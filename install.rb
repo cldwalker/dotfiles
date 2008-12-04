@@ -4,10 +4,14 @@
 
 home = File.expand_path('~')
 
+force = true if !ARGV[0].nil?
 Dir['.*'].each do |file|
-  next if ['install.rb','.','..'].include?(file) || file =~ /~$/ || File.directory?(file)
+  next if ['install.rb','.','..'].include?(file) || file =~ /~$/
   target = File.join(home, "#{file}")
-  `ln -is #{File.expand_path file} #{target}`
+  ln_option = force ? "f" : "i"
+  command = "ln -#{ln_option}s #{File.expand_path file} #{target}"
+  puts command
+  `#{command}`
 end
 
 # git push on commit
