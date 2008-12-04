@@ -1,0 +1,25 @@
+set ds=queri
+set guioptions=T
+set hls
+set titlestring
+noremap j 5j
+noremap k 5k
+noremap gh :nohl<CR>
+
+"Abbrevs
+"cabbrev myhelp file:///Users/bozo/docs/comp/vimperator.otl
+
+
+" select next/previous tab
+"map <Right> gt
+"map <Left>  gT
+map <C-l>   gt
+map <C-h>   gT
+
+" move current tab left/right
+map <S-Right> :tabmove! +1<CR>
+map <S-Left>  :tabmove! -1<CR>
+map <C-L>     :tabmove! +1<CR>
+map <C-H>     :tabmove! -1<CR>
+
+echo "vimperatorrc sourced"

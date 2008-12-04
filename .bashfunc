@@ -1,0 +1,16 @@
+rcd ()
+{
+  cd `path.rb -g -d $1`
+}
+
+ali ()
+{
+	ali.pl $@;
+	source ~/.bashalias ;
+}
+
+rmt () 
+{ 
+#move files to Trash bin, for files I'm not 100% sure to delete
+    mv -i $@ $HOME/temp/trash/
+}

@@ -1,0 +1,49 @@
+#file editing
+alias e='vim'
+alias b1='e ~/.bashrc'
+alias b2='e ~/.bash_history'
+alias b3='e ~/.bashalias'
+alias b4='e ~/.bashfunc'
+
+#for *nix commands
+alias ciao='sudo shutdown -h now'
+alias cp='cp -i'
+#alias ha='history -a'
+alias l.='ls -d .* --color=tty'
+alias la='ls -alh'
+alias lb='ls -B'
+alias mv='mv -i'
+alias gr='GREP_COLOR="1;4;34" grep --color=always --exclude=*~ --exclude=*.svn* --exclude=*.tmp --exclude=entries'
+alias grr='gr -r'
+alias psgrep='ps aux|grep'
+alias rm='rm -i'
+alias rmf='rm -f'
+alias so='source ~/.bashrc'
+#alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+alias k9='kill -9'
+alias ka="killall"
+
+#app aliases
+alias r='ruby'
+alias mydump='mysqldump -p -A'
+alias mys='safe_mysqld&'
+alias p='perl'
+alias sn='screen'
+
+
+#chained commands
+alias f#='ls |wc -l'
+alias w2l='tr -d 015 < $1 > $2'
+dos2nix="perl -pi.bak -we 's/\r/\n/g'"
+
+
+#git
+alias g='git'
+alias ga='ga'
+alias gbr='git branch'
+alias gci='git commit'
+alias gco='git checkout'
+alias gd='git diff'
+alias gl='git log'
+alias grm='git rm'
+alias gst='git status'
