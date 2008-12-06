@@ -1,5 +1,5 @@
-PATH=$PATH:/usr/local/mysql/bin:/usr/local/git/bin:/Users/bozo/bin:/Users/bozo/apps/bin
-MANPATH=$MANPATH:/usr/local/git/man
+PATH=$PATH:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/Users/bozo/bin:/Users/bozo/apps/bin
+MANPATH=$MANPATH:/usr/local/git/man:/opt/local/share/man
 export PGDATA=/opt/local/var/db/postgres
 
 alias ls='ls -G'

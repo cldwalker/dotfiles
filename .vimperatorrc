@@ -1,4 +1,4 @@
-set ds=queri
+set ds=queriac
 set guioptions=T
 set hls
 set titlestring
