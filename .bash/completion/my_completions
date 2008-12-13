@@ -1,0 +1,6 @@
+c ()
+{
+  cd `~/.bash/completion/completion_path.rb -k code $@`
+}
+
+complete -C ~/.bash/completion/code_completion.rb c

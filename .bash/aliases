@@ -1,15 +1,9 @@
-#file editing
-alias e='vim'
-alias b1='e ~/.bashrc'
-alias b2='e ~/.bash_history'
-alias b3='e ~/.bashalias'
-alias b4='e ~/.bashfunc'
-
 #for *nix commands
 alias ciao='sudo shutdown -h now'
 alias cp='cp -i'
 #alias ha='history -a'
 alias l=less
+alias ls='ls -G'
 alias l.='ls -d .* --color=tty'
 alias la='ls -alh'
 alias lb='ls -B'
@@ -25,19 +19,24 @@ alias so='source ~/.bashrc'
 alias k9='kill -9'
 alias ka="killall"
 
-#app aliases
-alias r='ruby'
-alias mydump='mysqldump -p -A'
-alias mys='safe_mysqld&'
-alias p='perl'
-alias sn='screen'
-
-
 #chained commands
 alias f#='ls |wc -l'
 alias w2l='tr -d 015 < $1 > $2'
 dos2nix="perl -pi.bak -we 's/\r/\n/g'"
 
+#Personal apps
+alias e='vim'
+alias r='ruby'
+alias mydump='mysqldump -p -A'
+alias p='perl'
+alias sn='screen'
+alias qt="open -a 'QuickTime Player'"
+alias mplayer="open -a 'MPlayer OSX'"
+alias prev="open -a 'Preview'"
+alias ss="sudo SystemStarter"
+alias oa="open -a"
+alias mem='memcached -d -l 127.0.0.1 -p 11211 -m 256'
+alias sc=script/spec
 
 #git
 alias g='git'
@@ -50,3 +49,9 @@ alias gl='git log'
 alias grm='git rm'
 alias gst='git status'
 alias gp='git push'
+
+#path dependent
+alias todo='vim ~bozo/docs/notes/todo.otl'
+alias mirb='irb -r /home/bozo/.irb'
+alias rconsole='ruby script/console --irb="irb -r /home/bozo/.irb_rails"'
+alias oxmms="open-x11 xmms && xmms"

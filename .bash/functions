@@ -1,3 +1,10 @@
+cl () 
+{ 
+    cd $1;
+    shift;
+    ls $a
+}
+
 rcd ()
 {
   cd `path.rb -g -d $1`
