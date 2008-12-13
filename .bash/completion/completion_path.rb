@@ -1,9 +1,15 @@
 #!/usr/bin/env ruby
 
 # == Description
-# Returns full path given a basename and possible directories it is under.
+# Returns first possible full path which matches the given basename under the specified directories.
+# Directories can be specified after the basename:
+#   $0 dir.rb ~/apps ~/temp
+#
+# Or in the config file completions.yml and then reference the key of config hash:
+#   $0 -key code dir.rb
+#
+# Warning: This doesn't handle basenames with the same name that occur in multiple directories.
 
-require 'find'
 require 'optparse'
 require 'yaml'
 OPT = {
@@ -13,7 +19,7 @@ OPT = {
 def parse_argv
 	ARGV.options do |opts|
 	  script_name = File.basename($0)
-	  opts.banner = "Usage: #{script_name} [options] file_basename"
+	  opts.banner = "Usage: #{script_name} [options] basename [directories]"
 
 	 opts.separator ""
 
@@ -27,30 +33,22 @@ def parse_argv
 end
 
 def paths_for_basename(basename, dirs)
-  options = {}
-	files =[]
-	i = 0
-
-	Find.find(*dirs) do |f|
-		puts "#{i}:#{f}" if options[:verbose]
-    files.push(f) if f =~ /\/#{basename}$/
-		#files.push(f) if f =~ /\/#{basename}\.(so|rb|bundle)$/
-		i+=1
-	end
-	result = files.uniq
-	#result.map! { |f| File.dirname(f) } if options[:dir]
-	result
+  files = []
+  dirs.each do |d|
+    Dir.entries(d).each do |f|
+      files.push(File.join(d,f)) if f == basename
+    end
+  end
+  files.uniq
 end
 
 parse_argv()
 basename = ARGV.shift
-#p OPT
 config_yaml_file = File.join(File.dirname(__FILE__), "completions.yml")
-#p YAML::load(File.new(config_yaml_file)) 
 dirs = OPT[:key] ? YAML::load(File.new(config_yaml_file))[OPT[:key]] : ARGV
 
 if dirs.nil? || basename.nil?
   puts "Directory or basename hasn't been specified"
   exit
 end
-puts paths_for_basename(basename,dirs)[0]
+puts paths_for_basename(basename,dirs)[0] || ''
