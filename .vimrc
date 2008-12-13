@@ -48,4 +48,11 @@
 		set hlsearch
 		set ruler
 		set viminfo='20,\"50
-		so ~/.my_vimrc
+	"rails from http://weblog.jamisbuck.org/2008/11/17/vim-follow-up
+		set tabstop=2
+		set smarttab
+		set shiftwidth=2
+		set autoindent
+		set expandtab
+		set backspace=start,indent
+	so ~/.my_vimrc

@@ -1,4 +1,4 @@
-PATH=$PATH:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/Users/bozo/bin:/Users/bozo/apps/bin
+PATH=$PATH:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/Users/bozo/bin:/usr/local/bin
 MANPATH=$MANPATH:/usr/local/git/man:/opt/local/share/man
 export PGDATA=/opt/local/var/db/postgres
 
@@ -25,6 +25,9 @@ set output-meta on
 set convert-meta off
 
 #TODO: completions
+  complete -C "/usr/bin/gemedit --complete" gemedit
+  source ~/.bash/completions/my_completions
+  #complete -C ~/.bash/completion_scripts/project_completion -o default c
 	#complete -d cd mkdir rmdir
 	#bash specific
 	# . /etc/bash_completion
