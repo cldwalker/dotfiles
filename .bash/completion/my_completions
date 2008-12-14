@@ -3,4 +3,9 @@ c ()
   cd `~/.bash/completion/completion_path.rb -k code $@`
 }
 
+cg ()
+{
+  cd `~/.bash/completion/completion_path.rb -k gem $@`
+}
 complete -C ~/.bash/completion/code_completion.rb c
+complete -C ~/.bash/completion/gem_completion.rb cg

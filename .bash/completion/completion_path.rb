@@ -6,7 +6,7 @@
 #   $0 dir.rb ~/apps ~/temp
 #
 # Or in the config file completions.yml and then reference the key of config hash:
-#   $0 -key code dir.rb
+#   $0 -k code dir.rb
 #
 # Warning: This doesn't handle basenames with the same name that occur in multiple directories.
 
