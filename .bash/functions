@@ -5,11 +5,6 @@ cl ()
     ls $a
 }
 
-rcd ()
-{
-  cd `path.rb -g -d $1`
-}
-
 rmt () 
 { 
 #move files to Trash bin, for files I'm not 100% sure to delete
