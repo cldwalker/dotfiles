@@ -1,11 +1,13 @@
+#for code directories
 c ()
 {
-  cd `~/.bash/completion/completion_path.rb -k code $@`
+  cd `~/.bash/completion/basename_to_full_path.rb -k code $@`
 }
 
+#for gem directories
 cg ()
 {
-  cd `~/.bash/completion/completion_path.rb -k gem $@`
+  cd `~/.bash/completion/basename_to_full_path.rb -k gem $@`
 }
-complete -C ~/.bash/completion/code_completion.rb c
-complete -C ~/.bash/completion/gem_completion.rb cg
+complete -C "~/.bash/completion/path_completer.rb code" c
+complete -C "~/.bash/completion/path_completer.rb gem" cg
