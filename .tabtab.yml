@@ -1,0 +1,6 @@
+files:
+  '/Users/bozo/.tabtab_definitions/gem.rb' : gem
+external:
+  - curl
+aliases:
+  gh: github

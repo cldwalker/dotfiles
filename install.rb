@@ -6,7 +6,7 @@ home = File.expand_path('~')
 
 force = true if !ARGV[0].nil?
 Dir['.*'].each do |file|
-  next if ['install.rb','.','..'].include?(file) || file =~ /~$/
+  next if ['.git','.gitignore', 'install.rb','.','..'].include?(file) || file =~ /~$|\.sw[a-z]$/
   target = File.join(home, "#{file}")
   ln_option = force ? "f" : "i"
   command = "ln -#{ln_option}s #{File.expand_path file} #{target}"

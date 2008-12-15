@@ -25,6 +25,6 @@ set convert-meta off
 source ~/.bash/aliases
 source ~/.bash/functions
 source ~/.bash/completions
-if [ -f ~/.bash_private ]; then
-  source ~/.bash_private
+if [ -f ~/.bash/private ]; then
+  source ~/.bash/private
 fi
