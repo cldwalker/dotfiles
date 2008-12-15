@@ -1,13 +1,24 @@
 #for code directories
-c ()
-{
+c () {
   cd `~/.bash/completion/basename_to_full_path.rb -k code $@`
 }
 
 #for gem directories
-cg ()
-{
+gcd () {
   cd `~/.bash/completion/basename_to_full_path.rb -k gem $@`
 }
+
+grd () {
+  open `~/.bash/completion/basename_to_full_path.rb -k gem_rdoc $@`/rdoc/index.html
+}
+
+gri () {
+  echo ${@:2}
+  ri -d `~/.bash/completion/basename_to_full_path.rb -k gem_rdoc $1`/ri ${@:2}
+}
+
+#Point shell functions to their autocompleting scripts
 complete -C "~/.bash/completion/path_completer.rb code" c
-complete -C "~/.bash/completion/path_completer.rb gem" cg
+complete -C "~/.bash/completion/path_completer.rb gem" gcd
+complete -C "~/.bash/completion/path_completer.rb gem_rdoc" grd
+complete -C "~/.bash/completion/path_completer.rb gem_rdoc" gri

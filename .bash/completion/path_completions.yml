@@ -14,3 +14,8 @@ gem:
   - /Users/bozo/.gem/ruby/1.8/gems
   - /Library/Ruby/Gems/1.8/gems
   - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems
+
+gem_rdoc:
+  - /Users/bozo/.gem/ruby/1.8/doc
+  - /Library/Ruby/Gems/1.8/doc
+  - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/doc

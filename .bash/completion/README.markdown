@@ -33,3 +33,10 @@ In path_completions.yml, I entered the key 'code' which lists my most active cod
 cd's to them. In that function, I also call basename_to_full_path.rb, passing the -k
 option my config key (step 2). In the same file, I also write a complete statement making sure to pass my key
 to the path_completer.rb script (step 3) and my bash function c.
+
+Todo
+====
+
+Explore providing different completions for different arguments of a command.
+Could come in handy for autocompleting methods for my gri() function.
+
