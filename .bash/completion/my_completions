@@ -31,9 +31,6 @@ rvi () {
 
 #Point shell functions to their autocompletions
 complete -o default -C "~/.bash/completion/path_completer.rb code" c
-complete -o default -C "~/.bash/completion/path_completer.rb gem" gcd
-complete -o default -C "~/.bash/completion/path_completer.rb gem" gm
-complete -o default -C "~/.bash/completion/path_completer.rb gem_rdoc" grd
-complete -o default -C "~/.bash/completion/path_completer.rb gem_rdoc" gri
-complete -o default -C "~/.bash/completion/path_completer.rb ruby_core" rcd
-complete -o default -C "~/.bash/completion/path_completer.rb ruby_core" rvi
+complete -o default -C "~/.bash/completion/path_completer.rb gem" gcd gm
+complete -o default -C "~/.bash/completion/path_completer.rb gem_rdoc" grd gri
+complete -o default -C "~/.bash/completion/path_completer.rb ruby_core" rcd rvi

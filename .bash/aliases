@@ -2,7 +2,8 @@
 alias ciao='sudo shutdown -h now'
 alias cp='cp -i'
 #alias ha='history -a'
-alias l=less
+alias l='less'
+alias lr='less -r'
 alias ls='ls -G'
 alias l.='ls -d .* --color=tty'
 alias la='ls -alh'
@@ -15,7 +16,7 @@ alias rm='rm -i'
 alias rmf='rm -f'
 alias rmb='rm -f *~'
 alias so='source ~/.bashrc'
-alias soo=source
+alias soo='source'
 #alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
 alias k9='kill -9'
 alias ka="killall"
@@ -40,12 +41,12 @@ alias prev="open -a 'Preview'"
 alias ss="sudo SystemStarter"
 alias oa="open -a"
 alias mem='memcached -d -l 127.0.0.1 -p 11211 -m 256'
-alias sc=script/spec
-alias x2=xmms2
+#alias sc=script/spec
+alias x2='xmms2'
 
 #git
 alias g='git'
-alias ga='ga'
+alias ga='git add'
 alias gbr='git branch'
 alias gci='git commit'
 alias gco='git checkout'

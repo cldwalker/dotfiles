@@ -1,17 +1,5 @@
-complete -C "/usr/bin/gemedit --complete" gemedit
 source ~/.bash/completion/my_completions
-
-#TODO: cleanup
-#complete -C ~/.bash/completion_scripts/project_completion -o default c
-#complete -d cd mkdir rmdir
-#bash specific
-# . /etc/bash_completion
+complete -C ~/.bash/completion/sake_completer.rb -o default sake
+complete -d cd cl
+complete -v set
 complete -A helptopic help
-#complete -a unalias
-#complete -v set
-#complete -j fg bg
-#silly=`find /usr/share/man/man* -name "*gz" -type f -exec basename {} \;|cut -d. -f1|tr '\n' ' '|cat`
-#silly=`ls /usr/share/man/man* |cut -d. -f1|tr '\n' ' '|cat`
-#silly='a whole lotta of stuff to satisfy this autocomplete'
-#complete -W "$silly" man
-#complete -C ~/bin/sake_complete.rb -o default sake
