@@ -54,5 +54,4 @@
 		set shiftwidth=2
 		set autoindent
 		set expandtab
-		set backspace=start,indent
 	so ~/.my_vimrc

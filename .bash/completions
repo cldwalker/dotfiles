@@ -1,5 +1,6 @@
 source ~/.bash/completion/my_completions
 complete -C ~/.bash/completion/sake_completer.rb -o default sake
+complete -C ~/.bash/completion/thor_completer.rb -o default thor
 complete -d cd cl
 complete -v set
 complete -A helptopic help
