@@ -1,6 +1,8 @@
-source ~/.bash/completion/my_completions
+if [ -f ~/code/gems/lightning/lightning_completions ]; then
+  source ~/code/gems/lightning/lightning_completions
+fi
 complete -C ~/.bash/completion/sake_completer.rb -o default sake
-complete -C ~/.bash/completion/thor_completer.rb -o default thor
+complete -C ~/.bash/completion/thor_completer.rb -o default thor t
 complete -d cd cl
 complete -v set
 complete -A helptopic help

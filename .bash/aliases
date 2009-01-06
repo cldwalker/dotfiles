@@ -32,6 +32,7 @@ dos2nix="perl -pi.bak -we 's/\r/\n/g'"
 alias e='vim'
 alias ee='vim -u NONE'
 alias r='ruby'
+alias t='thor'
 alias mydump='mysqldump -p -A'
 alias p='perl'
 alias sn='screen'
@@ -42,6 +43,7 @@ alias ss="sudo SystemStarter"
 alias mem='memcached -d -l 127.0.0.1 -p 11211 -m 256'
 #alias sc=script/spec
 alias x2='xmms2'
+alias sc='script/console'
 
 #git
 alias g='git'

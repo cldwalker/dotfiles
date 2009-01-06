@@ -10,7 +10,7 @@
 # Adapted from 
 # http://onrails.org/articles/2006/08/30/namespaces-and-sake-command-completion
 
-exit 0 unless /^thor\b/ =~ ENV["COMP_LINE"]
+exit 0 unless /^(thor|t)\b/ =~ ENV["COMP_LINE"]
 
 def thor_silent_tasks
   if File.exists?(dotcache = File.join(File.expand_path('~'), ".thortabs-#{Dir.pwd.hash}"))

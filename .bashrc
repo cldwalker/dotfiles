@@ -13,7 +13,6 @@ export RI="--format ansi -T"
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/Users/bozo/bin
 export MANPATH=$MANPATH:/usr/local/git/man:/opt/local/share/man:/usr/local/man
 export PGDATA=/opt/local/var/db/postgres
-#enable UTF-8
 export LC_CTYPE=en_US.UTF-8
 
 # shell options
@@ -21,6 +20,8 @@ set meta-flag on
 set input-meta on
 set output-meta on
 set convert-meta off
+#for mac osx
+bind "set completion-ignore-case on"
 
 source ~/.bash/aliases
 source ~/.bash/functions
