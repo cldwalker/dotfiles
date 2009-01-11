@@ -2,7 +2,7 @@
 # and utility belt
 #
 # This irbrc provides a simple way to load preferred irb settings via
-# a method irb_load_* or a file under your irb base directory.
+# a method irb_lib_* or a file under your irb base directory.
 
 require 'rubygems'
 #Set this to your preferred directory
@@ -11,7 +11,7 @@ $:.unshift IRB_BASE_DIR
 require 'snippets'
 
 #####   Defines IRB library loader ####
-def irb_load(*libraries)
+def load_irb_lib(*libraries)
   if libraries == [:all]
     libraries = (self.public_methods + self.private_methods).grep(/^#{IRB_METHOD_PREFIX}/).map {|e| e.gsub(IRB_METHOD_PREFIX, '') }
 
@@ -21,11 +21,11 @@ def irb_load(*libraries)
     #end
   end
   libraries.each do |e|
-    _irb_load(e) 
+    _load_irb_lib(e) 
   end
 end
 
-def _irb_load(library)
+def _load_irb_lib(library)
   begin
     if File.exists?(File.join(IRB_BASE_DIR, "#{library}.rb"))
       load File.join(IRB_BASE_DIR, "#{library}.rb")
@@ -38,10 +38,10 @@ def _irb_load(library)
     end
   rescue LoadError
     puts "Failed to load '#{library}'"
-  rescue
+  rescue Exception
     puts "Failed to load '#{library}'"
     puts "Reason: #{$!}"
   end
 end
 
-irb_load(:irb_options, :wirble, :railsrc, :aliases, :history, :core_extensions)
+load_irb_lib(:irb_options, :wirble, :railsrc, :aliases, :history, :core_extensions)
