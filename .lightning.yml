@@ -1,6 +1,6 @@
 ---
-generated_file: /Users/bozo/code/gems/lightning/lightning_completions
-ignore:
+generated_file: /Users/bozo/.bash/completion/lightning_completions
+ignore_paths:
     - .DS_Store
     - .git
 commands:
@@ -39,8 +39,8 @@ commands:
       description : ruby core files
       paths: 
       #picked from $LOAD_PATH
-        - /Library/Ruby/Site/1.8/**/*.rb
-        - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/**/*.rb
+        - /Library/Ruby/Site/1.8/**/*.{rb,bundle,so}
+        - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/**/*.{rb,bundle,so}
     - name : rcd
       map_to : cd
       description : ruby core directories

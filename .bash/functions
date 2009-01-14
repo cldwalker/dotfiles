@@ -10,3 +10,8 @@ rmt ()
 #move files to Trash bin, for files I'm not 100% sure to delete
     mv -i $@ $HOME/temp/trash/
 }
+
+#from http://github.com/defunkt/barefootexamples/blob/a4e0158e0bb0bc39121841c787d15bbcfe0a0e27/07bash.sh
+function vimgr {
+  vim -O `egrep -r -l $1 * | grep -v .svn`
+}
