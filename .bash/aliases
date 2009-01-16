@@ -20,6 +20,7 @@ alias soo='source'
 #alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
 alias k9='kill -9'
 alias ka="killall"
+alias s="sudo"
 
 #chained commands
 alias f#='ls |wc -l'
@@ -32,6 +33,7 @@ dos2nix="perl -pi.bak -we 's/\r/\n/g'"
 alias e='vim'
 alias ee='vim -u NONE'
 alias r='ruby'
+alias tt="testrb"
 alias t='thor'
 alias mydump='mysqldump -p -A'
 alias p='perl'

@@ -80,7 +80,7 @@
 			map <C-I>w	:s/\s\+$//
 			map <C-I>v	:s/^\(\t*\)/\1\[%#/ <CR> <BAR> :s/$/%\]/<CR><BAR>:noh<CR>
 			map <C-I>f	:s/^\(\s\+\)\[%#/\1/ <CR> <BAR> :s/%\]$//<CR><BAR>:noh<CR>
-			map <C-I>c	:s/^\(\t*\)/\1#/ <CR> <BAR>:noh<CR>
+			map <C-I>c	:s/^\(\s*\)/\1#/ <CR> <BAR>:noh<CR>
 				"prepends each line with # and preserves indents,useful for programming
 			map <C-I>d	:s/^\(\s\+\)#/\1/ <CR> <BAR>:noh<CR>
 				"undoes the above, useful for programming
