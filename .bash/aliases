@@ -47,6 +47,7 @@ alias x2='xmms2'
 alias ss='script/server'
 alias sc='script/console'
 alias gs='gem search -r'
+alias lni='lightning-install'
 
 #git
 alias g='git'

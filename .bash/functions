@@ -15,3 +15,8 @@ rmt ()
 function vimgr {
   vim -O `egrep -r -l $1 * | grep -v .svn`
 }
+
+function hf() { 
+  history | grep $1 
+}
+

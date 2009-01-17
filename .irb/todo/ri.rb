@@ -1,4 +1,4 @@
-#from http://github.com/mislav/dotfiles/tree/master/irbrc
+#from http://eigenclass.org/hiki/irb+ri+completion
 class Object
   def puts_ri_documentation_for(obj, meth)
     case self

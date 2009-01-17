@@ -10,11 +10,17 @@ commands:
       paths: 
         - /Users/bozo/code/gems/*
         - /Users/bozo/code/repo/*
+        - /Users/bozo/code/repo/priv/*
         - /Users/bozo/code/tds/gems/*
         
     - name : cd-g
       map_to : cd
       paths: gem
+      
+    - name : pb-g
+      map_to : echo -n
+      paths: gem
+      add_to_command: |pbcopy
       
     - name : m-g
       map_to : mate
@@ -34,7 +40,7 @@ commands:
       paths: gem_rdoc
       completion_regex: ^\S+
     
-    - name : v-rc
+    - name : v-r
       map_to : vim
       description : ruby core files
       paths: 
@@ -73,7 +79,12 @@ commands:
         - lib/**/*.rb
         - test/**/*.rb
         - spec/**/*.rb
-      
+
+    - name : v-n
+      map_to : vim
+      description: my notes
+      paths:
+        - /Users/bozo/docs/notes/**/*.otl
           
 paths: 
     #These entries should each map a unique key to a list of directories. When autocompleting, each

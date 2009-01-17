@@ -35,6 +35,22 @@ cd-g () {
 complete -o default -C "${LBIN_PATH}lightning-complete cd-g" cd-g
 
 
+pb-g () {
+  if [ -z "$1" ]; then
+    echo "No arguments given"
+    return
+  fi
+  FULL_PATH="`${LBIN_PATH}lightning-full_path pb-g $@`"
+  if [ $1 == '-test' ]; then
+    CMD="echo -n '$FULL_PATH' |pbcopy"
+    echo $CMD
+  else
+    echo -n "$FULL_PATH" |pbcopy
+  fi
+}
+complete -o default -C "${LBIN_PATH}lightning-complete pb-g" pb-g
+
+
 m-g () {
   if [ -z "$1" ]; then
     echo "No arguments given"
@@ -83,12 +99,12 @@ gri () {
 complete -o default -C "${LBIN_PATH}lightning-complete gri" gri
 
 #ruby core files
-v-rc () {
+v-r () {
   if [ -z "$1" ]; then
     echo "No arguments given"
     return
   fi
-  FULL_PATH="`${LBIN_PATH}lightning-full_path v-rc $@`"
+  FULL_PATH="`${LBIN_PATH}lightning-full_path v-r $@`"
   if [ $1 == '-test' ]; then
     CMD="vim '$FULL_PATH'"
     echo $CMD
@@ -96,7 +112,7 @@ v-rc () {
     vim "$FULL_PATH"
   fi
 }
-complete -o default -C "${LBIN_PATH}lightning-complete v-rc" v-rc
+complete -o default -C "${LBIN_PATH}lightning-complete v-r" v-r
 
 #ruby core directories
 cd-r () {
@@ -161,3 +177,19 @@ v-rr () {
   fi
 }
 complete -o default -C "${LBIN_PATH}lightning-complete v-rr" v-rr
+
+#my notes
+v-n () {
+  if [ -z "$1" ]; then
+    echo "No arguments given"
+    return
+  fi
+  FULL_PATH="`${LBIN_PATH}lightning-full_path v-n $@`"
+  if [ $1 == '-test' ]; then
+    CMD="vim '$FULL_PATH'"
+    echo $CMD
+  else
+    vim "$FULL_PATH"
+  fi
+}
+complete -o default -C "${LBIN_PATH}lightning-complete v-n" v-n
