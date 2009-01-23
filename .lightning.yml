@@ -46,7 +46,7 @@ commands:
       paths: 
       #picked from $LOAD_PATH
         - /Library/Ruby/Site/1.8/**/*.{rb,bundle,so}
-        - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/**/*.{rb,bundle,so}
+        - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/**/*.{rb,bundle,so,c}
     - name : cd-r
       map_to : cd
       description : ruby core directories

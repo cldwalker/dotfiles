@@ -22,10 +22,12 @@ alias k9='kill -9'
 alias ka="killall"
 alias s="sudo"
 
-#chained commands
+#commands that could be functions
 alias f#='ls |wc -l'
 alias w2l='tr -d 015 < $1 > $2'
 dos2nix="perl -pi.bak -we 's/\r/\n/g'"
+# Opens up any current working directory project to it's equivalent GitHub page:
+alias ghub="open \`git config -l | grep 'remote.origin.url' | sed -En \ 's/remote.origin.url=git(@|:\/\/)github.com(:|\/)(.+)\/(.+).git/https:\/\/github.com\/\3\/\4/p'\`"
 
 ### Personal (You'll need to adjust paths and install applications as needed) ###
 

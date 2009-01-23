@@ -1,4 +1,6 @@
 complete -o default -C 'tabtab --external' curl
+complete -o default -C 'tabtab --file /Users/bozo/.tabtab_definitions/xmms2.rb' xmms2
+complete -o default -C 'tabtab --file /Users/bozo/.tabtab_definitions/xmms2.rb --alias xmms2' x2
 complete -o default -C 'tabtab --file /Users/bozo/.tabtab_definitions/gem.rb' gem
 complete -o default -C 'tabtab --gem tabtab/lib/tabtab_definitions/cucumber.rb' cucumber
 complete -o default -C 'tabtab --gem tabtab/lib/tabtab_definitions/github.rb' github

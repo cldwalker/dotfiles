@@ -1,6 +1,8 @@
 files:
   '/Users/bozo/.tabtab_definitions/gem.rb' : gem
+  '/Users/bozo/.tabtab_definitions/xmms2.rb' : xmms2
 external:
   - curl
 aliases:
   gh: github
+  x2: xmms2
