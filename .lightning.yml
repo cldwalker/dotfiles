@@ -12,10 +12,16 @@ commands:
         - /Users/bozo/code/repo/*
         - /Users/bozo/code/repo/priv/*
         - /Users/bozo/code/tds/gems/*
+      aliases:
+        mc: /Users/bozo/code/gems/my_core
         
     - name : cd-g
       map_to : cd
       paths: gem
+      aliases:
+        g1: /Library/Ruby/Gems/1.8/gems
+        g2: /Users/bozo/.gem/ruby/1.8/gems
+        g3: /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems
       
     - name : pb-g
       map_to : echo -n
@@ -50,6 +56,8 @@ commands:
     - name : cd-r
       map_to : cd
       description : ruby core directories
+      aliases:
+        r1: /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8
       paths:
          - /Library/Ruby/Site/1.8/**/
          - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/**/

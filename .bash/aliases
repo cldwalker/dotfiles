@@ -49,6 +49,8 @@ alias x2='xmms2'
 alias ss='script/server'
 alias sc='script/console'
 alias gs='gem search -r'
+alias sgi='sudo gem install'
+alias sgu='sudo gem uninstall'
 alias lni='lightning-install'
 
 #git
@@ -57,12 +59,14 @@ alias ga='git add'
 alias gbr='git branch'
 alias gci='git commit'
 alias gco='git checkout'
+alias gcon='git config'
 alias gcl='git clone'
 alias gd='git diff'
 alias gl='git log'
 alias grm='git rm'
 alias gst='git status'
 alias gp='git push'
+alias gmv='g mv'
 
 #path dependent
 alias todo='vim ~bozo/docs/notes/todo.otl'
