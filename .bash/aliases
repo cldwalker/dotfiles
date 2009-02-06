@@ -35,6 +35,7 @@ alias ghub="open \`git config -l | grep 'remote.origin.url' | sed -En \ 's/remot
 alias e='vim'
 alias ee='vim -u NONE'
 alias r='ruby'
+alias rr='ruby -rubygems'
 alias tt="testrb"
 alias t='thor'
 alias mydump='mysqldump -p -A'

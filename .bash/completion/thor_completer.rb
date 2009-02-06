@@ -13,11 +13,14 @@
 exit 0 unless /^(thor|t)\b/ =~ ENV["COMP_LINE"]
 
 def thor_silent_tasks
-  if File.exists?(dotcache = File.join(File.expand_path('~'), ".thortabs-#{Dir.pwd.hash}"))
-    File.read(dotcache)
+  cache_file = File.join(File.expand_path('~'), ".thortabs-#{Dir.pwd.hash}")
+  if File.exists?(cache_file) 
+    # && (File.mtime( cache_file ) <= (Dir['**/*.thor']).collect {|x| File.mtime(x) }.max)
+    # http://rhnh.net/2008/06/08/rake-tab-completion-with-caching-and-namespace-support
+    File.read(cache_file)
   else
     tasks = `thor list`
-    File.open(dotcache, 'w') { |f| f.puts tasks }
+    File.open(cache_file, 'w') { |f| f.puts tasks }
     tasks
   end
 end

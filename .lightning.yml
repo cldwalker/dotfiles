@@ -12,6 +12,7 @@ commands:
         - /Users/bozo/code/repo/*
         - /Users/bozo/code/repo/priv/*
         - /Users/bozo/code/tds/gems/*
+        - /Users/bozo/code/fork/*
       aliases:
         mc: /Users/bozo/code/gems/my_core
         
