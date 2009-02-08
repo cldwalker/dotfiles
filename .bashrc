@@ -6,10 +6,11 @@ fi
 # Variables
 shopt -s histappend
 export HISTSIZE=3000
+export HISTFILESIZE=3000
 export EDITOR=vim
-export PS1='\[\033[01;34m\]\h \[\033[01;32m\]\W \$ \[\033[00m\]'
+export PS1='\[\033[01;34m\]\h \[\033[01;32m\]\W $(__git_ps1 "(%s)")$ \[\033[00m\] '
 #export PS1='[\u@\W] '
-export RI="--system --format ansi -T"
+export RI="--no-home --no-gems --no-site --format ansi -T"
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/Users/bozo/bin
 export MANPATH=$MANPATH:/usr/local/git/man:/opt/local/share/man:/usr/local/man
 export PGDATA=/opt/local/var/db/postgres

@@ -8,6 +8,10 @@ if [ -f ~/.bash/completion/.tabtab.bash ]; then
   source ~/.bash/completion/.tabtab.bash
 fi
 
+if [ -f ~/.bash/completion/git-completion.bash ]; then
+  source ~/.bash/completion/git-completion.bash
+fi
+
 #completion for cheat
 if [ ! -r ~/.cheat_completion ]; then
   echo "Rebuilding Cheat cache... "
