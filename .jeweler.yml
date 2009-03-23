@@ -1,0 +1,57 @@
+:default:
+  :email: gabriel.horner@gmail.com
+  :authors:
+    - Gabriel Horner
+  :has_rdoc: true
+  :extra_rdoc_files:
+    - README.rdoc
+    - LICENSE.txt
+  :files:
+    - "[A-Z]*"
+    - "{bin,lib,test}/**/*"
+  :summary: :description
+:gems:
+  hirb:
+    :description: "A mini view framework for console/irb that's easy to use, even while under its influence."
+    :homepage: http://tagaholic.me/hirb/
+    :rubyforge_project: tagaholic
+  has_machine_tags:
+    :description: "A rails tagging plugin implementing flickr's machine tags and maybe more (semantic tags)."
+    :homepage: http://tagaholic.me/has_machine_tags/
+    :files:
+      - "[A-Z]*"
+      - init.rb
+      - "{rails,generators,bin,lib,test}/**/*"
+  local_gem:
+    :description: "Loads any gem/library simply given its path. Great for nascent gems and/or for trying the latest code on a gem."
+    :homepage: http://tagaholic.me/local_gem/
+  alias:
+    :description: "Provides aliases for class names, class methods, instance methods and more. Mainly for console use."
+    :homepage: http://github.com/cldwalker/alias
+  console_update:
+    :description: "A rails plugin which allows you to edit your database records via the console and your favorite editor."
+    :homepage: http://tagaholic.me/console_udpate/
+    :files:
+      - "[A-Z]*"
+      - init.rb
+      - "{rails,bin,lib,test}/**/*"
+  lightning:
+    :description: "Path completions for your shell that will let you navigate like lightning."
+    :homepage: http://github.com/cldwalker/lightning
+    :files:
+      - "[A-Z]*"
+      - "*.example"
+      - "{bin,lib,test}/**/*"
+    :extra_rdoc_files:
+      - LICENSE.txt
+    :add_dependency: thor
+    :executables: 
+      - lightning-complete
+      - lightning-full_path
+      - lightning-install
+  core:
+    :description: Provides an easy way of using/sharing Ruby extension libraries (think activesupport) with a bias to monkeypatch-agnostic extensions.
+    :homepage: http://github.com/cldwalker/core
+  my_core:
+    :description: "My extensions to core ruby classes, similar to activesupport and facets gems."
+    :homepage: http://tagaholic.me/my_core/

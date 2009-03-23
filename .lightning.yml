@@ -83,11 +83,12 @@ commands:
       map_to : vim
       description: open files when in the base directory of a rails project
       paths:
-        - config/**/*.rb
+        #- config/**/*.rb
         - app/**/*.{rb,erb,rhtml}
-        - lib/**/*.rb
-        - test/**/*.rb
-        - spec/**/*.rb
+        - **/*.rb
+        #- lib/**/*.rb
+        #- test/**/*.rb
+        #- spec/**/*.rb
 
     - name : v-n
       map_to : vim

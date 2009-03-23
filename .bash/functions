@@ -20,3 +20,6 @@ function hf() {
   history | grep $1 
 }
 
+function fgr() {
+  find ${@:2} |grep $1 
+}
