@@ -12,7 +12,7 @@
   :summary: :description
 :gems:
   :hirb:
-    :description: "A mini view framework for console/irb that's easy to use, even while under its influence."
+    :summary: "A mini view framework for console/irb that's easy to use, even while under its influence."
     :homepage: http://tagaholic.me/hirb/
     :rubyforge_project: tagaholic
   :has_machine_tags:
@@ -55,3 +55,9 @@
   :my_core:
     :description: "My extensions to core ruby classes, similar to activesupport and facets gems."
     :homepage: http://tagaholic.me/my_core/
+  :gem_grep:
+    :homepage: http://github.com/cldwalker/gem_grep
+    :summary: "A gem command plugin which enhances the search command by providing extra search options and displaying results as a table."
+    :description: 'Enhances search command by displaying results in an ascii table and providing options to search (--fields) and display (--columns) gemspec attributes. These options take any gemspec attribute and more than one when comma delimited. Gemspec attributes can be aliased by specifying the first unique string that it starts with i.e. "su" for "summary".'
+    :add_dependency: cldwalker-hirb
+    :rubyforge_project: tagaholic
