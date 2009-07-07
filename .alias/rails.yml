@@ -1,0 +1,10 @@
+aliases:
+  constant:
+    ActiveRecord::Base: AB
+  instance_method:
+    ActiveRecord::Base:
+      update_attribute: ua
+  class_method:
+    ActiveRecord::Base:
+      find: '[]'
+      destroy: d

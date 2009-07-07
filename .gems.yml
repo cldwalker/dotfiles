@@ -26,8 +26,9 @@
     :description: "Loads any gem/library simply given its path. Great for nascent gems and/or for trying the latest code on a gem."
     :homepage: http://tagaholic.me/local_gem/
   :alias:
-    :description: "Provides aliases for class names, class methods, instance methods and more. Mainly for console use."
-    :homepage: http://github.com/cldwalker/alias
+    :summary: "Creates, manages and saves aliases for class methods, instance methods, constants, delegated methods and more."
+    :homepage: http://tagaholic.me/alias/
+    :rubyforge_project: tagaholic
   :console_update:
     :description: "A rails plugin which allows you to edit your database records via the console and your favorite editor."
     :homepage: http://tagaholic.me/console_udpate/

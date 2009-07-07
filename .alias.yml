@@ -1,0 +1,7 @@
+--- 
+:aliases: 
+  :instance_method: 
+    Alias::Console: 
+      create_aliases: ca
+      save_aliases: sa
+      search_aliases: sea
