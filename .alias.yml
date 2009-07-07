@@ -5,3 +5,16 @@
       create_aliases: ca
       save_aliases: sa
       search_aliases: sea
+    Object:
+      instance_eval: ie
+      instance_variables: iv
+      instance_variable_get: giv
+      instance_variable_set: siv
+    Module:
+      ancestors: an
+      instance_methods: im
+      private_instance_methods: pim
+  :class_to_instance_method:
+    MainCommands:
+      Kernel.require: r
+      Kernel.exit: x
