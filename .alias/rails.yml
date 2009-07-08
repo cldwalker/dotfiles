@@ -8,3 +8,8 @@ aliases:
     ActiveRecord::Base:
       find: '[]'
       destroy: d
+  any_to_instance_method:
+    RailsCommands:
+      'ActiveRecord::Base.connection.reconnect!': reconnect
+      ActionController::Routing::Routes.recognize_path: recognize_path
+      ActionController::Routing::Routes.generate: generate

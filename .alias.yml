@@ -14,7 +14,9 @@
       ancestors: an
       instance_methods: im
       private_instance_methods: pim
+    Kernel:
+      require: r
   :class_to_instance_method:
     MainCommands:
-      Kernel.require: r
       Kernel.exit: x
+      YAML.load_file: yl
