@@ -6,7 +6,6 @@
       save_aliases: sa
       search_aliases: sea
     Object:
-      instance_eval: ie
       instance_variables: iv
       instance_variable_get: giv
       instance_variable_set: siv
@@ -14,9 +13,15 @@
       ancestors: an
       instance_methods: im
       private_instance_methods: pim
+    Hash:
+      select: s
+    Array:
+      select: s
     Kernel:
       require: r
   :class_to_instance_method:
     MainCommands:
       Kernel.exit: x
+      Kernel.system: sy
       YAML.load_file: yl
+      Bond.spy: bs

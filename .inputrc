@@ -1,0 +1,29 @@
+# variables
+#set page-completions off
+#set print-completions-horizontally on
+set completion-ignore-case on
+set show-all-if-unmodified on
+set completion-query-items 120
+
+#macros
+#"\e3": "@[]\e[D"
+
+#keys
+set editing-mode vi
+$if mode=vi
+  set keymap vi-command
+  "\C-x\C-r": re-read-init-file
+  "\C-a": vi-insert-beg
+  "\C-e": vi-append-eol
+  "_": beginning-of-line
+  "\e4": dump-functions
+
+  set keymap vi-insert
+  "\C-x\C-r": re-read-init-file
+  "\C-a": vi-insert-beg
+  "\C-e": vi-append-eol
+  "\C-l": clear-screen
+else
+  "\e1": forward-search-history
+  #"\e\e[D": backward-word
+$endif

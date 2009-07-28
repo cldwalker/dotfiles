@@ -49,6 +49,7 @@ alias mem='memcached -d -l 127.0.0.1 -p 11211 -m 256'
 alias x2='xmms2'
 alias ss='script/server'
 alias js='jekyll --server'
+alias mi=mini-irb.rb
 alias lsc='RAILS_ENV=local script/console'
 alias sc='script/console'
 alias tf='tail -f'
