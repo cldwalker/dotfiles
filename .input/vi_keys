@@ -1,0 +1,6 @@
+"\C-a": vi-insert-beg
+"\C-e": vi-append-eol
+"\C-h": emacs-editing-mode
+ # kill to beginning of line
+"\C-d": "\C-[0C"
+"\es": "bind -p|grep "

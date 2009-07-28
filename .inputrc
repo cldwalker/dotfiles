@@ -1,29 +1,50 @@
 # variables
+set meta-flag on
+set input-meta on
+set output-meta on
+set convert-meta off
+set completion-ignore-case on
+set show-all-if-ambiguous on
+set completion-query-items 120
 #set page-completions off
 #set print-completions-horizontally on
-set completion-ignore-case on
-set show-all-if-unmodified on
-set completion-query-items 120
 
 #macros
 #"\e3": "@[]\e[D"
+#"\e\e[D": backward-word
 
 #keys
 set editing-mode vi
+
 $if mode=vi
   set keymap vi-command
-  "\C-x\C-r": re-read-init-file
-  "\C-a": vi-insert-beg
-  "\C-e": vi-append-eol
+  $include /Users/bozo/.input/vi_keys
+  $include /Users/bozo/.input/common_keys
+  "\C-I4": "1\C-I1"
   "_": beginning-of-line
-  "\e4": dump-functions
 
   set keymap vi-insert
-  "\C-x\C-r": re-read-init-file
-  "\C-a": vi-insert-beg
-  "\C-e": vi-append-eol
+  $include /Users/bozo/.input/vi_keys
+  $include /Users/bozo/.input/common_keys
   "\C-l": clear-screen
-else
+  "\C-p": previous-history
+  "\C-n": next-history
+  # emulate backward-kill-word since it doesn't work for vi
+  "\C-g": "\C-[bdwi"
+
+  $if Ruby
+    "\C-f": "toggle_complete\n"
+  $endif
+$else
+  set keymap emacs
+  #"\C-i": ""
+  # doesn't work?
+  "\C-x\C-h": vi-editing-mode
+  $include /Users/bozo/.input/common_keys
   "\e1": forward-search-history
-  #"\e\e[D": backward-word
+
+  #set keymap emacs-meta
+  #$include /Users/bozo/.input/common_keys
+  #set keymap emacs-ctlx
+  #$include /Users/bozo/.input/common_keys
 $endif

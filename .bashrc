@@ -18,14 +18,6 @@ export PGDATA=/opt/local/var/db/postgres
 export LC_CTYPE=en_US.UTF-8
 export RUBYLIB="$RUBYLIB:$RIPDIR/active/lib"
 
-# shell options
-set meta-flag on
-set input-meta on
-set output-meta on
-set convert-meta off
-#for mac osx
-bind "set completion-ignore-case on"
-
 source ~/.bash/aliases
 source ~/.bash/functions
 source ~/.bash/completions

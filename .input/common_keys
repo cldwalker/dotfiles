@@ -1,0 +1,4 @@
+"\C-x\C-r": re-read-init-file
+"\C-i1": dump-functions
+"\C-i2": dump-variables
+"\C-i3": dump-macros
