@@ -5,22 +5,26 @@ set output-meta on
 set convert-meta off
 set completion-ignore-case on
 set show-all-if-ambiguous on
+set show-all-if-unmodified on
 set completion-query-items 120
 #set page-completions off
 #set print-completions-horizontally on
 
-#macros
+# macros
 #"\e3": "@[]\e[D"
 #"\e\e[D": backward-word
 
-#keys
-set editing-mode vi
+# keys
+set keymap emacs
+$include /Users/bozo/.input/common_keys
+"\C-h": vi-editing-mode
+"\C-x\C-f": forward-search-history
 
+set editing-mode vi
 $if mode=vi
   set keymap vi-command
   $include /Users/bozo/.input/vi_keys
   $include /Users/bozo/.input/common_keys
-  "\C-I4": "1\C-I1"
   "_": beginning-of-line
 
   set keymap vi-insert
@@ -29,22 +33,5 @@ $if mode=vi
   "\C-l": clear-screen
   "\C-p": previous-history
   "\C-n": next-history
-  # emulate backward-kill-word since it doesn't work for vi
-  "\C-g": "\C-[bdwi"
-
-  $if Ruby
-    "\C-f": "toggle_complete\n"
-  $endif
-$else
-  set keymap emacs
-  #"\C-i": ""
-  # doesn't work?
-  "\C-x\C-h": vi-editing-mode
-  $include /Users/bozo/.input/common_keys
-  "\e1": forward-search-history
-
-  #set keymap emacs-meta
-  #$include /Users/bozo/.input/common_keys
-  #set keymap emacs-ctlx
-  #$include /Users/bozo/.input/common_keys
 $endif
+

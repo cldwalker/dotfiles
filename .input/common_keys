@@ -1,4 +1,11 @@
 "\C-x\C-r": re-read-init-file
+"\C-x\C-a": universal-argument
 "\C-i1": dump-functions
 "\C-i2": dump-variables
 "\C-i3": dump-macros
+"\C-I4": "\C-x\C-a1\C-I1"
+"\C-is": "bind -p|grep "
+
+$if Ruby
+  "\C-x\C-p": "toggle_complete\n"
+$endif
