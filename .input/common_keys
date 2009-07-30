@@ -1,11 +1,11 @@
 "\C-x\C-r": re-read-init-file
 "\C-x\C-a": universal-argument
-"\C-i1": dump-functions
-"\C-i2": dump-variables
-"\C-i3": dump-macros
-"\C-I4": "\C-x\C-a1\C-I1"
-"\C-is": "bind -p|grep "
+"\C-x6": dump-functions
+"\C-x7": dump-variables
+"\C-x8": dump-macros
+"\C-x9": "\C-x\C-a1\C-x6"
+"\C-x0": "bind -p|grep "
 
 $if Ruby
-  "\C-x\C-p": "toggle_complete\n"
+  "\C-x\C-p": "toggle_object_complete\n"
 $endif
