@@ -1,5 +1,9 @@
 "\C-a": vi-insert-beg
 "\C-e": vi-append-eol
 "\C-h": emacs-editing-mode
- # kill to beginning of line
-"\C-d": "\C-[0C"
+"\C-k": kill-line
+# same as *
+"\e-*": insert-completions
+# same as =
+"\e-?": possible-completions
+"\e.": yank-last-arg

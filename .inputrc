@@ -26,6 +26,12 @@ $if mode=vi
   $include /Users/bozo/.input/vi_keys
   $include /Users/bozo/.input/common_keys
   "_": beginning-of-line
+  "qq": start-kbd-macro
+  "qe": end-kbd-macro
+  "Q": call-last-kbd-macro
+  "\'": vi-goto-mark
+  "yn":yank-nth-arg
+  "yl":yank-last-arg
 
   set keymap vi-insert
   $include /Users/bozo/.input/vi_keys
