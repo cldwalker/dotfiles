@@ -60,6 +60,8 @@ alias sgin='sudo gem install --no-rdoc --no-ri'
 alias sgu='sudo gem uninstall'
 alias sgul='sudo gem uninstall -i ~/.gem/ruby/1.8'
 alias lni='lightning-install'
+alias b="ruby -rubygems -e \"require 'local_gem'; LocalGem.local_require 'hirb'; LocalGem.local_require 'alias'; load 'bin/boson'\""
+alias b2="ruby -rubygems bin/boson"
 
 #git
 alias g='git'

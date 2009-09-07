@@ -25,3 +25,5 @@
       Kernel.system: sy
       YAML.load_file: yl
       Bond.spy: bs
+      Boson.command: bc
+      Boson.library: bl
