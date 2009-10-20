@@ -15,9 +15,3 @@
       select: s
     Kernel:
       require: r
-  :class_to_instance_method:
-    MainCommands:
-      Kernel.exit: x
-      Kernel.system: sy
-      YAML.load_file: yl
-      Bond.spy: bs

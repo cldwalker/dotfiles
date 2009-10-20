@@ -24,3 +24,7 @@ source ~/.bash/completions
 if [ -f ~/.bash/private ]; then
   source ~/.bash/private
 fi
+
+# rvm installer added line:
+if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
+
