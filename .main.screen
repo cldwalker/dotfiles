@@ -1,0 +1,12 @@
+# inspired by http://mileszs.com/blog/2009/06/05/vim-and-screen.html
+
+source /home/bozo/.screenrc
+screen -t todo vim /home/bozo/docs/notes/todo.otl
+chdir /home/bozo/code/repo/tag-tree
+screen -t lsc script/console local
+screen -t lsc2
+chdir /home/bozo/code/gems/
+screen -t mi mini-irb.rb
+chdir /home/bozo/code/gems/boson
+screen -t code
+screen -t code2
