@@ -63,6 +63,8 @@ alias lni='lightning-install'
 alias b3="ruby -rubygems -e \"require 'local_gem'; LocalGem.local_require 'hirb'; LocalGem.local_require 'alias'; load 'bin/boson'\""
 alias b2="ruby -rubygems bin/boson"
 alias b='boson'
+alias r19='rvm use 1.9.1'
+alias r18='rvm use system'
 
 #git
 alias g='git'
