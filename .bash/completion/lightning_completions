@@ -13,6 +13,11 @@ g-r9 () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete g-r9" g-r9
 
+e-b () {
+  echo $( ${LBIN_PATH}lightning-translate e-b $@ )
+}
+complete -o default -C "${LBIN_PATH}lightning-complete e-b" e-b
+
 e-wd () {
   echo $( ${LBIN_PATH}lightning-translate e-wd $@ )
 }
@@ -77,6 +82,11 @@ e-ror () {
   echo $( ${LBIN_PATH}lightning-translate e-ror $@ )
 }
 complete -o default -C "${LBIN_PATH}lightning-complete e-ror" e-ror
+
+g-b () {
+  grep $( ${LBIN_PATH}lightning-translate g-b $@ )
+}
+complete -o default -C "${LBIN_PATH}lightning-complete g-b" g-b
 
 pb-g () {
   echo -n $( ${LBIN_PATH}lightning-translate pb-g $@ )
@@ -162,16 +172,16 @@ v-cw () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete v-cw" v-cw
 
-l-r () {
-  less $( ${LBIN_PATH}lightning-translate l-r $@ )
-}
-complete -o default -C "${LBIN_PATH}lightning-complete l-r" l-r
-
 #access any files from the root of a rails project
 m-ror () {
   mate $( ${LBIN_PATH}lightning-translate m-ror $@ )
 }
 complete -o default -C "${LBIN_PATH}lightning-complete m-ror" m-ror
+
+l-r () {
+  less $( ${LBIN_PATH}lightning-translate l-r $@ )
+}
+complete -o default -C "${LBIN_PATH}lightning-complete l-r" l-r
 
 cd-a () {
   cd $( ${LBIN_PATH}lightning-translate cd-a $@ )
@@ -213,6 +223,11 @@ l-r9 () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete l-r9" l-r9
 
+cd-b () {
+  cd $( ${LBIN_PATH}lightning-translate cd-b $@ )
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cd-b" cd-b
+
 m-wd () {
   mate $( ${LBIN_PATH}lightning-translate m-wd $@ )
 }
@@ -249,6 +264,11 @@ l-gd () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete l-gd" l-gd
 
+l-b () {
+  less $( ${LBIN_PATH}lightning-translate l-b $@ )
+}
+complete -o default -C "${LBIN_PATH}lightning-complete l-b" l-b
+
 #base directory of a ruby gem project
 cd-rb () {
   cd $( ${LBIN_PATH}lightning-translate cd-rb $@ )
@@ -280,6 +300,11 @@ e-gd () {
   echo $( ${LBIN_PATH}lightning-translate e-gd $@ )
 }
 complete -o default -C "${LBIN_PATH}lightning-complete e-gd" e-gd
+
+m-b () {
+  mate $( ${LBIN_PATH}lightning-translate m-b $@ )
+}
+complete -o default -C "${LBIN_PATH}lightning-complete m-b" m-b
 
 #my code directories
 l-c () {
@@ -335,6 +360,11 @@ g-ror () {
   grep $( ${LBIN_PATH}lightning-translate g-ror $@ )
 }
 complete -o default -C "${LBIN_PATH}lightning-complete g-ror" g-ror
+
+o-b () {
+  open $( ${LBIN_PATH}lightning-translate o-b $@ )
+}
+complete -o default -C "${LBIN_PATH}lightning-complete o-b" o-b
 
 e-cw () {
   echo $( ${LBIN_PATH}lightning-translate e-cw $@ )
@@ -455,6 +485,11 @@ ri-gd () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete ri-gd" ri-gd
 
+ls-b () {
+  ls $( ${LBIN_PATH}lightning-translate ls-b $@ )
+}
+complete -o default -C "${LBIN_PATH}lightning-complete ls-b" ls-b
+
 m-g () {
   mate $( ${LBIN_PATH}lightning-translate m-g $@ )
 }
@@ -466,16 +501,16 @@ ls-rb () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete ls-rb" ls-rb
 
-v-r () {
-  vim $( ${LBIN_PATH}lightning-translate v-r $@ )
-}
-complete -o default -C "${LBIN_PATH}lightning-complete v-r" v-r
-
 #access any files from the root of a rails project
 ls-ror () {
   ls $( ${LBIN_PATH}lightning-translate ls-ror $@ )
 }
 complete -o default -C "${LBIN_PATH}lightning-complete ls-ror" ls-ror
+
+v-r () {
+  vim $( ${LBIN_PATH}lightning-translate v-r $@ )
+}
+complete -o default -C "${LBIN_PATH}lightning-complete v-r" v-r
 
 ls-cw () {
   ls $( ${LBIN_PATH}lightning-translate ls-cw $@ )
@@ -543,6 +578,11 @@ o-r9 () {
   open $( ${LBIN_PATH}lightning-translate o-r9 $@ )
 }
 complete -o default -C "${LBIN_PATH}lightning-complete o-r9" o-r9
+
+v-b () {
+  vim $( ${LBIN_PATH}lightning-translate v-b $@ )
+}
+complete -o default -C "${LBIN_PATH}lightning-complete v-b" v-b
 
 e-a () {
   echo $( ${LBIN_PATH}lightning-translate e-a $@ )

@@ -17,6 +17,8 @@ export MANPATH=$MANPATH:/usr/local/git/man:/opt/local/share/man:/usr/local/man
 export PGDATA=/opt/local/var/db/postgres
 export LC_CTYPE=en_US.UTF-8
 export RUBYLIB="$RUBYLIB:$RIPDIR/active/lib"
+# only page if more than a screenful
+export LESS=FSRX
 
 source ~/.bash/aliases
 source ~/.bash/functions
