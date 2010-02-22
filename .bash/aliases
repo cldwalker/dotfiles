@@ -36,7 +36,6 @@ alias e='vim'
 alias ee='vim -u NONE'
 alias r='ruby'
 alias rr='ruby -rubygems'
-alias tt="testrb"
 alias t='thor'
 alias t2='thor2'
 alias mydump='mysqldump -p -A'
@@ -68,6 +67,7 @@ alias b2="ruby -rubygems bin/boson"
 alias b='boson'
 alias r19='rvm use 1.9.1'
 alias r18='rvm use system'
+alias clj='java -cp ~/apps/clojure-1.1.0/clojure.jar clojure.main'
 
 #git
 alias g='git'
