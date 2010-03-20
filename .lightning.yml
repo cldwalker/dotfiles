@@ -12,6 +12,7 @@
 - echo: e
 - cd
 - ls
+- cp
 :ignore_paths: 
 - .DS_Store
 - .git/
@@ -62,6 +63,8 @@
     - test/**/*_test.rb
     - spec/**/*.spec
     commands:
+    - name: ba
+      shell_command: bacon
     - name: tt
       shell_command: testrb
     - name: sp

@@ -55,6 +55,14 @@ cd-r () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete cd-r" cd-r
 
+#base directory of a ruby gem project
+ba () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate ba $@) )
+  bacon "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete ba" ba
+
 gi-rd () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate gi-rd $@) )
@@ -91,6 +99,13 @@ m-rd () {
   mate "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete m-rd" m-rd
+
+cp-a () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cp-a $@) )
+  cp "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cp-a" cp-a
 
 cd-cw () {
   local IFS=$'\n'
@@ -129,6 +144,13 @@ g-rd () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete g-rd" g-rd
 
+cp-b () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cp-b $@) )
+  cp "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cp-b" cp-b
+
 #access any files from the root of a rails project
 o-ror () {
   local IFS=$'\n'
@@ -166,6 +188,14 @@ v-cw () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete v-cw" v-cw
 
+#my code directories
+cp-c () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cp-c $@) )
+  cp "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cp-c" cp-c
+
 #base directory of a ruby gem project
 o-ruby_test () {
   local IFS=$'\n'
@@ -181,6 +211,14 @@ v-ror () {
   vim "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete v-ror" v-ror
+
+#access any files from the root of a rails project
+cp-ror () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cp-ror $@) )
+  cp "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cp-ror" cp-ror
 
 l-gd () {
   local IFS=$'\n'
@@ -262,6 +300,13 @@ e-ruby_test () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete e-ruby_test" e-ruby_test
 
+cp-g () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cp-g $@) )
+  cp "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cp-g" cp-g
+
 g-a () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate g-a $@) )
@@ -276,6 +321,13 @@ l-ror () {
   less "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete l-ror" l-ror
+
+g-gd () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate g-gd $@) )
+  grep "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete g-gd" g-gd
 
 ls-w () {
   local IFS=$'\n'
@@ -298,13 +350,6 @@ o-cw () {
   open "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete o-cw" o-cw
-
-g-gd () {
-  local IFS=$'\n'
-  local arr=( $(${LBIN_PATH}lightning-translate g-gd $@) )
-  grep "${arr[@]}"
-}
-complete -o default -C "${LBIN_PATH}lightning-complete g-gd" g-gd
 
 g-b () {
   local IFS=$'\n'
@@ -422,6 +467,13 @@ l-r () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete l-r" l-r
 
+cp-n () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cp-n $@) )
+  cp "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cp-n" cp-n
+
 e-cw () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate e-cw $@) )
@@ -474,6 +526,13 @@ gi-g () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete gi-g" gi-g
 
+cp-wd () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cp-wd $@) )
+  cp "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cp-wd" cp-wd
+
 pb-g () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate pb-g $@) )
@@ -487,6 +546,20 @@ m-a () {
   mate "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete m-a" m-a
+
+cp-r () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cp-r $@) )
+  cp "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cp-r" cp-r
+
+cp-r9 () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cp-r9 $@) )
+  cp "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cp-r9" cp-r9
 
 cd-wd () {
   local IFS=$'\n'
@@ -631,12 +704,27 @@ ls-b () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete ls-b" ls-b
 
+#base directory of a ruby gem project
+cp-rb () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cp-rb $@) )
+  cp "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cp-rb" cp-rb
+
 ls-wd () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate ls-wd $@) )
   ls "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete ls-wd" ls-wd
+
+cp-w () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cp-w $@) )
+  cp "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cp-w" cp-w
 
 #access any files from the root of a rails project
 ls-ror () {
@@ -668,6 +756,20 @@ g-r () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete g-r" g-r
 
+ls-r9 () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate ls-r9 $@) )
+  ls "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete ls-r9" ls-r9
+
+cp-rd () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cp-rd $@) )
+  cp "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cp-rd" cp-rd
+
 cd-g () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate cd-g $@) )
@@ -682,13 +784,6 @@ v-n () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete v-n" v-n
 
-ls-r9 () {
-  local IFS=$'\n'
-  local arr=( $(${LBIN_PATH}lightning-translate ls-r9 $@) )
-  ls "${arr[@]}"
-}
-complete -o default -C "${LBIN_PATH}lightning-complete ls-r9" ls-r9
-
 #base directory of a ruby gem project
 cd-rb () {
   local IFS=$'\n'
@@ -697,13 +792,6 @@ cd-rb () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete cd-rb" cd-rb
 
-o-g () {
-  local IFS=$'\n'
-  local arr=( $(${LBIN_PATH}lightning-translate o-g $@) )
-  open "${arr[@]}"
-}
-complete -o default -C "${LBIN_PATH}lightning-complete o-g" o-g
-
 #access ri documentation limited to this gem
 ri-gd () {
   local IFS=$'\n'
@@ -711,6 +799,13 @@ ri-gd () {
   ri --no-standard-docs -d "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete ri-gd" ri-gd
+
+o-g () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate o-g $@) )
+  open "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete o-g" o-g
 
 o-wd () {
   local IFS=$'\n'
@@ -792,19 +887,27 @@ v-r () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete v-r" v-r
 
-m-wd () {
-  local IFS=$'\n'
-  local arr=( $(${LBIN_PATH}lightning-translate m-wd $@) )
-  mate "${arr[@]}"
-}
-complete -o default -C "${LBIN_PATH}lightning-complete m-wd" m-wd
-
 l-r9 () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate l-r9 $@) )
   less "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete l-r9" l-r9
+
+#base directory of a ruby gem project
+cp-ruby_test () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cp-ruby_test $@) )
+  cp "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cp-ruby_test" cp-ruby_test
+
+m-wd () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate m-wd $@) )
+  mate "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete m-wd" m-wd
 
 #base directory of a ruby gem project
 cd-ruby_test () {
@@ -820,6 +923,20 @@ ls-g () {
   ls "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete ls-g" ls-g
+
+cp-gd () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cp-gd $@) )
+  cp "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cp-gd" cp-gd
+
+gi-r9 () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate gi-r9 $@) )
+  git "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete gi-r9" gi-r9
 
 #base directory of a ruby gem project
 ls-rb () {
@@ -857,19 +974,19 @@ m-n () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete m-n" m-n
 
-gi-r9 () {
-  local IFS=$'\n'
-  local arr=( $(${LBIN_PATH}lightning-translate gi-r9 $@) )
-  git "${arr[@]}"
-}
-complete -o default -C "${LBIN_PATH}lightning-complete gi-r9" gi-r9
-
 m-r9 () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate m-r9 $@) )
   mate "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete m-r9" m-r9
+
+g-r9 () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate g-r9 $@) )
+  grep "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete g-r9" g-r9
 
 ls-rd () {
   local IFS=$'\n'
@@ -892,13 +1009,6 @@ e-wd () {
   echo "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete e-wd" e-wd
-
-g-r9 () {
-  local IFS=$'\n'
-  local arr=( $(${LBIN_PATH}lightning-translate g-r9 $@) )
-  grep "${arr[@]}"
-}
-complete -o default -C "${LBIN_PATH}lightning-complete g-r9" g-r9
 
 #access any files from the root of a rails project
 m-ror () {
@@ -951,6 +1061,13 @@ m-r () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete m-r" m-r
 
+e-r9 () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate e-r9 $@) )
+  echo "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete e-r9" e-r9
+
 #base directory of a ruby gem project
 l-rb () {
   local IFS=$'\n'
@@ -966,12 +1083,19 @@ l-a () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete l-a" l-a
 
-e-r9 () {
+v-gd () {
   local IFS=$'\n'
-  local arr=( $(${LBIN_PATH}lightning-translate e-r9 $@) )
-  echo "${arr[@]}"
+  local arr=( $(${LBIN_PATH}lightning-translate v-gd $@) )
+  vim "${arr[@]}"
 }
-complete -o default -C "${LBIN_PATH}lightning-complete e-r9" e-r9
+complete -o default -C "${LBIN_PATH}lightning-complete v-gd" v-gd
+
+cp-cw () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cp-cw $@) )
+  cp "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cp-cw" cp-cw
 
 l-b () {
   local IFS=$'\n'
@@ -1001,10 +1125,3 @@ v-w () {
   vim "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete v-w" v-w
-
-v-gd () {
-  local IFS=$'\n'
-  local arr=( $(${LBIN_PATH}lightning-translate v-gd $@) )
-  vim "${arr[@]}"
-}
-complete -o default -C "${LBIN_PATH}lightning-complete v-gd" v-gd
