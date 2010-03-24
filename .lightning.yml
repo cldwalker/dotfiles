@@ -3,16 +3,16 @@
 
 :source_file: /Users/bozo/.bash/completion/lightning_completions
 :shell_commands: 
-- mate: m
-- vim: v
-- open: o
-- less: l
-- grep: g
-- git: gi
-- echo: e
-- cd
-- ls
-- cp
+  mate: m
+  vim: v
+  open: o
+  less: l
+  grep: g
+  git: gi
+  echo: e
+  cd: cd
+  ls: ls
+  cp: cp
 :ignore_paths: 
 - .DS_Store
 - .git/
