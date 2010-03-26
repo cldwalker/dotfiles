@@ -64,7 +64,7 @@
     - spec/**/*.spec
     commands:
     - name: ba
-      shell_command: bacon
+      shell_command: bacon -Ilib
     - name: tt
       shell_command: testrb
     - name: sp
@@ -74,7 +74,7 @@
     - /Users/bozo/.gem/ruby/1.8/gems/*
     - /Library/Ruby/Gems/1.8/gems/*
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/*
-    commands: 
+    add_commands: 
     - name: pb-g
       add_to_command: " |pbcopy"
       shell_command: echo -n
