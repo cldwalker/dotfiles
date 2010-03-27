@@ -1,7 +1,6 @@
 --- 
 :aliases: {}
 
-:source_file: /Users/bozo/.bash/completion/lightning_completions
 :shell_commands: 
   mate: m
   vim: v

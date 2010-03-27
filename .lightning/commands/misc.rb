@@ -1,7 +1,7 @@
 module Lightning::Commands
   usage 'edit', '', 'Edits config file'
   def edit_command(argv)
-    system ENV["EDITOR"] || 'vim', Lightning.config.source_file
+    system ENV["EDITOR"] || 'vim', Lightning::Config.config_file
   end
 
   usage 'map', '[-s|--shell_command]', 'Map of functions by bolt or shell_command'
