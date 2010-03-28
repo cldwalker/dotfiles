@@ -1,6 +1,5 @@
 --- 
-:aliases: {}
-
+:complete_regex: true
 :bolts: 
   ruby_test: 
     desc: base directory of a ruby gem project
@@ -132,10 +131,6 @@
     paths: 
     - "{app,config}/**/*.{erb,rhtml,yaml,yml}"
     - "**/*.rb"
-:complete_regex: true
-:ignore_paths: 
-- .DS_Store
-- .git/
 :shell_commands: 
   cd: cd
   cp: cp
@@ -147,3 +142,7 @@
   echo: e
   mate: m
   open: o
+
+:ignore_paths: 
+- .DS_Store
+- .git/
