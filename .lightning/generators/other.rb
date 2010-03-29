@@ -14,4 +14,8 @@ module Lightning::Generators
       :desc=>"*ALL* directories under the current directory. Careful where you do this."
     }
   end
+
+  def ruby_dir
+    { :paths=>system_ruby.map {|e| e +"/**/"} }
+  end
 end
