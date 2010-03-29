@@ -1,11 +1,11 @@
 module Lightning::Commands
-  usage 'edit', '', 'Edits config file'
-  def edit_command(argv)
+  meta 'edit', '', 'Edits config file'
+  def edit(argv)
     system ENV["EDITOR"] || 'vim', Lightning::Config.config_file
   end
 
-  usage 'map', '[-s|--shell_command]', 'Map of functions by bolt or shell_command'
-  def map_command(argv)
+  meta 'map', '[-s|--shell_command]', 'Map of functions by bolt or shell_command'
+  def map(argv)
     require 'hirb'
     Lightning.setup
     shell_cmd = %w{-s --shell_command}.include?(argv[0])
