@@ -40,14 +40,14 @@
     globs: 
     - "**/*"
     alias: w
-    add_commands:
+    add_commands: 
     - git
   local_ruby: 
     desc: base directory of a ruby gem project
     globs: 
     - "**/*.rb"
     - bin/**
-    add_commands:
+    add_commands: 
     - git
     alias: rb
   ruby_load_path: 
@@ -60,7 +60,7 @@
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/**/*.rb
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/powerpc-darwin9.0/**/*.rb
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0/**/*.rb
-    commands:
+    commands: 
     - less
     - echo
     alias: rlp
@@ -82,7 +82,7 @@
     globs: 
     - /Users/bozo/code/world/*
     alias: cw
-    commands:
+    commands: 
     - echo
     - mate
     - cd
@@ -98,7 +98,7 @@
     globs: 
     - "**/"
     alias: wd
-    commands:
+    commands: 
     - ls
     - cd
     - echo
@@ -153,9 +153,15 @@
     - echo
     - grep
     - vim
-:ignore_paths: 
-- .DS_Store
-- .git/
+  gem_doc19: 
+    :globs: 
+    - /Users/bozo/.rvm/gems/ruby/1.9.1/doc/*
+    :commands: 
+    - shell_command: open
+      desc: open a gem's documentation in a browser
+      post_path: /rdoc/index.html
+      name: o-gd19
+    alias: gd19
 :shell_commands: 
   cd: cd
   cp: cp
@@ -165,3 +171,6 @@
   ls: ls
   mate: m
   echo: e
+:ignore_paths: 
+- .DS_Store
+- .git/

@@ -498,3 +498,11 @@ v-ror () {
   vim "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete v-ror" v-ror
+
+#open a gem's documentation in a browser
+o-gd19 () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate o-gd19 $@) )
+  open "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete o-gd19" o-gd19
