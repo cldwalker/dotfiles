@@ -2,7 +2,7 @@
 :complete_regex: true
 :bolts: 
   app: 
-    paths: 
+    globs: 
     - /Applications/*.app
     - /Applications/Utilities/*.app
     commands: 
@@ -11,7 +11,7 @@
     alias: a
   ruby_test: 
     desc: base directory of a ruby gem project
-    paths: 
+    globs: 
     - test/**/*_test.rb
     - spec/**/*.spec
     commands: 
@@ -24,7 +24,7 @@
     alias: rt
   code: 
     desc: my code directories
-    paths: 
+    globs: 
     - /Users/bozo/code/gems/*
     - /Users/bozo/code/repo/*
     - /Users/bozo/code/repo/priv/*
@@ -37,21 +37,21 @@
     - echo
     alias: c
   wild: 
-    paths: 
+    globs: 
     - "**/*"
     alias: w
     add_commands:
     - git
   local_ruby: 
     desc: base directory of a ruby gem project
-    paths: 
+    globs: 
     - "**/*.rb"
     - bin/**
     add_commands:
     - git
     alias: rb
   ruby_load_path: 
-    :paths: 
+    globs: 
     - /Users/bozo/.rip/active/lib/**/*.rb
     - /Library/Ruby/Site/1.8/**/*.rb
     - /Library/Ruby/Site/1.8/powerpc-darwin9.0/**/*.rb
@@ -65,7 +65,7 @@
     - echo
     alias: rlp
   gem: 
-    paths: 
+    globs: 
     - /Users/bozo/.gem/ruby/1.8/gems/*
     - /Library/Ruby/Gems/1.8/gems/*
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/*
@@ -79,7 +79,7 @@
       add_to_command: " |pbcopy"
       shell_command: echo -n
   code_world: 
-    paths: 
+    globs: 
     - /Users/bozo/code/world/*
     alias: cw
     commands:
@@ -88,14 +88,14 @@
     - cd
     - less
   notes: 
-    paths: 
+    globs: 
     - /Users/bozo/docs/notes/**/*.otl
     commands: 
     - vim
     - less
     alias: n
   wild_dir: 
-    paths: 
+    globs: 
     - "**/"
     alias: wd
     commands:
@@ -103,12 +103,12 @@
     - cd
     - echo
   ruby_19: 
-    :paths: 
+    globs: 
     - /Users/bozo/.rvm/ruby-1.9.1-p378/lib/ruby/1.9.1/**/*.{rb,bundle,so,c}
     - /Users/bozo/.rvm/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/**/*.{rb,bundle,so,c}
     alias: r9
   bin: 
-    paths: 
+    globs: 
     - /Users/bozo/.rvm/bin/*
     - /usr/bin/*
     - /bin/*
@@ -126,7 +126,7 @@
     - less
     alias: b
   gem_doc: 
-    paths: 
+    globs: 
     - /Users/bozo/.gem/ruby/1.8/doc/*
     - /Library/Ruby/Gems/1.8/doc/*
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/doc/*
@@ -140,13 +140,13 @@
       shell_command: ri --no-standard-docs -d
     alias: gd
   ruby: 
-    paths: 
+    globs: 
     - /Library/Ruby/Site/1.8/**/*.{rb,bundle,so,c}
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/**/*.{rb,bundle,so,c}
     alias: r
   ror: 
     desc: access any files from the root of a rails project
-    paths: 
+    globs: 
     - "{app,config,lib}/**/*"
     - "{db}/**/*.rb"
     commands: 
