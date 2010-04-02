@@ -1,5 +1,4 @@
 --- 
-:complete_regex: true
 :bolts: 
   app: 
     globs: 
@@ -21,6 +20,15 @@
     - echo
     - vim
     alias: rt
+  rails: 
+    globs: 
+    - "{app,config,lib}/**/*"
+    - "{db}/**/*.rb"
+    commands: 
+    - echo
+    - grep
+    - vim
+    alias: ror
   code: 
     globs: 
     - /Users/bozo/code/gems/*
@@ -44,9 +52,9 @@
     globs: 
     - "**/*.rb"
     - bin/**
+    alias: rb
     add_commands: 
     - git
-    alias: rb
   ruby_load_path: 
     globs: 
     - /Users/bozo/.rip/active/lib/**/*.rb
@@ -78,12 +86,12 @@
   code_world: 
     globs: 
     - /Users/bozo/code/world/*
-    alias: cw
     commands: 
     - echo
     - mate
     - cd
     - less
+    alias: cw
   notes: 
     globs: 
     - /Users/bozo/docs/notes/**/*.otl
@@ -94,11 +102,11 @@
   wild_dir: 
     globs: 
     - "**/"
-    alias: wd
     commands: 
     - ls
     - cd
     - echo
+    alias: wd
   ruby_19: 
     globs: 
     - /Users/bozo/.rvm/ruby-1.9.1-p378/lib/ruby/1.9.1/**/*.{rb,bundle,so,c}
@@ -128,10 +136,10 @@
     - /Library/Ruby/Gems/1.8/doc/*
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/doc/*
     commands: 
-    - post_path: /rdoc/index.html
+    - name: o-gd
+      post_path: /rdoc/index.html
       desc: open gem's doc in browser
       shell_command: open
-      name: o-gd
     - post_path: /ri
       desc: access ri documentation limited to this gem
       shell_command: ri --no-standard-docs -d
@@ -141,24 +149,25 @@
     - /Library/Ruby/Site/1.8/**/*.{rb,bundle,so,c}
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/**/*.{rb,bundle,so,c}
     alias: r
-  rails:
-    globs: 
-    - "{app,config,lib}/**/*"
-    - "{db}/**/*.rb"
-    commands: 
-    - echo
-    - grep
-    - vim
-    alias: ror
   gem_doc19: 
     globs: 
     - /Users/bozo/.rvm/gems/ruby/1.9.1/doc/*
     :commands: 
-    - shell_command: open
-      desc: open a gem's documentation in a browser
+    - name: o-gd19
       post_path: /rdoc/index.html
-      name: o-gd19
+      shell_command: open
+      desc: open a gem's documentation in a browser
     alias: gd19
+  lightning: 
+    globs: 
+    - /Users/bozo/.lightning/**/*.rb
+    alias: lg
+    commands:
+    - vim
+    - mate
+:ignore_paths: 
+- .DS_Store
+- .git/
 :shell_commands: 
   cd: cd
   cp: cp
@@ -168,6 +177,4 @@
   ls: ls
   mate: m
   echo: e
-:ignore_paths: 
-- .DS_Store
-- .git/
+:complete_regex: true
