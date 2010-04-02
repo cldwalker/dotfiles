@@ -10,7 +10,6 @@
       shell_command: open -a
     alias: a
   ruby_test: 
-    desc: base directory of a ruby gem project
     globs: 
     - test/**/*_test.rb
     - spec/**/*.spec
@@ -23,7 +22,6 @@
     - vim
     alias: rt
   code: 
-    desc: my code directories
     globs: 
     - /Users/bozo/code/gems/*
     - /Users/bozo/code/repo/*
@@ -43,7 +41,6 @@
     add_commands: 
     - git
   local_ruby: 
-    desc: base directory of a ruby gem project
     globs: 
     - "**/*.rb"
     - bin/**
@@ -145,7 +142,6 @@
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/**/*.{rb,bundle,so,c}
     alias: r
   ror: 
-    desc: access any files from the root of a rails project
     globs: 
     - "{app,config,lib}/**/*"
     - "{db}/**/*.rb"
