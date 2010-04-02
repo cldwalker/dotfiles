@@ -141,7 +141,7 @@
     - /Library/Ruby/Site/1.8/**/*.{rb,bundle,so,c}
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/**/*.{rb,bundle,so,c}
     alias: r
-  ror: 
+  rails:
     globs: 
     - "{app,config,lib}/**/*"
     - "{db}/**/*.rb"
@@ -149,8 +149,9 @@
     - echo
     - grep
     - vim
+    alias: ror
   gem_doc19: 
-    :globs: 
+    globs: 
     - /Users/bozo/.rvm/gems/ruby/1.9.1/doc/*
     :commands: 
     - shell_command: open
