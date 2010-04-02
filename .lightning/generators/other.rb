@@ -18,4 +18,10 @@ module Lightning::Generators
   def ruby_dir
     { :globs=>system_ruby.map {|e| e +"/**/"} }
   end
+
+  def gem_doc
+    { :globs=>`gem environment path`.chomp.split(":").map {|e| e +"/doc/*" },
+      :commands=>[ {'shell_command'=>'open', 'desc'=>"open a gem's documentation in a browser",
+        'post_path'=>'/rdoc/index.html', 'name'=>'gem-doc' } ] }
+  end
 end
