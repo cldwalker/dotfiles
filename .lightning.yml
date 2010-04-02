@@ -46,14 +46,16 @@
     globs: 
     - "**/*"
     alias: w
-    add_commands: 
+    global: true
+    commands: 
     - git
   local_ruby: 
     globs: 
     - "**/*.rb"
     - bin/**
     alias: rb
-    add_commands: 
+    global: true
+    commands: 
     - git
   ruby_load_path: 
     globs: 
@@ -79,7 +81,8 @@
       g3: /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems
       g1: /Library/Ruby/Gems/1.8/gems
     alias: g
-    add_commands: 
+    global: true
+    commands: 
     - name: pb-g
       add_to_command: " |pbcopy"
       shell_command: echo -n
@@ -108,6 +111,7 @@
     - echo
     alias: wd
   ruby_19: 
+    global: true
     globs: 
     - /Users/bozo/.rvm/ruby-1.9.1-p378/lib/ruby/1.9.1/**/*.{rb,bundle,so,c}
     - /Users/bozo/.rvm/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/**/*.{rb,bundle,so,c}
@@ -145,6 +149,7 @@
       shell_command: ri --no-standard-docs -d
     alias: gd
   ruby: 
+    global: true
     globs: 
     - /Library/Ruby/Site/1.8/**/*.{rb,bundle,so,c}
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/**/*.{rb,bundle,so,c}
