@@ -4,7 +4,7 @@
     globs: 
     - /Applications/*.app
     - /Applications/Utilities/*.app
-    commands: 
+    functions: 
     - name: oa
       shell_command: open -a
     alias: a
@@ -12,7 +12,7 @@
     globs: 
     - test/**/*_test.rb
     - spec/**/*.spec
-    commands: 
+    functions: 
     - name: ba
       shell_command: bacon -Ilib
     - name: tt
@@ -24,7 +24,7 @@
     globs: 
     - "{app,config,lib}/**/*"
     - "{db}/**/*.rb"
-    commands: 
+    functions: 
     - echo
     - grep
     - vim
@@ -36,7 +36,7 @@
     - /Users/bozo/code/repo/priv/*
     - /Users/bozo/code/tds/gems/*
     - /Users/bozo/code/fork/*
-    commands: 
+    functions: 
     - name: c
       shell_command: cd
     - mate
@@ -47,7 +47,7 @@
     - "**/*"
     alias: w
     global: true
-    commands: 
+    functions: 
     - git
   local_ruby: 
     globs: 
@@ -55,7 +55,7 @@
     - bin/**
     alias: rb
     global: true
-    commands: 
+    functions: 
     - git
   ruby_load_path: 
     globs: 
@@ -67,7 +67,7 @@
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/**/*.rb
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/powerpc-darwin9.0/**/*.rb
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0/**/*.rb
-    commands: 
+    functions: 
     - less
     - echo
     alias: rlp
@@ -82,14 +82,14 @@
       g1: /Library/Ruby/Gems/1.8/gems
     alias: g
     global: true
-    commands: 
+    functions: 
     - name: pb-g
       add_to_command: " |pbcopy"
       shell_command: echo -n
   code_world: 
     globs: 
     - /Users/bozo/code/world/*
-    commands: 
+    functions: 
     - echo
     - mate
     - cd
@@ -98,14 +98,14 @@
   notes: 
     globs: 
     - /Users/bozo/docs/notes/**/*.otl
-    commands: 
+    functions: 
     - vim
     - less
     alias: n
   wild_dir: 
     globs: 
     - "**/"
-    commands: 
+    functions: 
     - ls
     - cd
     - echo
@@ -131,7 +131,7 @@
     - /usr/local/mysql/bin/*
     - /Users/bozo/bin/*
     - /Users/bozo/.rip/active/bin/*
-    commands: 
+    functions: 
     - less
     alias: b
   gem_doc: 
@@ -139,7 +139,7 @@
     - /Users/bozo/.gem/ruby/1.8/doc/*
     - /Library/Ruby/Gems/1.8/doc/*
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/doc/*
-    commands: 
+    functions: 
     - name: o-gd
       post_path: /rdoc/index.html
       desc: open gem's doc in browser
@@ -157,7 +157,7 @@
   gem_doc19: 
     globs: 
     - /Users/bozo/.rvm/gems/ruby/1.9.1/doc/*
-    :commands: 
+    functions: 
     - name: o-gd19
       post_path: /rdoc/index.html
       shell_command: open
@@ -167,7 +167,7 @@
     globs: 
     - /Users/bozo/.lightning/**/*.rb
     alias: lg
-    commands:
+    functions:
     - vim
     - mate
 :ignore_paths: 
