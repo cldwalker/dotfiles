@@ -2,11 +2,8 @@ module Lightning
   module Commands
     meta 'BOLT', 'Show all full paths of a bolt'
     def paths(argv)
-      bolt = argv.shift
-      if bolts[bolt]
-        puts CompletionMap.new(bolts[bolt].paths).map.values.sort
-      else
-        puts "Can't find bolt '#{bolt}'"
+      Lightning.config.if_bolt_found(argv.shift) do |bolt|
+        puts CompletionMap.new(Lightning.bolts[bolt].globs).map.values.sort
       end
     end
 
