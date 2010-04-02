@@ -7,6 +7,13 @@ module Lightning
       end
     end
 
+    meta 'GLOBS', 'Translates globs into full paths'
+    def glob(argv)
+      puts Dir.glob(argv, File::FNM_DOTMATCH).sort.delete_if {|e|
+        e =~ /(#{CompletionMap.ignore_paths.join('|')})/
+      }
+    end
+
     meta '', 'Edits config file'
     def edit(argv)
       system ENV["EDITOR"] || 'vim', Config.config_file
