@@ -282,6 +282,13 @@ m-g () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete m-g" m-g
 
+e-g () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate e-g $@) )
+  echo "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete e-g" e-g
+
 e-cw () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate e-cw $@) )
