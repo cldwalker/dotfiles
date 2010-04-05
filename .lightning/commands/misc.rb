@@ -1,25 +1,25 @@
 module Lightning
   module Commands
-    meta 'BOLT', 'Show all full paths of a bolt'
+    desc 'BOLT', 'Show all full paths of a bolt'
     def paths(argv)
       Lightning.config.if_bolt_found(argv.shift) do |bolt|
         puts CompletionMap.new(Lightning.bolts[bolt].globs).map.values.sort
       end
     end
 
-    meta 'GLOBS', 'Translates globs into full paths'
+    desc 'GLOBS', 'Translates globs into full paths'
     def glob(argv)
       puts Dir.glob(argv, File::FNM_DOTMATCH).sort.delete_if {|e|
         e =~ /(#{CompletionMap.ignore_paths.join('|')})/
       }
     end
 
-    meta '', 'Edits config file'
+    desc '', 'Edits config file'
     def edit(argv)
       system ENV["EDITOR"] || 'vim', Config.config_file
     end
 
-    meta '[-s|--shell_command]', 'Map of functions by bolt or shell_command'
+    desc '[-s|--shell_command]', 'Map of functions by bolt or shell_command'
     def map(argv)
       require 'hirb'
       Lightning.setup
