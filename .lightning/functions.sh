@@ -1,7 +1,8 @@
 #### This file was built by lightning. ####
 #LBIN_PATH="$PWD/bin/" #only use for development
 LBIN_PATH=""
- lightning-reload() {
+
+lightning-reload() {
   lightning install $@
   source_file=$(lightning source_file)
   source $source_file
