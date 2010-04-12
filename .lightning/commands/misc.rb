@@ -22,7 +22,6 @@ module Lightning
     desc '[-s|--shell_command]', 'Map of functions by bolt or shell_command'
     def map(argv)
       require 'hirb'
-      Lightning.setup
       shell_cmd = %w{-s --shell_command}.include?(argv[0])
       bolt_functions = Lightning.functions.inject({}) {|a,(k,v)|
         hash_key = shell_cmd ? v.shell_command : v.bolt.name
