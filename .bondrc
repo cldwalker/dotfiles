@@ -1,0 +1,31 @@
+actions do
+  def alias_constants(input)
+    fetch_constants = proc {|klass, klass_alias| klass.constants.grep(/^#{klass_alias}/i).map {|f| klass.const_get(f)} }
+    fetch_string_constants = proc {|klass, klass_alias|
+      klass.constants.grep(/^#{klass_alias}/i).map {|f|
+        (val = klass.const_get(f)) && val.is_a?(Module) ? val.to_s : "#{klass}::#{f}"
+      }
+    }
+
+    index = 1
+    aliases = input.split(":")
+    aliases.inject([Object]) do |completions,a|
+      completions = completions.select {|e| e.is_a?(Module) }.map {|klass|
+        aliases.size != index ? fetch_constants.call(klass, a) : fetch_string_constants.call(klass, a)
+      }.flatten
+      index += 1; completions
+    end
+  end
+
+  def my_constants(input)
+    receiver = input.matched[2]
+    candidates = current_eval("#{receiver}.constants")
+    candidates.grep(/^#{Regexp.escape(input.matched[5])}/).map {|e| receiver + "::" + e}
+  end
+end
+
+debrief :debug=>true, :default_search=>:underscore
+recomplete(:anywhere=>/((((::)?[A-Z][^:.\(]*)+)::?([^:.]*))$/, :action=>:my_constants, :search=>false)
+# place it before symbols
+#complete(:on=>/((([a-z][^:.\(]*)+):)+$/, :search=>false, :action=>:alias_constants, :place=>5)
+complete(:on=>/ENV\[["'](\S*)$/, :search=>false) {|e| ENV.keys.grep(/^#{Regexp.escape(e.matched[1])}/i) }
