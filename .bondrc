@@ -28,4 +28,3 @@ debrief :debug=>true, :default_search=>:underscore
 recomplete(:anywhere=>/((((::)?[A-Z][^:.\(]*)+)::?([^:.]*))$/, :action=>:my_constants, :search=>false)
 # place it before symbols
 #complete(:on=>/((([a-z][^:.\(]*)+):)+$/, :search=>false, :action=>:alias_constants, :place=>5)
-complete(:on=>/ENV\[["'](\S*)$/, :search=>false) {|e| ENV.keys.grep(/^#{Regexp.escape(e.matched[1])}/i) }
