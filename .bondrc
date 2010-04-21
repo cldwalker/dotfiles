@@ -25,6 +25,6 @@ actions do
 end
 
 debrief :debug=>true, :default_search=>:underscore
-recomplete(:anywhere=>/((((::)?[A-Z][^:.\(]*)+)::?([^:.]*))$/, :action=>:my_constants, :search=>false)
-# place it before symbols
-#complete(:on=>/((([a-z][^:.\(]*)+):)+$/, :search=>false, :action=>:alias_constants, :place=>5)
+# place it before modules + symbols
+complete(:on=>/(?:(?:[a-zA-Z]\w*):)+(\w+)?$/, :search=>false, :action=>:alias_constants, :place=>3)
+recomplete(:anywhere=>'(((::)?[A-Z][^:.\(]*)+)::?([^:.]*)', :action=>:my_constants, :search=>false)
