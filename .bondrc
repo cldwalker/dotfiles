@@ -1,30 +1,25 @@
-actions do
-  def alias_constants(input)
-    fetch_constants = proc {|klass, klass_alias| klass.constants.grep(/^#{klass_alias}/i).map {|f| klass.const_get(f)} }
-    fetch_string_constants = proc {|klass, klass_alias|
-      klass.constants.grep(/^#{klass_alias}/i).map {|f|
-        (val = klass.const_get(f)) && val.is_a?(Module) ? val.to_s : "#{klass}::#{f}"
-      }
-    }
-
-    index = 1
-    aliases = input.split(":")
-    aliases.inject([Object]) do |completions,a|
-      completions = completions.select {|e| e.is_a?(Module) }.map {|klass|
-        aliases.size != index ? fetch_constants.call(klass, a) : fetch_string_constants.call(klass, a)
-      }.flatten
-      index += 1; completions
-    end
-  end
-
-  def my_constants(input)
-    receiver = input.matched[2]
-    candidates = current_eval("#{receiver}.constants")
-    candidates.grep(/^#{Regexp.escape(input.matched[5])}/).map {|e| receiver + "::" + e}
-  end
+# place it before modules + symbols
+complete(:on=>/(?:(?:[a-zA-Z]\w*):)+(\w+)?$/, :search=>false, :action=>:alias_constants, :place=>4)
+recomplete(:name=>:constants, :anywhere=>'(((::)?[A-Z][^:.\(]*)+)::?([^:.]*)') do |input|
+  receiver = input.matched[2]
+  candidates = Mission.current_eval("#{receiver}.constants")
+  candidates.grep(/^#{Regexp.escape(input.matched[5])}/).map {|e| receiver + "::" + e}
 end
 
-debrief :debug=>true, :default_search=>:underscore
-# place it before modules + symbols
-complete(:on=>/(?:(?:[a-zA-Z]\w*):)+(\w+)?$/, :search=>false, :action=>:alias_constants, :place=>3)
-recomplete(:anywhere=>'(((::)?[A-Z][^:.\(]*)+)::?([^:.]*)', :action=>:my_constants, :search=>false)
+def alias_constants(input)
+  fetch_constants = proc {|klass, klass_alias| klass.constants.grep(/^#{klass_alias}/i).map {|f| klass.const_get(f)} }
+  fetch_string_constants = proc {|klass, klass_alias|
+    klass.constants.grep(/^#{klass_alias}/i).map {|f|
+      (val = klass.const_get(f)) && val.is_a?(Module) ? val.to_s : "#{klass}::#{f}"
+    }
+  }
+
+  index = 1
+  aliases = input.split(":")
+  aliases.inject([Object]) do |completions,a|
+    completions = completions.select {|e| e.is_a?(Module) }.map {|klass|
+      aliases.size != index ? fetch_constants.call(klass, a) : fetch_string_constants.call(klass, a)
+    }.flatten
+    index += 1; completions
+  end
+end
