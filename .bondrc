@@ -1,10 +1,10 @@
 # place it before modules + symbols
 complete(:on=>/(?:(?:[a-zA-Z]\w*):)+(\w+)?$/, :search=>false, :action=>:alias_constants, :place=>4)
-recomplete(:name=>:constants, :anywhere=>'(((::)?[A-Z][^:.\(]*)+)::?([^:.]*)') do |input|
-  receiver = input.matched[2]
-  candidates = Mission.current_eval("#{receiver}.constants")
-  candidates.grep(/^#{Regexp.escape(input.matched[5])}/).map {|e| receiver + "::" + e}
-end
+recomplete(:name=>:constants, :anywhere=>'([A-Z][^:. \(]*)::([^: .]*)') {|e|
+  receiver = e.matched[2]
+  candidates = eval("#{receiver}.constants") || []
+  normal_search(e.matched[3], candidates).map {|e| receiver + "::" + e}
+}
 
 def alias_constants(input)
   fetch_constants = proc {|klass, klass_alias| klass.constants.grep(/^#{klass_alias}/i).map {|f| klass.const_get(f)} }
