@@ -1,6 +1,6 @@
 # place it before modules + symbols
 complete(:on=>/(?:(?:[a-zA-Z]\w*):)+(\w+)?$/, :search=>false, :action=>:alias_constants, :place=>4)
-recomplete(:name=>:constants, :anywhere=>'([A-Z][^:. \(]*)::([^: .]*)') {|e|
+recomplete(:name=>:constants, :anywhere=>'([A-Z][^. \(]*)::([^: .]*)') {|e|
   receiver = e.matched[2]
   candidates = eval("#{receiver}.constants") || []
   normal_search(e.matched[3], candidates).map {|e| receiver + "::" + e}
