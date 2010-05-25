@@ -8,4 +8,3 @@ complete(:method=>"Object#method") {|e|
   e.object.is_a?(Module) ? e.object.methods - e.object.class.methods : e.object.class.instance_methods(false)
 }
 complete(:methods=>%w{render v}, :action=>'Hirb::Helpers::Table.render')
-complete(:method=>'menu', :action=>'Hirb::Menu.render')
