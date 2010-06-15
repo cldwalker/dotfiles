@@ -1,63 +1,73 @@
 --- 
+:shell_commands: 
+  cd: cd
+  cp: cp
+  grep: g
+  vim: v
+  ls: ls
+  less: l
+  echo: e
+  mate: m
 :bolts: 
-  app: 
+  rip_dirs: 
     globs: 
-    - /Applications/*.app
-    - /Applications/Utilities/*.app
-    functions: 
-    - name: oa
-      shell_command: open -a
-    alias: a
-  ruby_test: 
-    globs: 
-    - test/**/*_test.rb
-    - spec/**/*.spec
-    functions: 
-    - name: ba
-      shell_command: bacon -Ilib
-    - name: tt
-      shell_command: testrb
-    - echo
-    - vim
-    alias: rt
+    - /Users/bozo/.rip/.packages/*
+    global: true
+    alias: pd
   rails: 
-    globs: 
-    - "{app,config,lib}/**/*"
-    - "{db}/**/*.rb"
     functions: 
     - echo
     - grep
     - vim
+    globs: 
+    - "{app,config,lib}/**/*"
+    - "{db}/**/*.rb"
     alias: ror
+  ruby_test: 
+    functions: 
+    - name: ba
+      shell_command: bacon -Ilib
+    - name: tb
+      shell_command: testrb
+    - name: sp
+      shell_command: spec
+    - echo
+    - vim
+    globs: 
+    - "{test,spec}/**/*_{spec,test}.rb"
+    - "{test,spec}/**/{spec,test}_*.rb"
+    - spec/**/*.spec
+    alias: rt
+  app: 
+    functions: 
+    - name: oa
+      shell_command: open -a
+    globs: 
+    - /Applications/*.app
+    - /Applications/Utilities/*.app
+    alias: a
+  rip_path: 
+    globs: 
+    - /Users/bozo/.rip/*/lib/**/*.rb
+    global: true
+    alias: pp
   code: 
+    functions: 
+    - name: c
+      shell_command: cd
+    - mate
+    - echo
     globs: 
     - /Users/bozo/code/gems/*
     - /Users/bozo/code/repo/*
     - /Users/bozo/code/repo/priv/*
     - /Users/bozo/code/tds/gems/*
     - /Users/bozo/code/fork/*
-    functions: 
-    - name: c
-      shell_command: cd
-    - mate
-    - echo
     alias: c
-  wild: 
-    globs: 
-    - "**/*"
-    alias: w
-    global: true
-    functions: 
-    - git
-  local_ruby: 
-    globs: 
-    - "**/*.rb"
-    - bin/**
-    alias: rb
-    global: true
-    functions: 
-    - git
   ruby_load_path: 
+    functions: 
+    - less
+    - echo
     globs: 
     - /Users/bozo/.rip/active/lib/**/*.rb
     - /Library/Ruby/Site/1.8/**/*.rb
@@ -67,56 +77,70 @@
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/**/*.rb
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/powerpc-darwin9.0/**/*.rb
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0/**/*.rb
-    functions: 
-    - less
-    - echo
     alias: rlp
-  gem: 
-    globs: 
-    - /Users/bozo/.gem/ruby/1.8/gems/*
-    - /Library/Ruby/Gems/1.8/gems/*
-    - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/*
-    aliases: 
-      g2: /Users/bozo/.gem/ruby/1.8/gems
-      g3: /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems
-      g1: /Library/Ruby/Gems/1.8/gems
-    alias: g
-    global: true
+  local_ruby: 
     functions: 
-    - name: pb-g
-      add_to_command: " |pbcopy"
-      shell_command: echo -n
-  code_world: 
+    - git
     globs: 
-    - /Users/bozo/code/world/*
+    - "**/*.rb"
+    - bin/**
+    global: true
+    alias: rb
+  wild: 
+    functions: 
+    - git
+    globs: 
+    - "**/*"
+    global: true
+    alias: w
+  code_world: 
     functions: 
     - echo
     - mate
     - cd
     - less
-    alias: cw
-  notes: 
     globs: 
-    - /Users/bozo/docs/notes/**/*.otl
+    - /Users/bozo/code/world/*
+    alias: cw
+  gem: 
+    functions: 
+    - name: pb-g
+      add_to_command: " |pbcopy"
+      shell_command: echo -n
+    globs: 
+    - /Users/bozo/.gem/ruby/1.8/gems/*
+    - /Library/Ruby/Gems/1.8/gems/*
+    - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/*
+    global: true
+    aliases: 
+      g2: /Users/bozo/.gem/ruby/1.8/gems
+      g3: /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems
+      g1: /Library/Ruby/Gems/1.8/gems
+    alias: g
+  notes: 
     functions: 
     - vim
     - less
-    alias: n
-  wild_dir: 
     globs: 
-    - "**/"
+    - /Users/bozo/docs/notes/**/*.otl
+    alias: n
+  ruby_19: 
+    globs: 
+    - /Users/bozo/.rvm/ruby-1.9.1-p378/lib/ruby/1.9.1/**/*.{rb,bundle,so,c}
+    - /Users/bozo/.rvm/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/**/*.{rb,bundle,so,c}
+    global: true
+    alias: r9
+  wild_dir: 
     functions: 
     - ls
     - cd
     - echo
-    alias: wd
-  ruby_19: 
-    global: true
     globs: 
-    - /Users/bozo/.rvm/ruby-1.9.1-p378/lib/ruby/1.9.1/**/*.{rb,bundle,so,c}
-    - /Users/bozo/.rvm/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/**/*.{rb,bundle,so,c}
-    alias: r9
+    - "**/"
+    alias: wd
   bin: 
+    functions: 
+    - less
     globs: 
     - /Users/bozo/.rvm/bin/*
     - /usr/bin/*
@@ -131,55 +155,44 @@
     - /usr/local/mysql/bin/*
     - /Users/bozo/bin/*
     - /Users/bozo/.rip/active/bin/*
-    functions: 
-    - less
     alias: b
+  ruby: 
+    globs: 
+    - /Library/Ruby/Site/1.8/**/*.{rb,bundle,so,c}
+    - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/**/*.{rb,bundle,so,c}
+    global: true
+    alias: r
   gem_doc: 
+    functions: 
+    - name: o-gd
+      post_path: /rdoc/index.html
+      shell_command: open
+      desc: open gem's doc in browser
+    - post_path: /ri
+      shell_command: ri --no-standard-docs -d
+      desc: access ri documentation limited to this gem
     globs: 
     - /Users/bozo/.gem/ruby/1.8/doc/*
     - /Library/Ruby/Gems/1.8/doc/*
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/doc/*
-    functions: 
-    - name: o-gd
-      post_path: /rdoc/index.html
-      desc: open gem's doc in browser
-      shell_command: open
-    - post_path: /ri
-      desc: access ri documentation limited to this gem
-      shell_command: ri --no-standard-docs -d
     alias: gd
-  ruby: 
-    global: true
-    globs: 
-    - /Library/Ruby/Site/1.8/**/*.{rb,bundle,so,c}
-    - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/**/*.{rb,bundle,so,c}
-    alias: r
   gem_doc19: 
-    globs: 
-    - /Users/bozo/.rvm/gems/ruby/1.9.1/doc/*
     functions: 
     - name: o-gd19
       post_path: /rdoc/index.html
-      shell_command: open
       desc: open a gem's documentation in a browser
+      shell_command: open
+    globs: 
+    - /Users/bozo/.rvm/gems/ruby/1.9.1/doc/*
     alias: gd19
   lightning: 
+    functions: 
+    - vim
+    - mate
     globs: 
     - /Users/bozo/.lightning/**/*.rb
     alias: lg
-    functions:
-    - vim
-    - mate
 :ignore_paths: 
 - .DS_Store
 - .git/
-:shell_commands: 
-  cd: cd
-  cp: cp
-  vim: v
-  grep: g
-  less: l
-  ls: ls
-  mate: m
-  echo: e
 :complete_regex: true
