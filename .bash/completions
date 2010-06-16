@@ -2,6 +2,8 @@ if [ -f ~/.bash/completion/git-completion.bash ]; then
   source ~/.bash/completion/git-completion.bash
 fi
 
+eval `rip completion --bash`
+
 #completion for cheat
 if [ ! -r ~/.cheat_completion ]; then
   echo "Rebuilding Cheat cache... "

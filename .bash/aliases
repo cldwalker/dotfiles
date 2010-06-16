@@ -72,6 +72,7 @@ alias clj='java -cp ~/apps/clojure-1.1.0/clojure.jar clojure.main'
 alias h=heroku
 alias reb='rip env base'
 alias rp='rip-push'
+alias rpp='rip-pop'
 
 #git
 alias g='git'
