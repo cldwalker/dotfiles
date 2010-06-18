@@ -1,4 +1,8 @@
-actionpack 2.3.4
-activerecord 2.3.4
-activeresource 2.3.4
-activesupport 2.3.4
+actionmailer 2.3.8
+actionpack 2.3.8
+activerecord 2.3.8
+activeresource 2.3.8
+activesupport 2.3.8
+rack 1.2.1
+rails 2.3.8
+rake 0.8.7

@@ -3,7 +3,7 @@ heroku 1.9.9
 json_pure 1.4.3
 launchy 0.3.5
 mime-types 1.16
-rack 1.1.0
+rack 1.2.1
 rake 0.8.7
 rest-client 1.5.1
 shotgun 0.6

@@ -1,6 +1,5 @@
 addressable 2.1.2
 data_objects 0.10.2
-json_pure 1.4.3
 rdf 0.2.0
 rdf-do 0.3.1
 rdf-isomorphic 0.1.2
