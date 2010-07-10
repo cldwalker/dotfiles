@@ -1,3 +1,4 @@
+bcat 0.5.0
 capistrano 2.5.18
 cheat 1.2.1
 gemcutter 0.5.0
@@ -10,6 +11,7 @@ net-scp 1.0.2
 net-sftp 2.0.4
 net-ssh 2.0.23
 net-ssh-gateway 1.0.1
+rack 1.2.1
 rubyforge 2.0.4
 text-format 1.0.0
 text-hyphen 1.0.0

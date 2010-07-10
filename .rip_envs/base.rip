@@ -1,5 +1,4 @@
-file:///Users/bozo/code/gems/alias c3980e3d3823c9a1974c0bb5d7e2b97329b56990
-file:///Users/bozo/code/gems/boson v0.2.5
-file:///Users/bozo/code/gems/hirb 6d078d610527012f7d46d7d4d09db23ebe06fda4
-file:///Users/bozo/code/gems/lightning adb13c7e972e04949faec3bc092ca79ed80aa0c9
+alias 0.2.2
+file:///Users/bozo/code/gems/lightning e64445be66204d4d709a285fb2e02318363faf84
+local_gem 0.1.4
 rake 0.8.7
