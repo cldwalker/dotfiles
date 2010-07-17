@@ -1,0 +1,7 @@
+.gitignore
+coverage
+pkg
+website
+td
+metadata.rip
+.yardoc
