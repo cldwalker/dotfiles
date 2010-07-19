@@ -18,7 +18,7 @@ export LC_CTYPE=en_US.UTF-8
 export RUBYLIB=/Users/bozo/code/fork/rip/lib
 export NO_RUBYGEMS=true
 # only page if more than a screenful
-export LESS=FSRX
+export LESS=FRX
 eval `rip-config`
 
 source ~/.bash/aliases
