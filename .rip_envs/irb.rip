@@ -1,3 +1,4 @@
+Platform 0.4.0
 activesupport 2.3.8
 aggregate 0.2.1
 atom 0.3
@@ -23,6 +24,7 @@ git://github.com/justinperkins/ruby-gmail.git ddbb9a9668ade4ed515214bafce723ca85
 shared-mime-info 0.1
 sketches 0.1.1
 ssoroka-ansi 1.0.1
+termios 0.9.4
 tlsmail 0.0.1
 treetop 1.4.8
 twilio 2.8.0
