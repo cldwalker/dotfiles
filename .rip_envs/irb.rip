@@ -2,6 +2,7 @@ Platform 0.4.0
 activesupport 2.3.8
 aggregate 0.2.1
 atom 0.3
+file:///Users/bozo/code/gems/bond 0e662ededa9c952c4241000aaf9cd0bb3859eba9
 builder 2.1.2
 crack 0.1.6
 diff-lcs 1.1.2
@@ -30,3 +31,4 @@ treetop 1.4.8
 twilio 2.8.0
 twitter 0.9.7
 www-delicious 0.3.0
+yajl-ruby 0.7.7
