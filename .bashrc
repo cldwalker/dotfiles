@@ -19,6 +19,7 @@ export RUBYLIB=/Users/bozo/code/fork/rip/lib
 export NO_RUBYGEMS=true
 # only page if more than a screenful
 export LESS=FRX
+export RIPHELPERS=1
 eval `rip-config`
 
 source ~/.bash/aliases
