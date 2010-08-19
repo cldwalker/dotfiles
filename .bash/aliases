@@ -51,6 +51,7 @@ alias js='jekyll --server'
 alias mi=mini-irb.rb
 alias pirb='irb -f -rubygems -rirb/completion'
 alias lsc='RAILS_ENV=local script/console'
+alias lrc='RAILS_ENV=local rails console'
 alias sc='script/console'
 alias tf='tail -f'
 alias gs='gem grep -r'

@@ -3,10 +3,7 @@
 source /home/bozo/.screenrc
 screen -t todo vim /home/bozo/docs/notes/todo.otl
 chdir /home/bozo/code/repo/tag-tree
-screen -t lsc script/console local
-screen -t lsc2
+screen -t tt  #rvm use 1.8.7@rails3 && rip push irb && rip push db && rails console local
+screen -t tt
 chdir /home/bozo/code/gems/
-screen -t mi mini-irb.rb
-chdir /home/bozo/code/gems/boson
-screen -t code
-screen -t code2
+#screen -t irb rip push irb; irb
