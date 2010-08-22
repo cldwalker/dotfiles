@@ -1,0 +1,22 @@
+abstract 1.0.0
+arel 0.4.0
+builder 2.1.2
+git://github.com/carlhuda/bundler.git c7f06015886e07c1e697a930a30d884998e8b735
+erubis 2.6.6
+i18n 0.4.1
+mail 2.2.5
+mime-types 1.16
+polyglot 0.3.1
+rack 1.2.1
+rack-mount 0.6.11
+rack-test 0.5.4
+git://github.com/rails/rails.git /actionmailer v3.0.0_RC
+git://github.com/rails/rails.git /actionpack v3.0.0_RC
+git://github.com/rails/rails.git /activemodel v3.0.0_RC
+git://github.com/rails/rails.git /activerecord v3.0.0_RC
+git://github.com/rails/rails.git /activeresource v3.0.0_RC
+git://github.com/rails/rails.git /activesupport v3.0.0_RC
+git://github.com/rails/rails.git v3.0.0_RC
+git://github.com/rails/rails.git /railties v3.0.0_RC
+thor 0.14.0
+treetop 1.4.8

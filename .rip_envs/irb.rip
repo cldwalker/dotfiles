@@ -4,7 +4,7 @@ aggregate 0.2.1
 atom 0.3
 file:///Users/bozo/code/gems/bond 0e662ededa9c952c4241000aaf9cd0bb3859eba9
 builder 2.1.2
-crack 0.1.6
+crack 0.1.8
 diff-lcs 1.1.2
 duration 0.1.0
 file-find 0.3.4
@@ -12,7 +12,8 @@ googlebase 0.2.1
 file:///Users/bozo/code/fork/googlereader e75db2315f9d2997b2e46fe7aa75e150b7b3f1ba
 file:///Users/bozo/code/fork/grit 36a14b8041c388d7051e54e561e2c64e1d485970
 hashie 0.2.0
-httparty 0.5.2
+httparty 0.6.1
+json_pure 1.4.3
 local_gem 0.1.4
 file:///Users/bozo/code/fork/mail c8825148ef3f906f64ccdad50c68c9ab23f8da5a
 matthew-method_lister 0.3.2
