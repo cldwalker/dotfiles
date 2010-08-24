@@ -3,6 +3,12 @@ if [ -f ~/.lightning/functions.sh ]; then
   source ~/.lightning/functions.sh
 fi
 
+tobin()
+{
+  touch $1;
+  chmod +x $1;
+}
+
 cl () 
 { 
     cd $1;

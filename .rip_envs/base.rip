@@ -1,7 +1,9 @@
 alias 0.2.2
 /Users/bozo/code/gems/boson 
 /Users/bozo/code/gems/hirb 
-file:///Users/bozo/code/gems/lightning e64445be66204d4d709a285fb2e02318363faf84
+/Users/bozo/code/gems/lightning 
 local_gem 0.1.4
 rake 0.8.7
+git://github.com/josh/rip-bundle.git v0.9.4
 /Users/bozo/code/repo/rip-ext 
+/Users/bozo/code/repo/rip-licious 
