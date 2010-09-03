@@ -38,6 +38,12 @@
     - "{test,spec}/**/{spec,test}_*.rb"
     - spec/**/*.spec
     alias: rt
+  feature:
+    functions:
+    - name: cuc
+      shell_command: cucumber
+    globs:
+    - **/*.feature
   app: 
     functions: 
     - name: oa
