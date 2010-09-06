@@ -67,7 +67,7 @@
     - /Users/bozo/code/gems/*
     - /Users/bozo/code/work/*
     - /Users/bozo/code/repo/*
-    - /Users/bozo/code/repo/priv/*
+    - /Users/bozo/code/priv/*
     - /Users/bozo/code/tds/gems/*
     - /Users/bozo/code/fork/*
     alias: c
