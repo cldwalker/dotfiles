@@ -11,7 +11,7 @@
 :bolts: 
   rip_dirs: 
     globs: 
-    - /Users/bozo/.rip/.packages/*
+    - /Users/gabrielhorner/.rip/.packages/*
     global: true
     alias: pd
   rails: 
@@ -54,7 +54,7 @@
     alias: a
   rip_path: 
     globs: 
-    - /Users/bozo/.rip/*/lib/**/*.rb
+    - /Users/gabrielhorner/.rip/*/lib/**/*.rb
     global: true
     alias: pp
   code: 
@@ -64,19 +64,19 @@
     - mate
     - echo
     globs: 
-    - /Users/bozo/code/gems/*
-    - /Users/bozo/code/work/*
-    - /Users/bozo/code/repo/*
-    - /Users/bozo/code/priv/*
-    - /Users/bozo/code/tds/gems/*
-    - /Users/bozo/code/fork/*
+    - /Users/gabrielhorner/code/gems/*
+    - /Users/gabrielhorner/code/work/*
+    - /Users/gabrielhorner/code/repo/*
+    - /Users/gabrielhorner/code/priv/*
+    - /Users/gabrielhorner/code/tds/gems/*
+    - /Users/gabrielhorner/code/fork/*
     alias: c
   ruby_load_path: 
     functions: 
     - less
     - echo
     globs: 
-    - /Users/bozo/.rip/active/lib/**/*.rb
+    - /Users/gabrielhorner/.rip/active/lib/**/*.rb
     - /Library/Ruby/Site/1.8/**/*.rb
     - /Library/Ruby/Site/1.8/powerpc-darwin9.0/**/*.rb
     - /Library/Ruby/Site/1.8/universal-darwin9.0/**/*.rb
@@ -107,7 +107,7 @@
     - cd
     - less
     globs: 
-    - /Users/bozo/code/world/*
+    - /Users/gabrielhorner/code/world/*
     alias: cw
   gem: 
     functions: 
@@ -115,12 +115,12 @@
       add_to_command: " |pbcopy"
       shell_command: echo -n
     globs: 
-    - /Users/bozo/.gem/ruby/1.8/gems/*
+    - /Users/gabrielhorner/.gem/ruby/1.8/gems/*
     - /Library/Ruby/Gems/1.8/gems/*
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/*
     global: true
     aliases: 
-      g2: /Users/bozo/.gem/ruby/1.8/gems
+      g2: /Users/gabrielhorner/.gem/ruby/1.8/gems
       g3: /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems
       g1: /Library/Ruby/Gems/1.8/gems
     alias: g
@@ -129,12 +129,12 @@
     - vim
     - less
     globs: 
-    - /Users/bozo/docs/notes/**/*.otl
+    - /Users/gabrielhorner/docs/notes/**/*.otl
     alias: n
   ruby_19: 
     globs: 
-    - /Users/bozo/.rvm/ruby-1.9.1-p378/lib/ruby/1.9.1/**/*.{rb,bundle,so,c}
-    - /Users/bozo/.rvm/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/**/*.{rb,bundle,so,c}
+    - /Users/gabrielhorner/.rvm/ruby-1.9.1-p378/lib/ruby/1.9.1/**/*.{rb,bundle,so,c}
+    - /Users/gabrielhorner/.rvm/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/**/*.{rb,bundle,so,c}
     global: true
     alias: r9
   wild_dir: 
@@ -149,7 +149,7 @@
     functions: 
     - less
     globs: 
-    - /Users/bozo/.rvm/bin/*
+    - /Users/gabrielhorner/.rvm/bin/*
     - /usr/bin/*
     - /bin/*
     - /usr/sbin/*
@@ -160,8 +160,8 @@
     - /opt/local/bin/*
     - /opt/local/sbin/*
     - /usr/local/mysql/bin/*
-    - /Users/bozo/bin/*
-    - /Users/bozo/.rip/active/bin/*
+    - /Users/gabrielhorner/bin/*
+    - /Users/gabrielhorner/.rip/active/bin/*
     alias: b
   ruby: 
     globs: 
@@ -179,7 +179,7 @@
       shell_command: ri --no-standard-docs -d
       desc: access ri documentation limited to this gem
     globs: 
-    - /Users/bozo/.gem/ruby/1.8/doc/*
+    - /Users/gabrielhorner/.gem/ruby/1.8/doc/*
     - /Library/Ruby/Gems/1.8/doc/*
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/doc/*
     alias: gd
@@ -190,14 +190,14 @@
       desc: open a gem's documentation in a browser
       shell_command: open
     globs: 
-    - /Users/bozo/.rvm/gems/ruby/1.9.1/doc/*
+    - /Users/gabrielhorner/.rvm/gems/ruby/1.9.1/doc/*
     alias: gd19
   lightning: 
     functions: 
     - vim
     - mate
     globs: 
-    - /Users/bozo/.lightning/**/*.rb
+    - /Users/gabrielhorner/.lightning/**/*.rb
     alias: lg
 :ignore_paths: 
 - .DS_Store
