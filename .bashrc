@@ -18,13 +18,14 @@ export LC_CTYPE=en_US.UTF-8
 export NO_RUBYGEMS=true
 # only page if more than a screenful
 export LESS=FRX
-if [[ -x $(which rip) ]]; then
-  export PATH=/Users/bozo/code/fork/rip/bin:$PATH
-  export MANPATH=$MANPATH:/Users/bozo/code/fork/rip/man
+#if [[ -x $(which rip) ]]; then
+  export RIPDIR=/Users/gabrielhorner/.rip
+  export PATH=/Users/gabrielhorner/code/repo/rip/bin:$PATH
+  export MANPATH=$MANPATH:/Users/gabrielhorner/code/repo/rip/man
   export RIPHELPERS=1
-  export RUBYLIB=/Users/bozo/code/fork/rip/lib
+  export RUBYLIB=/Users/gabrielhorner/code/repo/rip/lib
   eval `rip-config`
-fi;
+#fi;
 
 source ~/.bash/aliases
 source ~/.bash/functions
