@@ -1,7 +1,5 @@
-/Users/bozo/code/gems/alias 
-/Users/bozo/code/gems/boson 
-/Users/bozo/code/gems/hirb 
-/Users/bozo/code/gems/lightning 
-rake 0.8.7
-/Users/bozo/code/repo/rip-ext 
-/Users/bozo/code/repo/rip-licious 
+git@github.com:cldwalker/alias.git e27a2bdbdb59c627bbba3a8fc0a0494b729dbf3e
+git@github.com:cldwalker/boson.git v0.3.0
+git@github.com:cldwalker/hirb.git 8fc7b60a8608d0433ec07c02930dbaef2d4d9a4e
+git@github.com:cldwalker/lightning.git 0f464886ae3118d79e8ac3829a13b6dd5cf569a3
+git@github.com:cldwalker/rip-licious.git 9470d5853a00f8a7ee80b7945ad73d5175ad0c6c

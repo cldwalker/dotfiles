@@ -14,6 +14,7 @@ googlebase 0.2.1
 git://github.com/cldwalker/googlereader.git e75db2315f9d2997b2e46fe7aa75e150b7b3f1ba
 git://github.com/cldwalker/grit.git 56cc709f7427ea20ea9971090a9efeba4eae3593
 hashie 0.2.0
+hirb 0.3.3
 httparty 0.6.1
 json_pure 1.4.3
 git://github.com/josh/keychain_services.git e990e4c1599f976e96677bb25f0059cb2967e8df
@@ -29,6 +30,7 @@ git://github.com/justinperkins/ruby-gmail.git ddbb9a9668ade4ed515214bafce723ca85
 shared-mime-info 0.1
 sketches 0.1.1
 ssoroka-ansi 1.0.1
+sys-admin 1.5.2
 termios 0.9.4
 tlsmail 0.0.1
 treetop 1.4.8

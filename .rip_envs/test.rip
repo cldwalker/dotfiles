@@ -1,8 +1,0 @@
-git://github.com/chneukirchen/bacon.git b90543f46b94af5d5c24720d8dce59e839c7409e
-bacon-bits 0.0.1
-contest 0.1.2
-mocha 0.9.8
-mocha-on-bacon 0.1.1
-rcov 0.9.8
-git://github.com/btakita/rr.git v1.0.0
-rspec 1.3.0
