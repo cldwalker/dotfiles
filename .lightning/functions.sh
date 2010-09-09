@@ -31,6 +31,13 @@ g-r9 () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete g-r9" g-r9
 
+e-ft () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate e-ft $@) )
+  echo "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete e-ft" e-ft
+
 m-pd () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate m-pd $@) )
@@ -136,6 +143,13 @@ l-r9 () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete l-r9" l-r9
 
+m-ft () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate m-ft $@) )
+  mate "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete m-ft" m-ft
+
 e-w () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate e-w $@) )
@@ -164,6 +178,13 @@ cd-r () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete cd-r" cd-r
 
+l-pp () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate l-pp $@) )
+  less "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete l-pp" l-pp
+
 v-g () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate v-g $@) )
@@ -177,13 +198,6 @@ g-rb () {
   grep "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete g-rb" g-rb
-
-l-pp () {
-  local IFS=$'\n'
-  local arr=( $(${LBIN_PATH}lightning-translate l-pp $@) )
-  less "${arr[@]}"
-}
-complete -o default -C "${LBIN_PATH}lightning-complete l-pp" l-pp
 
 m-lg () {
   local IFS=$'\n'
@@ -206,19 +220,19 @@ e-g () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete e-g" e-g
 
-cd-rb () {
-  local IFS=$'\n'
-  local arr=( $(${LBIN_PATH}lightning-translate cd-rb $@) )
-  cd "${arr[@]}"
-}
-complete -o default -C "${LBIN_PATH}lightning-complete cd-rb" cd-rb
-
 cp-g () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate cp-g $@) )
   cp "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete cp-g" cp-g
+
+cd-rb () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cd-rb $@) )
+  cd "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cd-rb" cd-rb
 
 g-w () {
   local IFS=$'\n'
@@ -241,6 +255,13 @@ cp-r9 () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete cp-r9" cp-r9
 
+v-ft () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate v-ft $@) )
+  vim "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete v-ft" v-ft
+
 sp () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate sp $@) )
@@ -254,6 +275,13 @@ cd-cw () {
   cd "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete cd-cw" cd-cw
+
+cp-pp () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cp-pp $@) )
+  cp "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cp-pp" cp-pp
 
 l-rb () {
   local IFS=$'\n'
@@ -282,13 +310,6 @@ c () {
   cd "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete c" c
-
-cp-pp () {
-  local IFS=$'\n'
-  local arr=( $(${LBIN_PATH}lightning-translate cp-pp $@) )
-  cp "${arr[@]}"
-}
-complete -o default -C "${LBIN_PATH}lightning-complete cp-pp" cp-pp
 
 v-lg () {
   local IFS=$'\n'
@@ -395,6 +416,13 @@ m-c () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete m-c" m-c
 
+g-ft () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate g-ft $@) )
+  grep "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete g-ft" g-ft
+
 l-pd () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate l-pd $@) )
@@ -415,6 +443,13 @@ git-w () {
   git "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete git-w" git-w
+
+cd-ft () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cd-ft $@) )
+  cd "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cd-ft" cd-ft
 
 cd-g () {
   local IFS=$'\n'
@@ -472,6 +507,20 @@ m-r9 () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete m-r9" m-r9
 
+m-pp () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate m-pp $@) )
+  mate "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete m-pp" m-pp
+
+l-ft () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate l-ft $@) )
+  less "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete l-ft" l-ft
+
 l-g () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate l-g $@) )
@@ -485,13 +534,6 @@ e-rb () {
   echo "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete e-rb" e-rb
-
-m-pp () {
-  local IFS=$'\n'
-  local arr=( $(${LBIN_PATH}lightning-translate m-pp $@) )
-  mate "${arr[@]}"
-}
-complete -o default -C "${LBIN_PATH}lightning-complete m-pp" m-pp
 
 e-rt () {
   local IFS=$'\n'
@@ -584,6 +626,13 @@ e-pd () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete e-pd" e-pd
 
+cp-ft () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cp-ft $@) )
+  cp "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cp-ft" cp-ft
+
 ri-gd () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate ri-gd $@) )
@@ -611,6 +660,13 @@ ls-w () {
   ls "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete ls-w" ls-w
+
+ls-ft () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate ls-ft $@) )
+  ls "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete ls-ft" ls-ft
 
 cuc () {
   local IFS=$'\n'

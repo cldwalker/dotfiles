@@ -44,6 +44,8 @@
       shell_command: cucumber
     globs:
     - **/*.feature
+    global: true
+    alias: ft
   app: 
     functions: 
     - name: oa
