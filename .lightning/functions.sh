@@ -10,6 +10,13 @@ lightning-reload() {
 }
 
 
+m-js () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate m-js $@) )
+  mate "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete m-js" m-js
+
 g-r () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate g-r $@) )
@@ -121,6 +128,13 @@ v-w () {
   vim "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete v-w" v-w
+
+v-js () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate v-js $@) )
+  vim "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete v-js" v-js
 
 o-gd19 () {
   local IFS=$'\n'
@@ -269,6 +283,13 @@ sp () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete sp" sp
 
+g-js () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate g-js $@) )
+  grep "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete g-js" g-js
+
 cd-cw () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate cd-cw $@) )
@@ -317,6 +338,13 @@ v-lg () {
   vim "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete v-lg" v-lg
+
+cd-js () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cd-js $@) )
+  cd "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cd-js" cd-js
 
 l-b () {
   local IFS=$'\n'
@@ -380,6 +408,13 @@ cd-w () {
   cd "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete cd-w" cd-w
+
+l-js () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate l-js $@) )
+  less "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete l-js" l-js
 
 e-pp () {
   local IFS=$'\n'
@@ -507,6 +542,13 @@ m-r9 () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete m-r9" m-r9
 
+cp-js () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate cp-js $@) )
+  cp "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete cp-js" cp-js
+
 m-pp () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate m-pp $@) )
@@ -548,6 +590,13 @@ cp-pd () {
   cp "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete cp-pd" cp-pd
+
+ls-js () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate ls-js $@) )
+  ls "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete ls-js" ls-js
 
 e-cw () {
   local IFS=$'\n'
@@ -604,6 +653,13 @@ v-pp () {
   vim "${arr[@]}"
 }
 complete -o default -C "${LBIN_PATH}lightning-complete v-pp" v-pp
+
+e-js () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate e-js $@) )
+  echo "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete e-js" e-js
 
 cp-r () {
   local IFS=$'\n'

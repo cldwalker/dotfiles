@@ -72,6 +72,9 @@
     - /Users/bozo/code/priv/*
     - /Users/bozo/code/tds/gems/*
     - /Users/bozo/code/fork/*
+    aliases:
+      dr: /Users/bozo/code/repo/dotfiles
+      dw: /Users/bozo/code/work/dotfiles
     alias: c
   ruby_load_path: 
     functions: 
@@ -201,6 +204,9 @@
     globs: 
     - /Users/bozo/.lightning/**/*.rb
     alias: lg
+  js:
+    globs: **/*.js
+    global: true
 :ignore_paths: 
 - .DS_Store
 - .git/
