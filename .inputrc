@@ -20,7 +20,7 @@ $include /Users/bozo/.input/common_keys
 "\C-h": vi-editing-mode
 "\C-x\C-f": forward-search-history
 
-set editing-mode vi
+set editing-mode emacs
 $if mode=vi
   set keymap vi-command
   $include /Users/bozo/.input/vi_keys

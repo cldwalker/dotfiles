@@ -92,6 +92,7 @@ alias gl='git log'
 alias grm='git rm'
 alias gst='git status'
 alias gp='git push'
+alias gpo='git push origin'
 alias gph='git push heroku master'
 alias gmv='g mv'
 
