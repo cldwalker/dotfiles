@@ -1,3 +1,5 @@
 set autolist
 set autoeval
 set autoreload
+eval $m = eval('self', TOPLEVEL_BINDING)
+eval require 'ruby-debug/completion'
