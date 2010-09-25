@@ -1,6 +1,6 @@
 set autolist
 set autoeval
 set autoreload
-eval $m = eval('self', TOPLEVEL_BINDING)
 eval require 'ruby-debug/completion'
-eval load '~/.irbrc'
+eval $m = eval('self', TOPLEVEL_BINDING)
+eval def irbrc; Kernel.load '~/.irbrc'; end
