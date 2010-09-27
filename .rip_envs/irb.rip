@@ -3,7 +3,7 @@ activesupport 2.3.8
 aggregate 0.2.1
 http://github.com/ssoroka/ansi.git c0316255508c72c025e14b624685a729881ea8ef
 atom 0.3
-git://github.com/cldwalker/bond.git 0e662ededa9c952c4241000aaf9cd0bb3859eba9
+git://github.com/cldwalker/bond.git v0.3.0
 builder 2.1.2
 git://github.com/cldwalker/core.git e7584f49d759a04aabc113e39223ebafabebb63b
 crack 0.1.8
@@ -20,7 +20,7 @@ httparty 0.6.1
 json_pure 1.4.3
 git://github.com/josh/keychain_services.git e990e4c1599f976e96677bb25f0059cb2967e8df
 local_gem 0.1.4
-git://github.com/cldwalker/mail.git ac45e4de5f94116ee700bed14d3250135d1d1f0c
+mail 2.2.6
 method_lister 0.3.2
 midiator 0.3.2
 mime-types 1.16
