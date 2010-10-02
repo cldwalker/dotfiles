@@ -8,4 +8,4 @@ rake 0.8.7
 rest-client 1.5.1
 shotgun 0.6
 sinatra 1.0
-tilt 0.10
+tilt 1.1

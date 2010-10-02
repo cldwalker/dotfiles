@@ -1,4 +1,5 @@
 bcat 0.5.0
+bundler 1.0.0
 capistrano 2.5.18
 cheat 1.3.0
 columnize 0.3.1
