@@ -1,0 +1,11 @@
+require 'ripl/color_error'
+Ripl.config[:color_error] = '34;1'
+
+require 'ripl/after_rc'
+IRB_PROCS = {}
+Ripl.after_rc do
+  IRB_PROCS.values.each {|proc| proc.call }
+end
+
+# proper way to load hirb but disabled for now
+# require 'ripl/hirb'
