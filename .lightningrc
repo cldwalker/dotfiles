@@ -63,6 +63,7 @@
     functions: 
     - name: c
       shell_command: cd
+    - cp
     - mate
     - echo
     globs: 

@@ -1,7 +1,11 @@
-require 'ripl/color_error'
-Ripl.config[:color_error] = '34;1'
+unless Ripl.config[:web]
+  require 'ripl/multi_line'
+  require 'ripl/color_error'
+  Ripl.config[:color_error] = '34;1'
+end
 
 require 'ripl/after_rc'
+# temporary hack for irb way of doing things
 IRB_PROCS = {}
 Ripl.after_rc do
   IRB_PROCS.values.each {|proc| proc.call }
