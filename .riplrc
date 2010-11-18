@@ -1,9 +1,11 @@
 unless Ripl.config[:web]
   require 'ripl/multi_line'
+  Ripl.config[:multi_line_prompt] = ' > '
   require 'ripl/color_error'
   Ripl.config[:color_error] = '34;1'
 end
 
+require 'ripl/commands'
 require 'ripl/after_rc'
 # temporary hack for irb way of doing things
 IRB_PROCS = {}
