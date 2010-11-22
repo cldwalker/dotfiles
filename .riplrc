@@ -5,6 +5,7 @@ unless Ripl.config[:web]
   Ripl.config[:color_error] = '34;1'
 end
 
+require 'ripl/options'
 require 'ripl/commands'
 require 'ripl/after_rc'
 # temporary hack for irb way of doing things
@@ -13,5 +14,4 @@ Ripl.after_rc do
   IRB_PROCS.values.each {|proc| proc.call }
 end
 
-# proper way to load hirb but disabled for now
-# require 'ripl/hirb'
+require 'ripl/hirb'
