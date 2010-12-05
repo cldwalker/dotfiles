@@ -1,32 +1,18 @@
 #*nix commands
 alias ciao='sudo shutdown -h now'
 alias cp='cp -i'
-#alias ha='history -a'
 alias l='less'
 alias lr='less -r'
 alias ls='ls -G'
-alias l.='ls -d .* --color=tty'
 alias la='ls -alh'
 alias mv='mv -i'
-alias gr='GREP_COLOR="1;4;34" grep --color=always --exclude=*~ --exclude=*.svn* --exclude=*.tmp --exclude=entries'
-alias grr='gr -r'
+alias gr='GREP_COLOR="1;4;34" grep --color=always --exclude=*~ --exclude=*.svn* --exclude=*.tmp --exclude=entries -r'
 alias psgrep='ps aux|grep'
 alias rm='rm -i'
 alias rmf='rm -f'
-alias rmb='rm -f *~'
 alias so='source ~/.bashrc'
-alias soo='source'
-#alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
 alias k9='kill -9'
-alias ka="killall"
 alias s="sudo"
-
-#commands that could be functions
-alias f#='ls |wc -l'
-alias w2l='tr -d 015 < $1 > $2'
-dos2nix="perl -pi.bak -we 's/\r/\n/g'"
-# Opens up any current working directory project to it's equivalent GitHub page:
-alias ghub="open \`git config -l | grep 'remote.origin.url' | sed -En \ 's/remote.origin.url=git(@|:\/\/)github.com(:|\/)(.+)\/(.+).git/https:\/\/github.com\/\3\/\4/p'\`"
 
 ### Personal (You'll need to adjust paths and install applications as needed) ###
 
@@ -36,36 +22,18 @@ alias ee='vim -u NONE'
 alias r='ruby'
 alias rr='ruby -rubygems'
 alias raker='rake -rubygems'
-alias t='thor'
-alias t2='thor2'
-alias mydump='mysqldump -p -A'
-alias p='perl'
 alias sn='screen'
-alias qt="open -a 'QuickTime Player'"
-alias mplayer="open -a 'MPlayer OSX'"
-alias starter="sudo SystemStarter"
-alias mem='memcached -d -l 127.0.0.1 -p 11211 -m 256'
 alias x2='xmms2'
 alias ss='script/server'
 alias js='jekyll --server'
-alias mi=mini-irb.rb
-alias pirb='irb -f -rubygems -rirb/completion'
-alias lsc='RAILS_ENV=local script/console'
-alias lrc='RAILS_ENV=local rails console'
-alias sc='script/console'
-alias tf='tail -f'
-alias gs='gem grep -r'
-alias gss='gem search -r'
+alias lrr='RAILS_ENV=local ripl rails'
+alias gs='gem search -r'
 alias sgi='sudo gem install'
-alias sgin='sudo gem install --no-rdoc --no-ri'
-alias gu='gem uninstall'
 alias sgu='sudo gem uninstall'
-alias sgul='sudo gem uninstall -i ~/.gem/ruby/1.8'
+alias gi='gem install'
+alias gu='gem uninstall'
 alias lg='lightning'
 alias lgr='lightning-reload'
-alias blg='ruby -Ilib bin/lightning'
-alias b3="ruby -Ilib -e \"require 'local_gem'; LocalGem.local_require 'hirb'; LocalGem.local_require 'alias'; load 'bin/boson'\""
-alias b2="ruby -Ilib bin/boson"
 alias b='boson'
 alias r19='rvm use 1.9.2-preview1'
 alias r18='rvm use system'
@@ -99,6 +67,4 @@ alias grc='git rebase --continue'
 alias gbd='git branch -D'
 
 #path dependent
-alias todo='vim ~bozo/docs/notes/todo.otl'
-alias mirb='irb -r /home/bozo/.irb'
-alias rconsole='ruby script/console --irb="irb -r /home/bozo/.irb_rails"'
+alias todo='vim ~/docs/notes/todo.otl'
