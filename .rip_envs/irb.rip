@@ -3,7 +3,7 @@ activesupport 2.3.8
 aggregate 0.2.1
 http://github.com/ssoroka/ansi.git c0316255508c72c025e14b624685a729881ea8ef
 atom 0.3
-git://github.com/cldwalker/bond.git v0.3.0
+bond 0.3.2
 builder 2.1.2
 git://github.com/cldwalker/core.git e7584f49d759a04aabc113e39223ebafabebb63b
 crack 0.1.8
