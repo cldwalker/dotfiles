@@ -15,3 +15,4 @@ Ripl.after_rc do
 end
 
 require 'ripl/hirb'
+Ripl.config[:hirb] = {:width => 156} if Ripl.config[:web]
