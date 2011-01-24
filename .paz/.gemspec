@@ -1,13 +1,13 @@
 # -*- encoding: utf-8 -*-
 require 'rubygems' unless Object.const_defined?(:Gem)
 require File.dirname(__FILE__) + "/lib/NAME/version"
- 
+
 Gem::Specification.new do |s|
   s.name        = "NAME"
   s.version     = CAPITAL_NAME::VERSION
   s.authors     = ["Gabriel Horner"]
   s.email       = "gabriel.horner@gmail.com"
-  s.homepage    = "http://tagaholic.me/NAME/"
+  s.homepage    = "http://github.com/cldwalker/NAME"
   s.summary = "SUMMARY"
   s.description =  "DESCRIPTION"
   s.required_rubygems_version = ">= 1.3.6"
