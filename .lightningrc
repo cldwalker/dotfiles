@@ -31,6 +31,8 @@
       shell_command: testrb
     - name: sp
       shell_command: spec
+    - name: rsp
+      shell_command: rspec
     - echo
     - vim
     globs: 
