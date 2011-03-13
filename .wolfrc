@@ -1,0 +1,52 @@
+Wolf::ALIASES.merge! :rhyme => 'words ending in',
+  :unicode => 'unicode %s to %s'
+
+__END__
+#Single query
+:date, :url, :ip, :domain_suffix, :code
+
+#Compare
+*:cities, :stocks
+sales tax *:cities
+salary *:profession
+
+#Dates
+holidays :year
+:datetime to :datetime
+:date in :year/:month
+:time_period from now
+:time_period ago
+:time_period + :time_period
+:time/time in :city
+
+#cs
+data transfer time 10GB, 6Mb/s
+unicode :code to :code
+# meth to convert any ruby expression to table
+truth table :expr # x or y and z
+:num to base :num
+:num base :num # convert to decimal
+
+#Math
+:num root of :num
+divisors/gcd/lcm/factors :num
+common divisors of :num and :num
+:% of :quantity # cups, miles
+:num +- :%
+?inverse FT(Fourier)/LT(Laplace) :expr
+vector {:num,:num,:num}
+grad/div/curl/laplace :vector_expr #gradient, divergence, curl
+maximize/minimize :expr
+d/dx / derative of :expr
+integrate :expr from x=:num to :num
+?distinct permutations of {:d,:d}
+:num,:num, ... # guess a sequence
+plot :expr
+
+#Color
+#:hex
+RGB *:num
+HTML :color
+
+#Misc
+:num :currency in :currency
