@@ -1,5 +1,5 @@
 unless Ripl.config[:web]
-  require 'ripl/multi_line'
+  require RUBY_VERSION > '1.9' ? 'ripl/ripper' : 'ripl/multi_line'
   Ripl.config[:multi_line_prompt] = ' > '
   require 'ripl/color_error'
   Ripl.config[:color_error] = '34;1'
