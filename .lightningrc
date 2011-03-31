@@ -78,6 +78,7 @@
     aliases:
       dr: /Users/bozo/code/repo/dotfiles
       dw: /Users/bozo/code/work/dotfiles
+      ci: /Users/bozo/code/work/wegowise-importers
     alias: c
   ruby_load_path: 
     functions: 
