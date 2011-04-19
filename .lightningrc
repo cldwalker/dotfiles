@@ -78,16 +78,11 @@
     functions: 
     - less
     - echo
-    globs: 
-    - $HOME/.rip/active/lib/**/*.rb
-    - /Library/Ruby/Site/1.8/**/*.rb
-    - /Library/Ruby/Site/1.8/powerpc-darwin9.0/**/*.rb
-    - /Library/Ruby/Site/1.8/universal-darwin9.0/**/*.rb
-    - /Library/Ruby/Site/**/*.rb
-    - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/**/*.rb
-    - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/powerpc-darwin9.0/**/*.rb
-    - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0/**/*.rb
     alias: rlp
+  ruby_load_dir: 
+    functions: 
+    - cd
+    alias: rld
   local_ruby: 
     functions: 
     - git
@@ -130,20 +125,6 @@
   bin: 
     functions: 
     - less
-    globs: 
-    - $HOME/.rvm/bin/*
-    - /usr/bin/*
-    - /bin/*
-    - /usr/sbin/*
-    - /sbin/*
-    - /usr/local/bin/*
-    - /usr/X11/bin/*
-    - /usr/local/git/bin/*
-    - /opt/local/bin/*
-    - /opt/local/sbin/*
-    - /usr/local/mysql/bin/*
-    - $HOME/bin/*
-    - $HOME/.rip/active/bin/*
     alias: b
   system_ruby: 
     globs: 
@@ -181,6 +162,9 @@
     - $GEM_HOME/gems/*
     global: true
     alias: g
+  gem_path:
+    global: true
+    alias: gg
   rvm_ruby_std:
     globs:
     - $HOME/.rvm/rubies/$RUBY_VERSION/lib/ruby/**/*.{rb,bundle,so,c}

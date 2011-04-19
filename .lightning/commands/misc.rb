@@ -2,7 +2,7 @@ module Lightning
   module Commands
     desc 'BOLT', 'Show all full paths of a bolt'
     def paths(argv)
-      Lightning.config.if_bolt_found(argv.shift) do |bolt|
+      Lightning::Commands.if_bolt_found(argv.shift) do |bolt|
         puts CompletionMap.new(Lightning.bolts[bolt].globs).map.values.sort
       end
     end

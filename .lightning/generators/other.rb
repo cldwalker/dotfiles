@@ -1,4 +1,16 @@
 module Lightning::Generators
+  def ruby_load_dir
+    $LOAD_PATH
+  end
+
+  def ruby_load_path
+    $LOAD_PATH.map {|e| "#{e}/**/*.rb" }
+  end
+
+  def gem_path
+    ENV['GEM_PATH'].split(':').map {|e| "#{e}/gems/*" }
+  end
+
   # td: remove subdirectories included in other directories
   desc "Ruby files in $LOAD_PATH"
   def ruby_load_path
