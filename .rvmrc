@@ -2,4 +2,4 @@ rvm_project_rvmrc=0
 rvm-rc() {
   __rvm_project_rvmrc
 }
-export rvm_path="/Users/bozo/.rvm"
+export rvm_path="$HOME/.rvm"
