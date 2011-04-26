@@ -72,7 +72,8 @@
     aliases:
       dr: $HOME/code/repo/dotfiles
       dw: $HOME/code/work/dotfiles
-      ci: $HOME/code/work/wegowise-importers
+      w: $HOME/code/work/wegowise
+      wi: $HOME/code/work/wegowise-importers
     alias: c
   ruby_load_path: 
     functions: 
