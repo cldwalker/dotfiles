@@ -18,3 +18,4 @@ require 'ripl/hirb'
 Ripl.config[:hirb] = {:width => 156} if Ripl.config[:web]
 
 Ripl.config[:completion] = {:debug => true}
+require 'ripl/i18n'
