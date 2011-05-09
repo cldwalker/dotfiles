@@ -70,6 +70,7 @@ alias gph='git push heroku master'
 alias gmv='git mv'
 alias grc='git rebase --continue'
 alias gbd='git branch -D'
+alias gfeat='git flow feature'
 
 #path dependent
 alias todo='vim ~/docs/notes/todo.otl'
