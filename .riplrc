@@ -19,3 +19,5 @@ Ripl.config[:hirb] = {:width => 156} if Ripl.config[:web]
 
 Ripl.config[:completion] = {:debug => true}
 require 'ripl/i18n'
+
+require 'ripl/duration' if RUBY_VERSION > '1.9'
