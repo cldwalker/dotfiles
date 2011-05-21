@@ -17,7 +17,7 @@ export LC_CTYPE=en_US.UTF-8
 export NO_RUBYGEMS=true
 # only page if more than a screenful
 export LESS=FRX
-if [ -d ~/.rip ]; then
+if [ -d ~/.rip  ]; then
   export RIPREPO=/Users/bozo/code/fork/rip
   if [ $USER == 'gabrielhorner' ]; then
     export RIPREPO=/Users/gabrielhorner/code/repo/rip
@@ -28,7 +28,9 @@ if [ -d ~/.rip ]; then
   export RUBYLIB=$RIPREPO/lib:$RUBYLIB
   export RIPDIR=$HOME/.rip
   export RIPHELPERS=1
-  eval `rip-config`
+  if [ $BASH != '/bin/sh' ]; then
+    eval `rip-config`
+  fi;
 fi;
 
 source ~/.bash/aliases
@@ -39,5 +41,4 @@ if [ -f ~/.bash/private ]; then
 fi
 
 # rvm installer added line:
-if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
-
+if [ -s ~/.rvm/scripts/rvm ] && [ $BASH != '/bin/sh' ] ; then source ~/.rvm/scripts/rvm ; fi
