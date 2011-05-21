@@ -11,9 +11,8 @@ export EDITOR=vim
 export PS1='\[\033[01;34m\]\W \[\033[01;32m\]$(__git_ps1 "(%s)")$ \[\033[00m\]'
 #export PS1='\[\033[01;34m\]\W $ \[\033[00m\]'
 export RI="--no-home --no-gems --no-site --format ansi -T"
-export PATH=/usr/local/bin:$PATH:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$HOME/bin
-export MANPATH=$MANPATH:/opt/local/share/man:/usr/local/man
-export PGDATA=/opt/local/var/db/postgres
+export PATH=/usr/local/bin:$PATH:/usr/local/mysql/bin:$HOME/bin
+export MANPATH=$MANPATH:/usr/local/man
 export LC_CTYPE=en_US.UTF-8
 export NO_RUBYGEMS=true
 # only page if more than a screenful
