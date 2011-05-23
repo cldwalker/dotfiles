@@ -79,6 +79,7 @@
     functions: 
     - less
     - echo
+    - vim
     alias: rlp
   ruby_load_dir: 
     functions: 

@@ -290,6 +290,13 @@ e-rlp () {
 }
 complete -o default -C "${LBIN_PATH}lightning-complete e-rlp" e-rlp
 
+v-rlp () {
+  local IFS=$'\n'
+  local arr=( $(${LBIN_PATH}lightning-translate v-rlp $@) )
+  vim "${arr[@]}"
+}
+complete -o default -C "${LBIN_PATH}lightning-complete v-rlp" v-rlp
+
 cd-rld () {
   local IFS=$'\n'
   local arr=( $(${LBIN_PATH}lightning-translate cd-rld $@) )
