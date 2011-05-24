@@ -49,6 +49,7 @@ alias re='rip env'
 alias rel='rip env -l'
 alias rp='rip-push'
 alias rpp='rip-pop'
+alias rh='rip-usage'
 alias bu='bundle'
 
 #git
