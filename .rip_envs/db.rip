@@ -1,4 +1,4 @@
-addressable 2.1.2
+addressable 2.2.6
 bson 1.0.2
 bson_ext 1.0.4
 data_objects 0.10.2
