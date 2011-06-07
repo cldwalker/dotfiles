@@ -163,6 +163,7 @@
     globs:
     - $GEM_HOME/gems/*
     - $GEM_HOME/bundler/gems/*
+    - vendor/ruby/*/{gems,bundler/gems}/*
     global: true
     alias: g
   gem_path:
