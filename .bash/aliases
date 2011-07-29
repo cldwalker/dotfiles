@@ -78,6 +78,7 @@ alias gmv='git mv'
 alias grc='git rebase --continue'
 alias gbd='git branch -D'
 alias gfeat='git flow feature'
+alias grel='git flow release'
 alias gg='git grep'
 
 #path dependent
