@@ -3,7 +3,7 @@ complete(:on=>/(?:(?:[a-zA-Z]\w*):)+(\w+)?$/, :search=>false, :action=>:alias_co
 recomplete(:name=>:constants, :anywhere=>'([A-Z][^. \(]*)::([^: .]*)') {|e|
   receiver = e.matched[2]
   candidates = eval("#{receiver}.constants") || []
-  normal_search(e.matched[3], candidates).map {|e| receiver + "::" + e}
+  normal_search(e.matched[3], candidates).map {|e| "#{receiver}::#{e}" }
 }
 
 def alias_constants(input)
