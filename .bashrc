@@ -8,7 +8,7 @@ shopt -s histappend
 export HISTSIZE=3000
 export HISTFILESIZE=3000
 export EDITOR=vim
-export VISUAL=mvim
+export VISUAL=vim
 export PS1='\[\033[01;34m\]\W \[\033[01;32m\]$(__git_ps1 "(%s)")$ \[\033[00m\]'
 #export PS1='\[\033[01;34m\]\W $ \[\033[00m\]'
 export RI="--no-home --no-gems --no-site --format ansi -T"
