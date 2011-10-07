@@ -31,6 +31,7 @@ alias ss='script/server'
 alias js='jekyll --server'
 alias rr='ripl rails'
 alias rt="RAILS_ENV='test'"
+alias rd="RAILS_ENV='development'"
 alias lrr='RACK_ENV=local ripl rack'
 alias rb='ripl'
 alias gs='gem search -r'
