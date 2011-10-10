@@ -1,0 +1,1 @@
+Keys::VimKeys.vim_cmd = 'mvim -v'
