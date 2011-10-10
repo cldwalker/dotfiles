@@ -3,18 +3,20 @@ Keys::VimKeys.vim_cmd = 'mvim -v'
 class Keys::Runner < Thor
   method_option :list, :desc => 'only prints list of keys left'
   desc 'left', 'Determines keys left for a given key combo'
-  def left(query)
+  def left(key_combo)
+    query = '^' + Regexp.escape(key_combo)
+    query << '[a-z]' if query.end_with?('-')
+    regex = Regexp.new query
     keys = Keys::DB.keys
-    regex = Regexp.new '^' + Regexp.escape(query)
     keys.select! {|e| e[:key] =~ regex }
 
     available = ('a' .. 'z').to_a
-    if query.end_with? '-'
-      available.map! {|e| query + e }
+    if key_combo.end_with? '-'
+      available.map! {|e| key_combo + e }
       available -= keys.map {|e| e[:key][/^\S+/] }.compact
-    elsif query[/-\S/]
-      available.map! {|e| "#{query} #{e}" }
-      if !keys.empty? && keys.all? {|e| e[:key] == query }
+    elsif key_combo[/-\S/]
+      available.map! {|e| "#{key_combo} #{e}" }
+      if !keys.empty? && keys.all? {|e| e[:key] == key_combo }
         abort "This key is a top level key"
       end
       available -= keys.map {|e| e[:key] }
