@@ -1,1 +1,36 @@
 Keys::VimKeys.vim_cmd = 'mvim -v'
+
+class Keys::Runner < Thor
+  method_option :list, :desc => 'only prints list of keys left'
+  desc 'left', 'Determines keys left for a given key combo'
+  def left(query)
+    keys = Keys::DB.keys
+    regex = Regexp.new '^' + Regexp.escape(query)
+    keys.select! {|e| e[:key] =~ regex }
+
+    available = ('a' .. 'z').to_a
+    if query.end_with? '-'
+      available.map! {|e| query + e }
+      available -= keys.map {|e| e[:key][/^\S+/] }.compact
+    elsif query[/-\S/]
+      available.map! {|e| "#{query} #{e}" }
+      if !keys.empty? && keys.all? {|e| e[:key] == query }
+        abort "This key is a top level key"
+      end
+      available -= keys.map {|e| e[:key] }
+    else
+      abort "Invalid query. Query must be the beginning of a key combo" +
+        " i.e. C- or C-a."
+    end
+
+    if options[:list]
+      available << "No combinations left" if available.empty?
+      puts available, "#{available.size} keys left"
+    else
+      keys += available.map {|key| {key: key, desc: '** AVAILABLE **'} }
+      keys.sort_by! {|e| e[:key] }
+      puts Hirb::Helpers::Table.render(keys,
+       fields: [:key, :mode, :from, :desc], headers: {:desc => 'desc/action'})
+    end
+  end
+end
