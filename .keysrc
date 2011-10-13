@@ -35,4 +35,29 @@ class Keys::Runner < Thor
        fields: [:key, :mode, :from, :desc], headers: {:desc => 'desc/action'})
     end
   end
+
+  desc 'conflict', 'List conflict keys'
+  def conflict
+    keys = Keys::DB.keys
+    defaults = keys.select {|e| e[:from] == 'default' }.
+      each_with_object({}) {|e,t| t[e[:key]] = e }
+    conflicts = []
+    keys.each {|e|
+      if e[:from] != 'default' && (default = defaults[e[:key]]) &&
+          modes_are_same?(e, default)
+        conflicts << default
+        conflicts << e
+      end
+    }
+    puts Hirb::Helpers::Table.render(conflicts,
+      fields: [:key, :mode, :from, :desc], headers: {desc: 'desc/action'})
+  end
+
+  private
+
+  def modes_are_same?(key1, key2)
+    (key1[:mode].split('') & key2[:mode].split('')).any?
+  end
 end
+
+# vim: ft=ruby
