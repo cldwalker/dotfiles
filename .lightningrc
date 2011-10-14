@@ -74,6 +74,7 @@
       dw: $HOME/code/work/dotfiles
       w: $HOME/code/work/wegowise
       wi: $HOME/code/work/wegowise-importers
+      in: $HOME/code/work/importer-net
     alias: c
   ruby_load_path: 
     functions: 
