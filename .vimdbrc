@@ -1,13 +1,14 @@
-Keys::VimKeys.vim_cmd = 'mvim -v'
+Vimdb.vim = 'mvim -v'
 
-class Keys::Runner < Thor
+# Additional commands for keys
+class Vimdb::Runner < Thor
   method_option :list, :desc => 'only prints list of keys left'
   desc 'left', 'Determines keys left for a given key combo'
   def left(key_combo)
     query = '^' + Regexp.escape(key_combo)
     query << '[a-z]' if query.end_with?('-')
     regex = Regexp.new query
-    keys = Keys::DB.keys
+    keys = Vimdb.user.items
     keys.select! {|e| e[:key] =~ regex }
 
     available = ('a' .. 'z').to_a
@@ -38,7 +39,7 @@ class Keys::Runner < Thor
 
   desc 'conflict', 'List conflict keys'
   def conflict
-    keys = Keys::DB.keys
+    keys = Vimdb.user.items
     defaults = keys.select {|e| e[:from] == 'default' }.
       each_with_object({}) {|e,t| t[e[:key]] = e }
     conflicts = []
