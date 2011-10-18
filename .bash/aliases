@@ -60,6 +60,7 @@ alias bu='bundle'
 alias bi='bundle install'
 alias be='bundle exec'
 alias brew='RUBYOPT="" brew'
+alias v='vimdb'
 
 #git
 alias g='git'
