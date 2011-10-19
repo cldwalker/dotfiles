@@ -59,10 +59,11 @@ class Vimdb::Runner < Thor
   method_option :field, :default => 'key', :desc => 'field to query', :aliases => '-f'
   desc 'anki', 'Prints out item info in tab format for anki'
   def anki(query = nil)
+    require 'cgi'
     keys = Vimdb.user.search(query, options)
     keys.group_by {|e| e[:desc] }.each {|desc,common_keys|
-      puts "#{desc}<br/>mode: #{common_keys.map {|e| e[:mode] }.uniq.join(',')}" +
-        "\t" + common_keys.map {|e| e[:key] }.join(', ')
+      puts "#{CGI.escapeHTML(desc)}<br/>mode: #{common_keys.map {|e| e[:mode] }.uniq.join(',')}" +
+        "\t" + CGI.escapeHTML(common_keys.map {|e| e[:key] }.uniq.join(', '))
     }
   end
 
