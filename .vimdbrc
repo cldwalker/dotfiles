@@ -1,5 +1,5 @@
 Vimdb.vim = 'mvim -v'
-Vimdb::Keys.config[:plugins_dir] = 'plugins'
+Vimdb.plugins_dir = 'plugins'
 
 # Additional commands for keys
 class Vimdb::Runner < Thor
