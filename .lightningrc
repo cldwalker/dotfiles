@@ -184,3 +184,4 @@
 - .DS_Store
 - .git/
 :complete_regex: true
+:shell: zsh
