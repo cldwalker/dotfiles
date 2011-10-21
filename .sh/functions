@@ -1,0 +1,33 @@
+tobin()
+{
+  touch $1;
+  chmod +x $1;
+}
+
+cl () 
+{ 
+    cd $1;
+    shift;
+    ls $a
+}
+
+#move files to Trash bin, for files I'm not 100% sure to delete
+rmt () {
+  mv -i $@ $HOME/temp/trash/
+}
+
+function vgr() {
+  vim -c ":Ack $@"
+}
+
+function hf() { 
+  history | grep $1 
+}
+
+function fgr() {
+  find ${@:2} |grep $1 
+}
+
+function rip_env_eval() {
+  eval RIPENV=$1 rip ${@:2}
+}

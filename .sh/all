@@ -1,0 +1,10 @@
+source ~/.sh/variables
+source ~/.sh/aliases
+source ~/.sh/functions
+
+if [ -f ~/.sh/private ]; then
+  source ~/.sh/private
+fi
+
+# rvm installer added line:
+if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi

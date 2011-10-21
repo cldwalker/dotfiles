@@ -1,0 +1,11 @@
+export HISTSIZE=3000
+export HISTFILESIZE=3000
+export EDITOR=vim
+export VISUAL=vim
+export RI="--no-home --no-gems --no-site --format ansi -T"
+export PATH=/usr/local/bin:$PATH:/usr/local/mysql/bin:$HOME/bin
+export MANPATH=$MANPATH:/usr/local/man
+export LC_CTYPE=en_US.UTF-8
+export NO_RUBYGEMS=true
+# only page if more than a screenful
+export LESS=FRX
