@@ -8,3 +8,19 @@ fi
 
 # rvm installer added line:
 if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
+
+if [ -d ~/.rip  ]; then
+  export RIPREPO=/Users/bozo/code/fork/rip
+  if [[ "$USER" == "gabrielhorner" ]]; then
+    export RIPREPO=/Users/gabrielhorner/code/repo/rip
+  fi;
+
+  export PATH=$RIPREPO/bin:$PATH
+  export MANPATH=$MANPATH:$RIPREPO/man
+  export RUBYLIB=$RIPREPO/lib:$RUBYLIB
+  export RIPDIR=$HOME/.rip
+  export RIPHELPERS=1
+  if [ "$SHELL" != '/bin/sh' ]; then
+    eval `rip-config`
+  fi;
+fi;
