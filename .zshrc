@@ -12,5 +12,11 @@ plugins=(git brew gem git-flow redis-cli rvm)
 export ZSH_THEME="random"
 source $ZSH/oh-my-zsh.sh
 
+# OPTIONS
 # pesky autocorrection
 unsetopt correctall
+
+# KEYS
+autoload edit-command-line
+zle -N edit-command-line
+bindkey '^X^e' edit-command-line
