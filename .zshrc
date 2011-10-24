@@ -16,6 +16,7 @@ fi
 # pesky autocorrection
 unsetopt correctall
 unsetopt beep
+unsetopt extendedglob
 
 # KEYS
 autoload edit-command-line
