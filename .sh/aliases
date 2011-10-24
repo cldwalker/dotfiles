@@ -6,7 +6,7 @@ alias lr='less -r'
 alias ls='ls -G'
 alias la='ls -alh'
 alias mv='mv -i'
-alias gr='GREP_COLOR="1;4;34" grep --color=always --exclude=*~ --exclude=*.svn* --exclude=*.tmp --exclude=entries -r'
+alias gr="GREP_COLOR='1;4;34' grep --color=always --exclude='*~' --exclude='*.svn*' --exclude='*.tmp' --exclude=entries -r"
 alias psgrep='ps aux|grep'
 alias rm='rm -i'
 alias rmf='rm -f'
