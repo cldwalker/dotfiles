@@ -1,5 +1,5 @@
 Vimdb.vim = 'mvim -v'
-Vimdb.plugins_dir = 'plugins'
+Vimdb.plugins_dir = '(plugins|autoload)'
 
 # Additional commands for keys
 class Vimdb::Runner < Thor
@@ -55,8 +55,7 @@ class Vimdb::Runner < Thor
       fields: [:key, :mode, :from, :desc], headers: {desc: 'desc/action'})
   end
 
-  common_options
-  method_option :field, :default => 'key', :desc => 'field to query', :aliases => '-f'
+  common_search_options
   desc 'anki', 'Prints out item info in tab format for anki'
   def anki(query = nil)
     require 'cgi'
