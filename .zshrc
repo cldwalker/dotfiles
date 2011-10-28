@@ -22,3 +22,5 @@ unsetopt extendedglob
 autoload edit-command-line
 zle -N edit-command-line
 bindkey '^X^e' edit-command-line
+# like bash
+bindkey '^[.' insert-last-word
