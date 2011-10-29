@@ -9,3 +9,4 @@ export LC_CTYPE=en_US.UTF-8
 export NO_RUBYGEMS=true
 # only page if more than a screenful
 export LESS=FRX
+export NODE_PATH=/usr/local/lib/node_modules
