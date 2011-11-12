@@ -66,6 +66,32 @@ class Vimdb::Runner < Thor
     }
   end
 
+  common_search_options
+  method_option :tag, :required => true, :aliases => '-t'
+  desc 'tag ITEM -t TAG', 'Tags a specific item with a tag'
+  def tag(query)
+    items = Vimdb.user.search(query, options)
+    if items.size > 1
+      Hirb.enable
+      items = Hirb::Menu.render(items, fields: Vimdb.item.fields)
+    end
+    items.each do |item|
+      system('tag', 'add', "#{item[:key]}.#{item[:mode]}", options[:tag])
+    end
+  end
+
+  desc 'tag_list TAG', 'List items in tag'
+  def tag_list(tag)
+    ids = `tag list #{tag}`.split("\n")
+    items = Vimdb.user.items
+    keys = ids.map {|id| id.split('.') }.map do |(key, mode)|
+      items.find {|item|
+        item[:key] == key && item[:mode].include?(mode)
+      }
+    end
+    puts Hirb::Helpers::Table.render(keys, fields: Vimdb.item.fields)
+  end
+
   private
 
   def modes_are_same?(key1, key2)
