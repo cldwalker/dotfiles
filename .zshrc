@@ -24,3 +24,7 @@ zle -N edit-command-line
 bindkey '^X^e' edit-command-line
 # like bash
 bindkey '^[.' insert-last-word
+
+# COMPLETION
+# get option description in completion
+zstyle ':completion:*' verbose yes
