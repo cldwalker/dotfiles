@@ -1,0 +1,42 @@
+--- 
+num: 
+- C-a.n
+- C-x.n
+practice: 
+- "!!{filter}.n"
+- "!{filter}.vs"
+- "!{motion}{filter}.n"
+why: 
+- C-^.n
+- ZZ.n
+- ZQ.n
+maybe: 
+- "''.n"
+- "'[.n"
+- "'].n"
+- C-d.i
+- C-t.i
+- X.n
+- `[.n
+- s.n
+- ~.n
+- "[("
+- "['"
+learn: 
+- =.vs
+- ==.n
+- ={motion}.n
+useful: 
+- "@@.n"
+- "@:.n"
+- V.n
+- "[m.n"
+- g#.n
+later: 
+- do.n
+- dp.n
+- C-w g ].n
+- g].n
+- "[[.n"
+- "[c.n"
+- g C-h.n
