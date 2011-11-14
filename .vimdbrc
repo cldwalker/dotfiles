@@ -76,7 +76,7 @@ class Vimdb::Runner < Thor
       items = Hirb::Menu.render(items, fields: Vimdb.item.fields)
     end
     items.each do |item|
-      system('tag', 'add', "#{item[:key]}.#{item[:mode]}", options[:tag])
+      system('tag', 'add', "#{item[:key]}.#{item[:mode]}", '--tags', options[:tag])
     end
   end
 
