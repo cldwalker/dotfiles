@@ -18,10 +18,14 @@ maybe:
 - C-t.i
 - X.n
 - `[.n
-- s.n
+- "[\"x]s.n"
 - ~.n
-- "[("
-- "['"
+- "[(.n"
+- "['.n"
+- gD.n
+- C-w P.n
+- C-w g }.n
+- C-w o.n
 learn: 
 - =.vs
 - ==.n
@@ -32,6 +36,11 @@ useful:
 - V.n
 - "[m.n"
 - g#.n
+- q:.n
+- "[\"x]S.n"
+- g&.n
+- gi.n
+- C-w }.n
 later: 
 - do.n
 - dp.n
@@ -40,3 +49,4 @@ later:
 - "[[.n"
 - "[c.n"
 - g C-h.n
+- g@{motion}.n
