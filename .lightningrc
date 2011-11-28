@@ -1,5 +1,5 @@
---- 
-:shell_commands: 
+---
+:shell_commands:
   cd: cd
   cp: cp
   grep: g
@@ -8,23 +8,23 @@
   less: l
   echo: e
   mate: m
-:bolts: 
-  rip_dirs: 
-    globs: 
+:bolts:
+  rip_dirs:
+    globs:
     - $HOME/.rip/.packages/*
     global: true
     alias: pd
-  rails: 
-    functions: 
+  rails:
+    functions:
     - echo
     - grep
     - vim
-    globs: 
-    - "{app,config,lib}/**/*"
-    - "{db}/**/*.rb"
+    globs:
+    - ! '{app,config,lib}/**/*'
+    - ! '{db}/**/*.rb'
     alias: ror
-  ruby_test: 
-    functions: 
+  ruby_test:
+    functions:
     - name: ba
       shell_command: bacon -Ilib -I.
     - name: tb
@@ -33,9 +33,9 @@
       shell_command: rspec
     - echo
     - vim
-    globs: 
-    - "{test,spec}/**/*_{spec,test}.rb"
-    - "{test,spec}/**/{spec,test}_*.rb"
+    globs:
+    - ! '{test,spec}/**/*_{spec,test}.rb'
+    - ! '{test,spec}/**/{spec,test}_*.rb'
     - spec/**/*.spec
     alias: rt
   feature:
@@ -43,30 +43,30 @@
     - name: cuc
       shell_command: cucumber
     globs:
-    - **/*.feature
+    - ! '**/*.feature'
     global: true
     alias: ft
-  app: 
-    functions: 
+  app:
+    functions:
     - name: oa
       shell_command: open -a
-    globs: 
+    globs:
     - /Applications/*.app
     - /Applications/Utilities/*.app
     alias: a
-  rip_path: 
-    globs: 
+  rip_path:
+    globs:
     - $HOME/.rip/*/lib/**/*.rb
     global: true
     alias: pp
-  code: 
-    functions: 
+  code:
+    functions:
     - name: c
       shell_command: cd
     - cp
     - mate
     - echo
-    globs: 
+    globs:
     - $HOME/code/{gems,work,repo,priv,fork}/*
     - $HOME/code/tds/gems/*
     aliases:
@@ -76,66 +76,66 @@
       wi: $HOME/code/work/wegowise-importers
       in: $HOME/code/work/importer-net
     alias: c
-  ruby_load_path: 
-    functions: 
+  ruby_load_path:
+    functions:
     - less
     - echo
     - vim
     alias: rlp
-  ruby_load_dir: 
-    functions: 
+  ruby_load_dir:
+    functions:
     - cd
     alias: rld
-  local_ruby: 
-    functions: 
+  local_ruby:
+    functions:
     - git
-    globs: 
-    - "**/*.rb"
+    globs:
+    - ! '**/*.rb'
     - bin/**
     global: true
     alias: rb
-  wild: 
-    functions: 
+  wild:
+    functions:
     - git
-    globs: 
-    - "**/*"
+    globs:
+    - ! '**/*'
     global: true
     alias: w
-  code_world: 
-    functions: 
+  code_world:
+    functions:
     - echo
     - mate
     - cd
     - less
-    globs: 
+    globs:
     - $HOME/code/world/*
     alias: cw
-  notes: 
-    functions: 
+  notes:
+    functions:
     - vim
     - less
-    globs: 
+    globs:
     - $HOME/docs/notes/**/*.otl
     alias: n
-  wild_dir: 
-    functions: 
+  wild_dir:
+    functions:
     - ls
     - cd
     - echo
-    globs: 
-    - "**/"
+    globs:
+    - ! '**/'
     alias: wd
-  bin: 
-    functions: 
+  bin:
+    functions:
     - less
     alias: b
-  system_ruby: 
-    globs: 
+  system_ruby:
+    globs:
     - /Library/Ruby/Site/1.8/**/*.{rb,bundle,so,c}
     - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/**/*.{rb,bundle,so,c}
     global: true
-  gem_doc: 
-    functions: 
+  gem_doc:
+    functions:
     - name: o-gd
       post_path: /rdoc/index.html
       shell_command: open
@@ -143,23 +143,23 @@
     - post_path: /ri
       shell_command: ri --no-standard-docs -d
       desc: access ri documentation limited to this gem
-    globs: 
+    globs:
     - $GEM_HOME/doc/*
     alias: gd
-  lightning: 
-    functions: 
+  lightning:
+    functions:
     - vim
     - mate
-    globs: 
+    globs:
     - $HOME/.lightning/**/*.rb
     alias: lg
   js:
-    globs: **/*.js
+    globs: ! '**/*.js'
     global: true
   gem:
-    functions: 
+    functions:
     - name: pb-g
-      add_to_command: " |pbcopy"
+      add_to_command: ! ' |pbcopy'
       shell_command: echo -n
     globs:
     - $GEM_HOME/gems/*
@@ -180,7 +180,7 @@
     - $HOME/.rvm/src/$RUBY_VERSION/**/*.{c,h,rb}
     global: true
     alias: rc
-:ignore_paths: 
+:ignore_paths:
 - .DS_Store
 - .git/
 :complete_regex: true
