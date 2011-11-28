@@ -87,7 +87,7 @@ class Vimdb::Runner < Thor
     keys = ids.map {|id| id.split('.') }.map do |(key, mode)|
       items.find {|item|
         item[:key] == key && item[:mode].include?(mode)
-      }
+      } or raise "No key found for '#{key}.#{mode}'"
     end
     puts Hirb::Helpers::Table.render(keys, fields: Vimdb.item.fields)
   end
