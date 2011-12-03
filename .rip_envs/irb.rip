@@ -20,6 +20,7 @@ httparty 0.6.1
 json_pure 1.4.3
 git://github.com/josh/keychain_services.git e990e4c1599f976e96677bb25f0059cb2967e8df
 local_gem 0.1.4
+looksee 1.0.2
 mail 2.2.6
 method_lister 0.3.2
 midiator 0.3.2

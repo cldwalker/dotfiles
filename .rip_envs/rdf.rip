@@ -4,7 +4,7 @@ diff-lcs 1.1.2
 /Users/bozo/code/fork/dydra 
 mime-types 1.16
 net-http-persistent 1.6.1
-nokogiri 1.4.3.1
+nokogiri 1.4.6
 polyglot 0.3.1
 promise 0.3.0
 rdf 0.3.3
