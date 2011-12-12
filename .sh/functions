@@ -34,3 +34,4 @@ function rip_env_eval() {
 
 function rspec() { if [ -e Gemfile ]; then bundle exec rspec $@; else command rspec $@; fi }
 function cucumber() { if [ -e Gemfile ]; then bundle exec cucumber $@; else command cucumber $@; fi }
+function rake() { if [ -e Gemfile ]; then bundle exec rake $@; else command rake $@; fi }
