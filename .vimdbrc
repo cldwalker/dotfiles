@@ -2,7 +2,7 @@ Vimdb.vim = 'mvim -v'
 Vimdb.plugins_dir = '(plugins|autoload)'
 
 # Additional commands for keys
-class Vimdb::Runner < Thor
+class Vimdb::Runner
   method_option :list, :desc => 'only prints list of keys left'
   desc 'left KEY', 'Determines keys left for a given key combo'
   def left(key_combo)
