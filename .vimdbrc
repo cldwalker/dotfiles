@@ -3,9 +3,9 @@ Vimdb.plugins_dir = '(plugins|autoload)'
 
 # Additional commands for keys
 class Vimdb::Runner
-  method_option :list, :desc => 'only prints list of keys left'
-  desc 'left KEY', 'Determines keys left for a given key combo'
-  def left(key_combo)
+  option :list, :desc => 'only prints list of keys left'
+  desc 'Determines keys left for a given key combo'
+  def left(key_combo, options={})
     query = '^' + Regexp.escape(key_combo)
     query << '[a-z]' if query.end_with?('-')
     regex = Regexp.new query
@@ -38,7 +38,7 @@ class Vimdb::Runner
     end
   end
 
-  desc 'conflict', 'List conflict keys'
+  desc 'List conflict keys'
   def conflict
     keys = Vimdb.user.items
     defaults = keys.select {|e| e[:from] == 'default' }.
@@ -56,7 +56,7 @@ class Vimdb::Runner
   end
 
   common_search_options
-  desc 'anki [QUERY]', 'Prints out item info in tab format for anki'
+  desc 'Prints out item info in tab format for anki'
   def anki(query = nil)
     require 'cgi'
     keys = Vimdb.user.search(query, options)
@@ -67,8 +67,8 @@ class Vimdb::Runner
   end
 
   common_search_options
-  method_option :tag, :required => true, :aliases => '-t'
-  desc 'tag ITEM -t TAG', 'Tags a specific item with a tag'
+  option :tag, :required => true
+  desc 'Tags a specific item with a tag'
   def tag(query)
     items = Vimdb.user.search(query, options)
     if items.size > 1
@@ -80,7 +80,7 @@ class Vimdb::Runner
     end
   end
 
-  desc 'tag_list TAG', 'List items in tag'
+  desc 'List items in tag'
   def tag_list(tag)
     ids = `tag list #{tag}`.split("\n")
     items = Vimdb.user.items
