@@ -8,6 +8,7 @@ fi
 
 # rvm installer added line:
 if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
+if [ -s ~/Developer/cinderella.profile ] ; then source ~/Developer/cinderella.profile ; fi
 
 if [ -d ~/.rip  ]; then
   export RIPREPO=/Users/bozo/code/fork/rip
