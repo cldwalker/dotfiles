@@ -3,6 +3,7 @@
 	branch = auto
 	status = auto
 	interactive = auto
+
 [core]
 	excludesfile = /Users/me/.git_ignore
 
@@ -19,3 +20,15 @@
   network = log --graph --pretty=oneline --abbrev-commit
   re = remote
   lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+
+[url "git@github.com:"]
+    insteadOf = "gh:"
+
+[url "git://github.com/"]
+    insteadOf = "github:"
+
+[url "git://gist.github.com/"]
+    insteadOf = "gist:"
+
+[url "git@heroku.com:"]
+    insteadOf = "heroku:"
