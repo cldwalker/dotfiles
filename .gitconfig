@@ -7,7 +7,7 @@
 	excludesfile = /Users/me/.git_ignore
 
 [push]
-  default = tracking
+  default = current
 
 #thanks to http://hoth.entp.com/2009/1/21/git-track-is-where-its-at
 [alias]
