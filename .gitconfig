@@ -1,0 +1,21 @@
+[color]
+	diff = auto
+	branch = auto
+	status = auto
+	interactive = auto
+[core]
+	excludesfile = /Users/me/.git_ignore
+
+[push]
+  default = tracking
+
+#thanks to http://hoth.entp.com/2009/1/21/git-track-is-where-its-at
+[alias]
+  ls = ls-files
+  ignored = "!git ls-files --others --exclude-standard"
+  pending = !git --no-pager log origin/master..master && echo
+  nb = checkout -b
+  who = shortlog -s -n
+  network = log --graph --pretty=oneline --abbrev-commit
+  re = remote
+  lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
