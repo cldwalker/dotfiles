@@ -8,7 +8,7 @@ module Lightning::Generators
   end
 
   def gem_path
-    ENV['GEM_PATH'].split(':').map {|e| "#{e}/gems/*" }
+    (ENV['GEM_PATH'] || '').split(':').map {|e| "#{e}/gems/*" }
   end
 
   # td: remove subdirectories included in other directories
