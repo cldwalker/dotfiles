@@ -70,6 +70,7 @@
     - $HOME/code/{gems,work,repo,priv,fork}/*
     - $HOME/code/tds/gems/*
     - /Volumes/relevance/ls_reporting/[a-z]*
+    - /Volumes/relevance/[a-z]*
     alias: c
   ruby_load_path:
     functions:
