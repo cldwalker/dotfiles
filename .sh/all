@@ -1,4 +1,3 @@
-source ~/.sh/variables
 source ~/.sh/aliases
 source ~/.sh/functions
 
@@ -6,23 +5,29 @@ if [ -f ~/.sh/private ]; then
   source ~/.sh/private
 fi
 
-if [[ "$RBENV" == '' ]]; then
-  if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
-fi;
-if [ -s ~/Developer/cinderella.profile ] ; then source ~/Developer/cinderella.profile ; fi
+# don't remodify $PATH when tmux starts
+if [[ "$TMUX" == '' ]]; then
+  source ~/.sh/variables
 
-if [ -d ~/.rip  ]; then
-  export RIPREPO=/Users/bozo/code/fork/rip
-  if [[ "$USER" == "gabrielhorner" ]]; then
-    export RIPREPO=/Users/gabrielhorner/code/repo/rip
+  if [[ "$RBENV" == '' ]]; then
+    if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
+  fi;
+  if [ -s ~/Developer/cinderella.profile ] ; then source ~/Developer/cinderella.profile ; fi
+
+  if [ -d ~/.rip  ]; then
+    export RIPREPO=/Users/bozo/code/fork/rip
+    if [[ "$USER" == "gabrielhorner" ]]; then
+      export RIPREPO=/Users/gabrielhorner/code/repo/rip
+    fi;
+
+    export PATH=$RIPREPO/bin:$PATH
+    export MANPATH=$MANPATH:$RIPREPO/man
+    export RUBYLIB=$RIPREPO/lib:$RUBYLIB
+    export RIPDIR=$HOME/.rip
+    export RIPHELPERS=1
+    if [ "$SHELL" != '/bin/sh' ]; then
+      eval `rip-config`
+    fi;
   fi;
 
-  export PATH=$RIPREPO/bin:$PATH
-  export MANPATH=$MANPATH:$RIPREPO/man
-  export RUBYLIB=$RIPREPO/lib:$RUBYLIB
-  export RIPDIR=$HOME/.rip
-  export RIPHELPERS=1
-  if [ "$SHELL" != '/bin/sh' ]; then
-    eval `rip-config`
-  fi;
 fi;
