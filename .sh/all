@@ -6,8 +6,9 @@ if [ -f ~/.sh/private ]; then
   source ~/.sh/private
 fi
 
-# rvm installer added line:
-if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
+if [[ "$RBENV" == '' ]]; then
+  if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
+fi;
 if [ -s ~/Developer/cinderella.profile ] ; then source ~/Developer/cinderella.profile ; fi
 
 if [ -d ~/.rip  ]; then
