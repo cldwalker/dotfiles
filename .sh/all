@@ -9,9 +9,6 @@ fi
 if [[ "$TMUX" == '' ]]; then
   source ~/.sh/variables
 
-  if [[ "$RBENV" == '' ]]; then
-    if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
-  fi;
   if [ -s ~/Developer/cinderella.profile ] ; then source ~/Developer/cinderella.profile ; fi
 
   if [ -d ~/.rip  ]; then
@@ -29,5 +26,17 @@ if [[ "$TMUX" == '' ]]; then
       eval `rip-config`
     fi;
   fi;
-
 fi;
+
+## handle rubies
+
+if [[ "$RBENV" == '' ]]; then
+  if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
+fi;
+
+# doesn't suffer from tmux $PATH remodification, dunno why?
+if [[ "$RBENV" != '' ]] && [[ -x $SMEAGOL_ROOT_DIR/.rbenv/bin/rbenv ]]; then
+  export PATH="$SMEAGOL_ROOT_DIR/.rbenv/bin:$PATH";
+  export RBENV_ROOT="$SMEAGOL_ROOT_DIR/.rbenv";
+  eval "$(rbenv init -)"
+fi
