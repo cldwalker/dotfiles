@@ -34,7 +34,7 @@ if [[ "$RBENV" == '' ]]; then
   if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
 fi;
 
-# doesn't suffer from tmux $PATH remodification, dunno why?
+# doesn't suffer from tmux $PATH remodification, stupid /usr/libexec/path_helper
 if [[ "$RBENV" != '' ]] && [[ -x $SMEAGOL_ROOT_DIR/.rbenv/bin/rbenv ]]; then
   export PATH="$SMEAGOL_ROOT_DIR/.rbenv/bin:$PATH";
   export RBENV_ROOT="$SMEAGOL_ROOT_DIR/.rbenv";
