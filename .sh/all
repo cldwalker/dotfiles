@@ -22,13 +22,15 @@ if [[ "$TMUX" == '' ]]; then
     export RUBYLIB=$RIPREPO/lib:$RUBYLIB
     export RIPDIR=$HOME/.rip
     export RIPHELPERS=1
-    if [ "$SHELL" != '/bin/sh' ]; then
-      eval `rip-config`
-    fi;
   fi;
 fi;
 
-## handle rubies
+## handle ruby managers
+if [ -d ~/.rip  ]; then
+  if [ "$SHELL" != '/bin/sh' ]; then
+    eval `rip-config`
+  fi;
+fi;
 
 if [[ "$RBENV" == '' ]]; then
   if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
