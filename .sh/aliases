@@ -10,7 +10,6 @@ alias gr="GREP_COLOR='1;4;34' grep --color=always --exclude='*~' --exclude='*.sv
 alias psgrep='ps aux|grep'
 alias rm='rm -i'
 alias rmf='rm -f'
-alias so='source ~/.bashrc'
 alias k9='kill -9'
 alias s="sudo"
 
