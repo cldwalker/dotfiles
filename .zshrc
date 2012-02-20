@@ -18,12 +18,8 @@ unsetopt correctall
 unsetopt beep
 unsetopt extendedglob
 
-# KEYS
-autoload edit-command-line
-zle -N edit-command-line
-bindkey '^X^e' edit-command-line
-# like bash
-bindkey '^[.' insert-last-word
+source ~/.zsh/keys.zsh
+source ~/.zsh/functions.zsh
 
 # COMPLETION
 # get option description in completion
