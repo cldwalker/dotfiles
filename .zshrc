@@ -20,6 +20,7 @@ unsetopt extendedglob
 
 source ~/.zsh/keys.zsh
 source ~/.zsh/functions.zsh
+source ~/.zsh/completions.zsh
 
 # COMPLETION
 # get option description in completion
