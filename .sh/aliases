@@ -32,7 +32,7 @@ alias rr='ripl rails'
 alias rt="RAILS_ENV='test'"
 alias rd="RAILS_ENV='development'"
 alias lrr='RACK_ENV=local ripl rack'
-alias rb='ripl'
+alias ir='ripl'
 alias gs='gem search -r'
 alias sgi='sudo gem install'
 alias sgu='sudo gem uninstall'
@@ -64,6 +64,7 @@ alias bi='bundle install'
 alias be='bundle exec'
 alias brew='RUBYOPT="" brew'
 alias v='vimdb'
+alias rb='rbenv'
 
 #git
 alias g='git'
