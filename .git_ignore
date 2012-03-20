@@ -1,2 +1,6 @@
 *~
 .DS_Store
+pkg
+.rbx
+tags
+.rbenv-gemsets

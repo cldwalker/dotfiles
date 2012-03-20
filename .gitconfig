@@ -5,7 +5,7 @@
 	interactive = auto
 
 [core]
-	excludesfile = /Users/me/.git_ignore
+	excludesfile = ~/.git_ignore
 
 [push]
   default = current
