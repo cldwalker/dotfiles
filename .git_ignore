@@ -4,3 +4,5 @@ pkg
 .rbx
 tags
 .rbenv-gemsets
+bundle
+.bundle

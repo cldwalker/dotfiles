@@ -64,6 +64,7 @@ alias bi='bundle install'
 alias be='bundle exec'
 alias brew='RUBYOPT="" brew'
 alias v='vimdb'
+alias u='urls'
 alias rb='rbenv'
 
 #git
