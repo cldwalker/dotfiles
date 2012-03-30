@@ -1,1 +1,2 @@
 require 'boson/more'
+require 'boson/url_libraries'
