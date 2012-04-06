@@ -6,7 +6,7 @@ if [ -f ~/.sh/private ]; then
 fi
 
 # don't remodify $PATH when tmux starts
-if [[ "$TMUX" == '' ]]; then
+#if [[ "$TMUX" == '' ]]; then
   source ~/.sh/variables
 
   if [ -s ~/Developer/cinderella.profile ] ; then source ~/Developer/cinderella.profile ; fi
@@ -23,7 +23,7 @@ if [[ "$TMUX" == '' ]]; then
     export RIPDIR=$HOME/.rip
     export RIPHELPERS=1
   fi;
-fi;
+#fi;
 
 ## handle ruby managers
 if [ -d ~/.rip  ]; then
