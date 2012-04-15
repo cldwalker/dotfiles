@@ -152,15 +152,11 @@
   js:
     globs: ! '**/*.js'
     global: true
-  gem:
+  gem_new:
     functions:
     - name: pb-g
       add_to_command: ! ' |pbcopy'
       shell_command: echo -n
-    globs:
-    - $GEM_HOME/gems/*
-    - $GEM_HOME/bundler/gems/*
-    - vendor/ruby/*/{gems,bundler/gems}/*
     global: true
     alias: g
   gem_path:
