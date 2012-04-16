@@ -162,16 +162,26 @@
   gem_path:
     global: true
     alias: gg
+  rbenv_ruby_std:
+    globs:
+    - $RBENV_ROOT/versions/$RBENV_VERSION/lib/ruby/{1.9.1,1.8}/**/*.{rb,bundle,so,c}
+    global: true
+    alias: r
+  rbenv_ruby_core:
+    globs:
+    - $RBENV_ROOT/versions/$RBENV_VERSION/include/**/*.{h,inc}
+    global: true
+    alias: rc
   rvm_ruby_std:
     globs:
     - $HOME/.rvm/rubies/$RUBY_VERSION/lib/ruby/**/*.{rb,bundle,so,c}
     global: true
-    alias: r
+    alias: rv
   rvm_ruby_core:
     globs:
     - $HOME/.rvm/src/$RUBY_VERSION/**/*.{c,h,rb}
     global: true
-    alias: rc
+    alias: rvc
 :ignore_paths:
 - .DS_Store
 - .git/
