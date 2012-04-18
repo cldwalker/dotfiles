@@ -1,9 +1,0 @@
-# inspired by http://mileszs.com/blog/2009/06/05/vim-and-screen.html
-
-source /home/bozo/.screenrc
-screen -t todo vim /home/bozo/docs/notes/todo.otl
-chdir /home/bozo/code/repo/tag-tree
-screen -t tt  #rvm use 1.8.7@rails3 && rip push irb && rip push db && rails console local
-screen -t tt
-chdir /home/bozo/code/gems/
-#screen -t irb rip push irb; irb
