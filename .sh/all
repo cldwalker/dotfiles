@@ -12,7 +12,7 @@ fi
   if [ -s ~/Developer/cinderella.profile ] ; then source ~/Developer/cinderella.profile ; fi
 
   if [ -d ~/.rip  ]; then
-    export RIPREPO=/Users/bozo/code/fork/rip
+    export RIPREPO=$HOME/code/fork/rip
     if [[ "$USER" == "gabrielhorner" ]]; then
       export RIPREPO=/Users/gabrielhorner/code/repo/rip
     fi;
