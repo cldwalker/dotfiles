@@ -9,7 +9,7 @@ module Lightning::Generators
 
   def gem_new
     arr = ["#{ENV['GEM_HOME']}/gems/*", "#{ENV['GEM_HOME']}/bundler/gems/*",
-     "vendor/ruby/*/{gems,bundler/gems}/*"]
+     "{vendor,bundle}/ruby/*/{gems,bundler/gems}/*"]
     require 'rubygems' unless defined? Gem
     arr << "#{Gem.default_dir}/gems/*"
   end
