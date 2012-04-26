@@ -7,7 +7,6 @@
   ls: ls
   less: l
   echo: e
-  mate: m
 :bolts:
   rip_dirs:
     globs:
@@ -53,6 +52,7 @@
     globs:
     - /Applications/*.app
     - /Applications/Utilities/*.app
+    - /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/*.app
     alias: a
   rip_path:
     globs:
@@ -64,11 +64,9 @@
     - name: c
       shell_command: cd
     - cp
-    - mate
     - echo
     globs:
-    - $HOME/code/{gems,work,repo,priv,fork}/*
-    - $HOME/code/tds/gems/*
+    - $HOME/code/{gems,old_work,repo,priv,fork}/*
     - /Volumes/relevance/[a-z]*
     alias: c
   ruby_load_path:
@@ -99,7 +97,6 @@
   code_world:
     functions:
     - echo
-    - mate
     - cd
     - less
     globs:
@@ -144,7 +141,6 @@
   lightning:
     functions:
     - vim
-    - mate
     globs:
     - $HOME/.lightning/**/*.rb
     alias: lg
