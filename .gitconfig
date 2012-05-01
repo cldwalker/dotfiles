@@ -1,3 +1,10 @@
+[user]
+	name = Gabriel Horner
+	email = gabriel.horner@gmail.com
+
+[include]
+    path = ~/.gitconfig.github
+
 [color]
 	diff = auto
 	branch = auto
@@ -8,10 +15,11 @@
 	excludesfile = ~/.git_ignore
 
 [push]
-  default = current
+	default = current
 
 #thanks to http://hoth.entp.com/2009/1/21/git-track-is-where-its-at
 [alias]
+  co = checkout
   ls = ls-files
   ignored = "!git ls-files --others --exclude-standard"
   pending = !git --no-pager log origin/master..master && echo
