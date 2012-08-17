@@ -55,7 +55,7 @@
  {:name "->" :desc "arg gets inserted as first arg"}
  {:name "->>" :desc "arg gets inserted as last arg"}
  {:name "interpose" :desc "join(a).split(/\\s+/)"}
- {:name "comp" :desc "comp a b c) = (a (b (c))) = opposite of ->>"}
+ {:name "comp" :desc "(comp a b c) = (a (b (c))) = opposite of ->>"}
  {:name "apply" :desc "apply(fn [args]): fn.call(*args)"}
  {:name "partial" :desc "partial(fn *args): #(apply fn *args *&)"}
  {:name "fnil" :desc "sets default for a function expecting non-nil args used in clojure prob 2 as (hash[:key] ||= {}) << 2"}]
