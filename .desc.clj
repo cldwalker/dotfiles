@@ -38,7 +38,7 @@
   :desc "takes a quoted list b/c it's a fn and not a macro like ns"}
  {:name "clojure.core/apply", :desc "last arg must be a list"}
  {:name "clojure.core/macroexpand-1", :desc "expands once"}
- {:name "macroexpand-all", :desc "recursive expand all"}
+ {:name "clojure.walk/macroexpand-all", :desc "recursive expand all"}
  {:name "clojure.core/macroexpand",
   :desc "expands top level macro recursively"}
  {:name "clojure.core/deref", :desc "never blocks"}
