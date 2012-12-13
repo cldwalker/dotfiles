@@ -73,6 +73,7 @@ alias ga='git add'
 alias gb='git branch'
 alias gci='git commit'
 alias gca='git commit --amend'
+alias gcac='git commit --amend -C HEAD'
 alias gco='git checkout'
 alias gcon='git config'
 alias gcl='git clone'
@@ -93,3 +94,4 @@ alias gg='git grep'
 
 #path dependent
 alias todo='vim ~/docs/notes/todo.otl'
+alias=$HOME/.datomic-free/bin/datomic-free
