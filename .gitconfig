@@ -28,6 +28,7 @@
   network = log --graph --pretty=oneline --abbrev-commit
   re = remote
   lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+  news = log -p HEAD@{1}..HEAD@{0}
 
 [url "git@github.com:"]
     insteadOf = "gh:"
