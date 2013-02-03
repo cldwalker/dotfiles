@@ -66,7 +66,7 @@
     - cp
     - echo
     globs:
-    - $HOME/code/{gems,old_work,repo,priv,fork}/*
+    - $HOME/code/{gems,old_work,repo,priv,fork,cjars}/*
     - /Volumes/relevance/[a-z]*
     alias: c
   ruby_load_path:
