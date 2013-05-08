@@ -90,4 +90,14 @@
   :desc "partial(fn *args): #(apply fn *args *&)"}
  {:name "clojure.core/fnil",
   :desc
-  "sets default for a function expecting non-nil args used in clojure prob 2 as (hash[:key] ||= {}) << 2"}]
+  "sets default for a function expecting non-nil args used in clojure prob 2 as (hash[:key] ||= {}) << 2"}
+ {:name "clojure.core/some->", :desc "try of the clojure world"}
+ {:name "clojure.core/re-matches",
+  :desc "same as re-find except it matches against whole string"}
+ {:name "clojure.core/cond->",
+  :desc "handy way to conditionally build up a seq or map of options"}
+ {:name "clojure.core/map-indexed",
+  :desc
+  "can be easily recreated by passing range as an additional arg to map"}
+ {:name "clojure.core/as->",
+  :desc "seems mainly for inlinining readable fns in threaded macros"}]
