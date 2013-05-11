@@ -54,7 +54,7 @@
  {:name "clojure.zip/zipper",
   :desc "[children? children create-branch]"}
  {:name "clojure.core/partition",
-  :desc "similar to enum chunking meth"}
+  :desc "useful for converting flat list/vec to sublists/subvecs"}
  {:name "clojure.core/with-meta", :desc "replace meta"}
  {:name "clojure.core/vary-meta", :desc "assoc meta"}
  {:name "clojure.core/subseq",
