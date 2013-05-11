@@ -1,0 +1,3 @@
+curl -i -H "Authorization: token XXX" https://api.github.com/repos/cldwalker/alias
+curl -X POST -u "U:PASS" --data '{"client_id": "XX", "client_secret": "XX"}' https://api.github.com/authorizations
+curl -X POST https:xxx.json -H "Content-Type: application/json" -d '{"api_token":"XX","session_token":"XX"}'
