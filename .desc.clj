@@ -26,11 +26,13 @@
   :desc "anon include scoped to a namespace"}
  {:name "clojure.core/reify", :desc "creates a protocol obj"}
  {:name "clojure.core/for",
-  :desc "list comprehension, cartesian product"}
+  :desc
+  "cartesian product, when wanting to destructure mapped items easily"}
  {:name "clojure.core/condp",
   :desc "generalized case where = fn can be anything"}
  {:name "clojure.core/doseq",
-  :desc "can take multiple args to do nested iteration"}
+  :desc
+  "can take multiple bindings to do nested iteration, has :let and other useful constructs that for has"}
  {:name "clojure.core/frequencies",
   :desc "map of # of distinct items in a vec"}
  {:name "clojure.core/ns-map", :desc "symbol to vars"}
@@ -100,4 +102,8 @@
   :desc
   "can be easily recreated by passing range as an additional arg to map"}
  {:name "clojure.core/as->",
-  :desc "seems mainly for inlinining readable fns in threaded macros"}]
+  :desc "seems mainly for inlinining readable fns in threaded macros"}
+ {:name "clojure.core/into", :desc "convert pairs of vecs into a map"}
+ {:name "clojure.pprint/cl-format",
+  :desc
+  "a hard to read formatter which may be useful in certain scenarios"}]
