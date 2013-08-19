@@ -102,8 +102,12 @@
   :desc
   "can be easily recreated by passing range as an additional arg to map"}
  {:name "clojure.core/as->",
-  :desc "seems mainly for inlinining readable fns in threaded macros"}
+  :desc
+  "inline readable fns in arrows, also use as a tap to build up an expr"}
  {:name "clojure.core/into", :desc "convert pairs of vecs into a map"}
  {:name "clojure.pprint/cl-format",
   :desc
-  "a hard to read formatter which may be useful in certain scenarios"}]
+  "a hard to read formatter which may be useful in certain scenarios"}
+ {:name "clojure.stacktrace/print-stack-trace",
+  :desc
+  "a friendlier alternative to clojure.repl/pst as it can be captured with-out-str"}]
