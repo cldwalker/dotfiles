@@ -31,6 +31,8 @@
   news = log -p HEAD@{1}..HEAD@{0}
   # http://stackoverflow.com/questions/9651898/is-there-a-git-sed-or-equivalent
   sed = ! git ls-files -z | xargs -0 sed -i -e
+  fd = diff HEAD ^origin/master
+  fl = log HEAD ^origin/master
 
 [url "git@github.com:"]
     insteadOf = "gh:"
