@@ -3,7 +3,7 @@ Description
 
   These are the dot files for apps I use every day.
 Among these apps are:
-  
+
 * bash: aliases, functions, completions
 * vim: config and plugins
 * vimperator: firefox plugin to make it vim-like, includes config and plugins
@@ -19,3 +19,6 @@ Install
 
 Simply run `ruby install.rb` in this directory to symlink these files to
 your home directory.
+
+For light table, you will need to additionally:
+`ln -s ~/.light_table/ ~/Library/Application\ Support/LightTable/settings`
