@@ -12,7 +12,8 @@
 {:+ {
      ;; The app tag is kind of like global scope. You assign behaviors that affect
      ;; all of Light Table here
-     :app [(:lt.objs.style/set-skin "dark")]
+     :app [(:lt.objs.style/set-skin "dark")
+           (:lt.objs.plugins/load-js "recall.js" true)]
 
      ;; The editor tag is applied to all editors
      :editor [:lt.objs.editor/no-wrap
