@@ -15,8 +15,6 @@
 
      :editor {"alt-w" [:editor.watch.watch-selection]
               "alt-shift-w" [:editor.watch.unwatch]
-              ;; buggy?
-              ;; "cmd.- l" [(:editor.open-pair "(")]
 
               "cmd-=" [:paredit.select.parent :smart-indent-selection :paredit.select.clear]
               ;;Eval the parent ( ... )
@@ -27,11 +25,17 @@
               ;; requires master until 0.0.2 paredit
               "alt-s" [:paredit.unwrap.parent]}
 
+     :editor.keys.normal {
+                          ;; a dumb wrap - cursor must be before word
+                          ;; a smarter one would 'Bh' if in middle of word
+                          "cmd-." [(:editor.open-pair "(") :paredit.grow.right]}
+
      ;; thanks to https://groups.google.com/forum/#!topic/light-table-discussion/BIyWHnRcoWc
      :editor.keys.vim.normal {">" [:paredit.grow.right]
                               "<" [:paredit.shrink.right]
                               "alt-shift-." [:paredit.shrink.left]
                               "alt-shift-," [:paredit.grow.left]
+
                               ;;Select the parent expression, whether that's [], {}, or ()
                               "cmd-," [:paredit.select.parent]
                               "cmd-;" [:toggle-comment-selection]}}}
