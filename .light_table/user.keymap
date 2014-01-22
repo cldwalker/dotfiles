@@ -24,14 +24,14 @@
                            :eval-editor-form
                            :paredit.select.clear]
 
-              ;;Select the parent expression, whether that's [], {}, or ()
-              "cmd-v" [:paredit.select.parent]
+              ;; requires master until 0.0.2 paredit
+              "alt-s" [:paredit.unwrap.parent]}
 
-              }
      ;; thanks to https://groups.google.com/forum/#!topic/light-table-discussion/BIyWHnRcoWc
      :editor.keys.vim.normal {">" [:paredit.grow.right]
                               "<" [:paredit.shrink.right]
                               "alt-shift-." [:paredit.shrink.left]
                               "alt-shift-," [:paredit.grow.left]
+                              ;;Select the parent expression, whether that's [], {}, or ()
+                              "cmd-," [:paredit.select.parent]
                               "cmd-;" [:toggle-comment-selection]}}}
-
