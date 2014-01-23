@@ -17,8 +17,13 @@
 
      ;; The editor tag is applied to all editors
      :editor [:lt.objs.editor/no-wrap
-              (:lt.objs.style/set-theme "default")
-              (:lt.plugins.vim/activate-vim)]
+              (:lt.objs.style/set-theme "cobalt")
+              (:lt.plugins.vim/activate-vim)
+
+              ;; (un)comment below to toggle line numbers
+              ;; :lt.objs.editor/line-numbers
+              :lt.objs.editor/hide-line-numbers
+              ]
 
      ;; Here we can add behaviors to just clojure editors
      :editor.clojure [(:lt.objs.langs.clj/print-length 1000)]}
