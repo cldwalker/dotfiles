@@ -44,4 +44,8 @@
 
                               ;;Select the parent expression, whether that's [], {}, or ()
                               "cmd-," [:paredit.select.parent]
-                              "cmd-;" [:toggle-comment-selection]}}}
+                              "cmd-;" [:toggle-comment-selection]}
+
+     ;; avoid going to out of the way keys for command bar
+     :filter-list.input { "ctrl-n" [(:filter-list.input.move-selection 1)]
+                          "ctrl-p" [(:filter-list.input.move-selection -1)]}}}
