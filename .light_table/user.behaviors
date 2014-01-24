@@ -24,7 +24,9 @@
                                       "<Space>c" ":ltexec toggle-console"
                                       "<Space>k" ":ltexec keymap.modify-user"
                                       "<Space>p" ":ltexec plugin-manager.show"
-                                      "<Space>w" ":ltexec workspace.show"})]
+                                      "<Space>v" ":ltexec tabset.new"
+                                      "<Space>w" ":ltexec workspace.show"
+                                      "<Space>x" ":ltexec tabset.close"})]
 
      ;; The editor tag is applied to all editors
      :editor [:lt.objs.editor/no-wrap
