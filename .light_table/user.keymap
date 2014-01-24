@@ -24,14 +24,11 @@
               ;; requires master until 0.0.2 paredit
               "alt-s" [:paredit.unwrap.parent]}
 
-     :editor.keys.normal {;;cmd-/ is a leader - must be in insert mode :(
-                          "cmd-/ b" [:behaviors.modify-user]
-                          "cmd-/ c" [:toggle-console]
+     :editor.keys.normal {
+                          ;; for leader keys that work in normal mode see :vim/map-keys in behaviors
+                          ;;cmd-/ is a leader for multi-command keys - must be in insert mode :(
                           ;; open browser tab with focus to type url
-                          "cmd-/ h" [:add-browser-tab :browser.url-bar.focus]
-                          "cmd-/ k" [:keymap.modify-user]
-                          "cmd-/ p" [:plugin-manager.show]
-                          "cmd-/ w" [:workspace.show]
+                          "cmd-/ o" [:add-browser-tab :browser.url-bar.focus]
                           ;; view current html in a split window
                           "cmd-/ s" [:tabset.new :tabset.next :editor.open-current-file-in-browser]
 

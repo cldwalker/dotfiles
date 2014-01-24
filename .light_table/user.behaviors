@@ -13,7 +13,18 @@
      ;; The app tag is kind of like global scope. You assign behaviors that affect
      ;; all of Light Table here
      :app [(:lt.objs.style/set-skin "dark")
-           (:lt.objs.plugins/load-js "recall.js" true)]
+           (:lt.objs.plugins/load-js "recall.js" true)
+           :lt.objs.intro/show-new-file
+           (:lt.plugins.vim/map-keys {"-" "$",
+                                      "0" "^",
+                                      "j" "gj",
+                                      "k" "gk"
+                                      ;; <Space> is a leader key in normal mode
+                                      "<Space>b" ":ltexec behaviors.modify-user"
+                                      "<Space>c" ":ltexec toggle-console"
+                                      "<Space>k" ":ltexec keymap.modify-user"
+                                      "<Space>p" ":ltexec plugin-manager.show"
+                                      "<Space>w" ":ltexec workspace.show"})]
 
      ;; The editor tag is applied to all editors
      :editor [:lt.objs.editor/no-wrap
