@@ -14,16 +14,16 @@
      ;; all of Light Table here
      :app [(:lt.objs.style/set-skin "dark")
            (:lt.objs.plugins/load-js "recall.js" true)
-           :lt.objs.intro/show-new-file
            (:lt.plugins.vim/map-keys {"-" "$",
                                       "0" "^",
                                       "j" "gj",
                                       "k" "gk"
                                       ;; <Space> is a leader key in normal mode
                                       "<Space>b" ":ltexec behaviors.modify-user"
-                                      "<Space>c" ":ltexec toggle-console"
+                                      "<Space>c" ":ltexec clear-console"
                                       "<Space>k" ":ltexec keymap.modify-user"
                                       "<Space>p" ":ltexec plugin-manager.show"
+                                      "<Space>tc" ":ltexec toggle-console"
                                       "<Space>v" ":ltexec tabset.new"
                                       "<Space>w" ":ltexec workspace.show"
                                       "<Space>x" ":ltexec tabset.close"})]
@@ -43,4 +43,4 @@
 
  ;; You can use the subtract key to remove behavior that may get added by
  ;; another diff
- :- {:app []}}
+ :- {:app [:lt.objs.intro/show-intro]}}
