@@ -1,4 +1,5 @@
-[{:name "CSS", :version "0.0.1", :source "https://github.com/LightTable/CSS"}
+[{:name "Keymapper", :version "0.0.4", :source "https://github.com/joshuafcole/keymapper"}
+ {:name "CSS", :version "0.0.1", :source "https://github.com/LightTable/CSS"}
  {:name "Claire", :version "0.1.6", :source "https://github.com/joshuafcole/claire"}
  {:name "Clojure", :version "0.0.6", :source "https://github.com/LightTable/Clojure"}
  {:name "GBlame", :version "0.0.5", :source "https://github.com/bfabry/gblame"}
@@ -9,5 +10,6 @@
  {:name "Rainbow", :version "0.0.8", :source "https://github.com/LightTable/Rainbow"}
  {:name "Workspace Nav", :version "0.0.3", :source "https://github.com/bfabry/workspace-nav"}
  {:name "Vim", :version "0.0.2", :source "https://github.com/LightTable/Vim"}
+ {:name "Paredit-Plus", :version "0.0.3", :source "https://github.com/otijhuis/paredit-plus.git"}
  {:name "Python", :version "0.0.3", :source "https://github.com/LightTable/Python"}
  {:name "plugins_inc", :version "0.1.0", :source "https://github.com/cldwalker/lt-plugins-inc"}]

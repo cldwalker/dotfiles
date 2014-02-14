@@ -26,7 +26,14 @@
                                       "<Space>tc" ":ltexec toggle-console"
                                       "<Space>v" ":ltexec tabset.new"
                                       "<Space>w" ":ltexec workspace.show"
-                                      "<Space>x" ":ltexec tabset.close"})]
+                                      "<Space>x" ":ltexec tabset.close"
+                                      ;; \\ is leader key for paredit
+                                      ;; killing-backward also known as raise
+                                      "\\r" ":ltexec paredit-plus.splice-sexp-killing-backward"
+                                      "\\(" ":ltexec paredit-plus.wrap-round"
+                                      "\\{" ":ltexec paredit-plus.wrap-curly"
+                                      "\\[" ":ltexec paredit-plus.wrap-square"
+                                      "\\'" ":ltexec paredit-plus.wrap-quote"})]
 
      ;; The editor tag is applied to all editors
      :editor [:lt.objs.editor/no-wrap
