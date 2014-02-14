@@ -43,4 +43,8 @@
 
  ;; You can use the subtract key to remove behavior that may get added by
  ;; another diff
- :- {:app [:lt.objs.intro/show-intro]}}
+ :- {:app [:lt.objs.intro/show-intro]
+     ;; turn off aggressive autocomplete
+     :editor [:lt.plugins.auto-complete/auto-show-on-input]
+     ;; turn off annoying info boxes while editing any behavior
+     :editor.behaviors [:lt.objs.langs.behaviors/show-info-on-move]}}
