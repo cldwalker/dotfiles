@@ -21,6 +21,7 @@
                                       ;; <Space> is a leader key in normal mode
                                       "<Space>b" ":ltexec behaviors.modify-user"
                                       "<Space>c" ":ltexec clear-console"
+                                      "<Space>e" ":ltexec ltfiles.expand-current-inline-result"
                                       "<Space>k" ":ltexec keymap.modify-user"
                                       "<Space>p" ":ltexec plugin-manager.show"
                                       "<Space>tc" ":ltexec toggle-console"
