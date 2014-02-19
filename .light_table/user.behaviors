@@ -1,14 +1,3 @@
-;; User behaviors
-;; -----------------------------
-;; Behaviors are stored as a set of diffs that are merged together
-;; to create the final set of functionality that makes up Light Table. You can
-;; modify these diffs to either add or subtract functionality.
-;;
-;; Behaviors are added to tags, objects with those tags then automatically gain
-;; whatever logic the behavior imparts. To see a list of user-level behaviors,
-;; start typing a word related to the functionality you want in between the square
-;; brackets (e.g. "theme").
-
 {:+ {
      ;; The app tag is kind of like global scope. You assign behaviors that affect
      ;; all of Light Table here
@@ -19,9 +8,15 @@
                                       "k" "gk"
                                       ;; <Space> is a leader key in normal mode
                                       "<Space>b" ":ltexec behaviors.modify-user"
-                                      "<Space>c" ":ltexec clear-console"
+                                      ; c - for cancel/clear/kill actions
+                                      "<Space>cc" ":ltexec clear-console"
+                                      "<Space>cC" ":ltexec editor.disconnect-clients"
+                                      "<Space>ce" ":ltexec eval.cancel-all!"
+                                      "<Space>cw" ":ltexec editor.watch.remove-all"
+                                      "<Space>cs" ":ltexec reset-working"
                                       "<Space>k" ":ltexec keymap.modify-user"
                                       "<Space>p" ":ltexec plugin-manager.show"
+                                      ; t - for toggle
                                       "<Space>tc" ":ltexec toggle-console"
                                       "<Space>ti" ":ltexec ltfiles.toggle-current-inline-result"
                                       "<Space>tl" ":ltexec ltfiles.toggle-line-numbers"
