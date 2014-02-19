@@ -4,6 +4,8 @@
 
      :editor {"alt-w" [:editor.watch.watch-selection]
               "alt-shift-w" [:editor.watch.unwatch]
+              ;; has to be here instead of <Space>-ti b/c of selection limitation
+              "alt-," [:ltfiles.toggle-current-inline-result]
 
               "cmd-=" [:paredit.select.parent :smart-indent-selection :paredit.select.clear]
               ;;Eval the parent ( ... )
@@ -41,6 +43,7 @@
      :filter-list.input { "ctrl-n" [(:filter-list.input.move-selection 1)]
                           "ctrl-p" [(:filter-list.input.move-selection -1)]}
 
+     ;; Broken alt combos: i,e
      ;; thanks to https://github.com/jamii/lt-config/
      :editor.clj {"alt-p" [(:eval.custom "(with-out-str (clojure.pprint/write __SELECTION__ :suppress-namespaces false :dispatch clojure.pprint/code-dispatch))" {:result-type :inline :verbatim true})]
                   "alt-m" [(:eval.custom "(with-out-str (clojure.pprint/write (macroexpand-1 '__SELECTION__) :suppress-namespaces false :dispatch clojure.pprint/code-dispatch))" {:result-type :inline :verbatim true})]
