@@ -6,6 +6,8 @@
                                       "0" "^",
                                       "j" "gj",
                                       "k" "gk"
+                                      ;"v" ":ltexec ltfiles.vim-visual-mode"
+                                      "gv" ":ltexec ltfiles.vim-reselect-visual"
                                       ;; <Space> is a leader key in normal mode
                                       "<Space>b" ":ltexec behaviors.modify-user"
                                       ; c - for cancel/clear/kill actions
