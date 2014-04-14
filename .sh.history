@@ -11,3 +11,4 @@ python -m SimpleHTTPServer 8081
 ruby -run -e httpd . -p5000
 cat doc/*.md | aspell list  --home-dir=. --personal=whitelist | sort | uniq
 ssh -L 3000:127.0.0.1:3000 some@ip
+ffmpeg -ss 4 -i ~/Movies/Screen\ Recording\ 7.mov -pix_fmt rgb24 -r 5 -vf scale=640:-1 -t 10 output.gif
