@@ -16,6 +16,11 @@ rmt () {
   mv -i $@ $HOME/temp/trash/
 }
 
+# git grep blame (ggb)
+ggb() {
+  git grep -n "$1" "${2:=.}" | perl -pe 's/([^:]+):([^:]+).*/`git blame -L $2,$2 $1`/se'
+}
+
 function vgr() {
   vim -c ":Ack $@"
 }
