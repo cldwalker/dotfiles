@@ -15,3 +15,5 @@ ffmpeg -ss 4 -i ~/Movies/Screen\ Recording\ 7.mov -pix_fmt rgb24 -r 5 -vf scale=
 git config --rename-section remote.origin remote.old
 sips --resampleHeight 400 some.png
 perl -i -p -e 's%cheatsheet_files%{{ site.baseurl }}public%g' cheatsheet.html
+java -cp build io.github.yokolet.oak.TwoWorkableThreads
+javac -d build src/io/github/yokolet/oak/TwoWorkableThreads.java
