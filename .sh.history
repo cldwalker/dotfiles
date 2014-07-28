@@ -14,3 +14,4 @@ ssh -L 3000:127.0.0.1:3000 some@ip
 ffmpeg -ss 4 -i ~/Movies/Screen\ Recording\ 7.mov -pix_fmt rgb24 -r 5 -vf scale=640:-1 -t 10 output.gif
 git config --rename-section remote.origin remote.old
 sips --resampleHeight 400 some.png
+perl -i -p -e 's%cheatsheet_files%{{ site.baseurl }}public%g' cheatsheet.html
