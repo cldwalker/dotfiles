@@ -20,3 +20,4 @@ javac -d build src/io/github/yokolet/oak/TwoWorkableThreads.java
 ruby -e 'p ARGF.inject(0) { |sum, line| line.split[1].to_i + sum }'
 dot -Tpng input.dot > output.png
 expand -t 2 comp/ruby.otl > ruby.otl
+ssh -L 3001:127.0.0.1:3001 -L 3000:127.0.0.1:3000 -p 45880 user@IP
