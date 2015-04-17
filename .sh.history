@@ -21,3 +21,7 @@ ruby -e 'p ARGF.inject(0) { |sum, line| line.split[1].to_i + sum }'
 dot -Tpng input.dot > output.png
 expand -t 2 comp/ruby.otl > ruby.otl
 ssh -L 3001:127.0.0.1:3001 -L 3000:127.0.0.1:3000 -p 45880 user@IP
+git revert -m 1 RevertCommit
+iptables -D INPUT 1
+tc qdisc add dev eth0 root handle 10: netem loss "20%" "75%" 
+iptables -A INPUT -p tcp --dport 8082 -j DROP
