@@ -2,10 +2,6 @@ if [ -f ~/.bash/completion/git-completion.bash ]; then
   source ~/.bash/completion/git-completion.bash
 fi
 
-if [[ -x $(which rip) ]]; then
-  eval `rip completion --bash`;
-fi;
-
 if [[ -x $(which cheat) ]]; then
   #completion for cheat
   if [ ! -r ~/.cheat_completion ]; then

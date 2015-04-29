@@ -8,11 +8,6 @@
   less: l
   echo: e
 :bolts:
-  rip_dirs:
-    globs:
-    - $HOME/.rip/.packages/*
-    global: true
-    alias: pd
   rails:
     functions:
     - echo
@@ -54,11 +49,6 @@
     - /Applications/Utilities/*.app
     - /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/*.app
     alias: a
-  rip_path:
-    globs:
-    - $HOME/.rip/*/lib/**/*.rb
-    global: true
-    alias: pp
   code:
     functions:
     - name: c
