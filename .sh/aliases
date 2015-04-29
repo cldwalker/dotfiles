@@ -15,7 +15,6 @@ alias s="sudo"
 ### Personal (You'll need to adjust paths and install applications as needed) ###
 
 #apps
-alias vim='mvim -v'
 alias e='vim'
 alias emacs='emacs -nw'
 alias se='NO_VIM_PLUGINS=1 vim'
