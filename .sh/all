@@ -5,21 +5,6 @@ if [ -f ~/.sh/private ]; then
   source ~/.sh/private
 fi
 
-# don't remodify $PATH when tmux starts
-#if [[ "$TMUX" == '' ]]; then
-  source ~/.sh/variables
+source ~/.sh/variables
 
-  if [ -s ~/Developer/cinderella.profile ] ; then source ~/Developer/cinderella.profile ; fi
-
-#fi;
-
-if [[ "$RBENV" == '' ]]; then
-  if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
-fi;
-
-# doesn't suffer from tmux $PATH remodification, stupid /usr/libexec/path_helper
-if [[ "$RBENV" != '' ]] && [[ -x $SMEAGOL_ROOT_DIR/.rbenv/bin/rbenv ]]; then
-  export PATH="$SMEAGOL_ROOT_DIR/.rbenv/bin:$PATH";
-  export RBENV_ROOT="$SMEAGOL_ROOT_DIR/.rbenv";
-  eval "$(rbenv init -)"
-fi
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
