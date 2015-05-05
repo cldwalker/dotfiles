@@ -16,15 +16,15 @@ set completion-query-items 120
 
 # keys
 set keymap emacs
-$include /Users/bozo/.input/common_keys
+$include /Users/me/.input/common_keys
 "\C-h": vi-editing-mode
 "\C-x\C-f": forward-search-history
 
 set editing-mode emacs
 $if mode=vi
   set keymap vi-command
-  $include /Users/bozo/.input/vi_keys
-  $include /Users/bozo/.input/common_keys
+  $include /Users/me/.input/vi_keys
+  $include /Users/me/.input/common_keys
   "_": beginning-of-line
   "qq": start-kbd-macro
   "qe": end-kbd-macro
@@ -34,8 +34,8 @@ $if mode=vi
   "yl":yank-last-arg
 
   set keymap vi-insert
-  $include /Users/bozo/.input/vi_keys
-  $include /Users/bozo/.input/common_keys
+  $include /Users/me/.input/vi_keys
+  $include /Users/me/.input/common_keys
   "\C-l": clear-screen
   "\C-p": previous-history
   "\C-n": next-history
