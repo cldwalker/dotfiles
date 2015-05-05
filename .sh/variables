@@ -2,15 +2,12 @@ export HISTSIZE=3000
 export HISTFILESIZE=3000
 export EDITOR=vim
 export VISUAL=vim
-export PATH=/usr/local/bin:$PATH:/usr/local/mysql/bin:$HOME/bin
+export PATH=$PATH:/usr/local/mysql/bin:$HOME/bin
 export MANPATH=$MANPATH:/usr/local/man
 export LC_CTYPE=en_US.UTF-8
 # only page if more than a screenful
 export LESS=FRX
-export NODE_PATH=/usr/local/lib/node_modules
 
 # ruby
 export RI="--no-home --no-gems --no-site --format ansi -T"
 export NO_RUBYGEMS=true
-export RBXOPT=-X19
-export JRUBY_OPTS=--1.9
