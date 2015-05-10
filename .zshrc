@@ -7,6 +7,9 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.sh/all
 
+if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
+if which jenv > /dev/null; then eval "$(jenv init - zsh)"; fi
+
 #for lightning - http://github.com/cldwalker/lightning
 if [ -f ~/.lightning/functions.sh ] && [ "$SHELL" != '/bin/sh' ] ; then
   source ~/.lightning/functions.sh
