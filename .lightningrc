@@ -56,8 +56,7 @@
     - cp
     - echo
     globs:
-    - $HOME/code/{gems,old_work,repo,priv,fork,cjars}/*
-    - /Volumes/relevance/[a-z]*
+    - $HOME/code/{gems,work,repo,priv,fork,cjars}/*
     alias: c
   ruby_load_path:
     functions:
@@ -111,23 +110,6 @@
     functions:
     - less
     alias: b
-  system_ruby:
-    globs:
-    - /Library/Ruby/Site/1.8/**/*.{rb,bundle,so,c}
-    - /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/**/*.{rb,bundle,so,c}
-    global: true
-  gem_doc:
-    functions:
-    - name: o-gd
-      post_path: /rdoc/index.html
-      shell_command: open
-      desc: open gem's doc in browser
-    - post_path: /ri
-      shell_command: ri --no-standard-docs -d
-      desc: access ri documentation limited to this gem
-    globs:
-    - $GEM_HOME/doc/*
-    alias: gd
   lightning:
     functions:
     - vim
@@ -135,38 +117,19 @@
     - $HOME/.lightning/**/*.rb
     alias: lg
   js:
-    globs: ! '**/*.js'
+    globs:
+    - '**/*.js'
     global: true
-  gem_new:
-    functions:
-    - name: pb-g
-      add_to_command: ! ' |pbcopy'
-      shell_command: echo -n
-    global: true
-    alias: g
-  gem_path:
-    global: true
-    alias: gg
   rbenv_ruby_std:
     globs:
-    - $RBENV_ROOT/versions/$RBENV_VERSION/lib/ruby/{1.9.1,1.8}/**/*.{rb,bundle,so,c}
+    - $HOME/.rbenv/versions/*/lib/ruby/{2.1.0,2.2.0}/**/*.{rb,bundle,so,c}
     global: true
     alias: r
   rbenv_ruby_core:
     globs:
-    - $RBENV_ROOT/versions/$RBENV_VERSION/include/**/*.{h,inc}
+    - $HOME/.rbenv/versions/*/include/**/*.{h,inc}
     global: true
     alias: rc
-  rvm_ruby_std:
-    globs:
-    - $HOME/.rvm/rubies/$RUBY_VERSION/lib/ruby/**/*.{rb,bundle,so,c}
-    global: true
-    alias: rv
-  rvm_ruby_core:
-    globs:
-    - $HOME/.rvm/src/$RUBY_VERSION/**/*.{c,h,rb}
-    global: true
-    alias: rvc
 :ignore_paths:
 - .DS_Store
 - .git/
