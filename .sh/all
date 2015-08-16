@@ -6,3 +6,4 @@ if [ -f ~/.sh/private ]; then
 fi
 
 source ~/.sh/variables
+source $(brew --prefix nvm)/nvm.sh
