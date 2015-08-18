@@ -46,3 +46,12 @@ bind down:ctrl;alt;cmd  throw down  resize
 
 # Window Hints
 bind esc:cmd hint
+
+# HYPER keys
+alias hyper shift,cmd
+bind c:${hyper} focus 'Google Chrome'
+bind s:${hyper} focus 'Slack'
+bind t:${hyper} focus 'iTerm'
+bind l:${hyper} focus 'Light Table'
+bind x:${hyper} focus 'Xcode'
+bind i:${hyper} focus 'iOS Simulator'
