@@ -52,6 +52,7 @@ alias hyper alt,shift
 bind c:${hyper} focus 'Google Chrome'
 bind s:${hyper} focus 'Slack'
 bind t:${hyper} focus 'iTerm'
+bind y:${hyper} focus 'Terminal'
 bind l:${hyper} focus 'Light Table'
 bind x:${hyper} focus 'Xcode'
 bind i:${hyper} focus 'iOS Simulator'
