@@ -29,3 +29,4 @@ find . -type f -exec chmod 644 {} \;
 find . -type d -exec chmod 755 {} \;
 xattr -l .
 xattr -d com.apple.quarantine .
+ffmpeg -ss 0 -i Guided\ Forest\ Meditation-Y_-AwBBNQMk.m4a -vn -c copy -t 14:33 guided_forest_meditation.m4a
