@@ -10,6 +10,7 @@ export LC_CTYPE=en_US.UTF-8
 export LESS=FRX
 export NVM_DIR=~/.nvm
 export LT_HOME=~/code/repo/LightTable/builds/lighttable-0.8.0-alpha-mac
+export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # ruby
 export RI="--no-home --no-gems --no-site --format ansi -T"
