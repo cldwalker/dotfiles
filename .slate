@@ -51,7 +51,7 @@ bind esc:cmd hint
 alias hyper alt,shift
 bind c:${hyper} focus 'Google Chrome'
 bind s:${hyper} focus 'Slack'
-bind t:${hyper} focus 'iTerm'
+bind t:${hyper} focus 'iTerm2'
 bind y:${hyper} focus 'Terminal'
 bind l:${hyper} focus 'Light Table'
 bind x:${hyper} focus 'Xcode'
