@@ -28,3 +28,5 @@ source ~/.zsh/completions.zsh
 # COMPLETION
 # get option description in completion
 zstyle ':completion:*' verbose yes
+
+export PATH="$HOME/.yarn/bin:$PATH"

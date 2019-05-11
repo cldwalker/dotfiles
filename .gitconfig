@@ -34,6 +34,7 @@
   sed = ! git ls-files -z | xargs -0 sed -i -e
   fd = diff HEAD ^origin/master
   fl = log HEAD ^origin/master
+  sup = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
 
 [url "git@github.com:"]
     insteadOf = "gh:"
