@@ -1,9 +1,9 @@
 # trying out oh-my-zsh
 export ZSH=$HOME/.oh-my-zsh
-export DISABLE_AUTO_UPDATE="true"
-plugins=(git brew redis-cli rvm)
+plugins=(git emoji docker lein)
 export ZSH_THEME="clean"
 source $ZSH/oh-my-zsh.sh
+COMPLETION_WAITING_DOTS="true"
 
 source ~/.sh/all
 

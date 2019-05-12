@@ -6,4 +6,6 @@ if [ -f ~/.sh/private ]; then
 fi
 
 source ~/.sh/variables
-source $(brew --prefix nvm)/nvm.sh
+if which nvm > /dev/null ; then
+ source $(brew --prefix nvm)/nvm.sh
+fi
