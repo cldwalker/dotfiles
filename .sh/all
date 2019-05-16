@@ -6,6 +6,4 @@ if [ -f ~/.sh/private ]; then
 fi
 
 source ~/.sh/variables
-if which nvm > /dev/null ; then
- source $(brew --prefix nvm)/nvm.sh
-fi
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
