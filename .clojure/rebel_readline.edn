@@ -1,0 +1,2 @@
+{:key-bindings {:emacs [["^M" :clojure-force-accept-line
+                         "^J" :clojure-force-accept-line]]}}
