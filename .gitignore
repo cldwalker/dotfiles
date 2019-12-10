@@ -1,3 +1,4 @@
 .gitignore
 .sh/private
 .herrie/autosave.pls
+.clojure/.cpcache
