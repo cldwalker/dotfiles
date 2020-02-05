@@ -35,6 +35,7 @@
   fd = diff HEAD ^origin/master
   fl = log HEAD ^origin/master
   sup = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+  msha = rev-parse --short=20
 
 [url "git@github.com:"]
     insteadOf = "gh:"
