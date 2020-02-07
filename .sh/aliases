@@ -55,6 +55,7 @@ alias brew='RUBYOPT="" brew'
 alias v='vimdb'
 alias u='urls'
 alias rb='rbenv'
+alias bbk='rlwrap deps.clj -Scommand "bb -cp {{classpath}} {{main-opts}}"'
 
 #git
 alias g='git'

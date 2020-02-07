@@ -3,7 +3,7 @@ export HISTFILESIZE=3000
 export EDITOR=vim
 export VISUAL=vim
 export GOPATH=$HOME/.go
-export PATH=$PATH:$HOME/bin:$GOPATH/bin:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/bin:$GOPATH/bin:$HOME/.cargo/bin:$HOME/code/repo/clj-clis
 export MANPATH=$MANPATH:/usr/local/man
 export LC_CTYPE=en_US.UTF-8
 # only page if more than a screenful
@@ -11,6 +11,8 @@ export LESS=FRX
 export NVM_DIR=~/.nvm
 export LT_HOME=~/code/repo/LightTable/builds/lighttable-0.8.1-mac
 export ANDROID_HOME=/usr/local/opt/android-sdk
+CLJ_HTTP_LITE_PATH="$(clojure -Sdeps '{:deps {clj-http-lite {:git/url "https://github.com/borkdude/clj-http-lite" :sha "f44ebe45446f0f44f2b73761d102af3da6d0a13e"}}}' -Spath)"
+export BABASHKA_CLASSPATH=$HOME/code/repo/clj-clis/src:$CLJ_HTTP_LITE_PATH
 
 # ruby
 export RI="--no-home --no-gems --no-site --format ansi -T"
