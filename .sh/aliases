@@ -56,6 +56,7 @@ alias v='vimdb'
 alias u='urls'
 alias rb='rbenv'
 alias bbk='rlwrap deps.clj -Scommand "bb -cp {{classpath}} {{main-opts}}"'
+alias bbjq='bb "(json/parse-stream *in* true)" | bb'
 
 #git
 alias g='git'

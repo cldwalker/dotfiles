@@ -33,3 +33,5 @@ ffmpeg -ss 0 -i Guided\ Forest\ Meditation-Y_-AwBBNQMk.m4a -vn -c copy -t 14:33 
 sed -i '' -E 's/snaptastic/snapability/g' env/**/*.cljs
 for x in *; do mv $x _$x; done
 arp -a
+lein test $(git diff --name-only |grep _test.clj)
+git grep -oh '(helper/[a-zA-z\-]\+' test-sponsor | sort |uniq
