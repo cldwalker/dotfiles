@@ -86,4 +86,4 @@ alias gg='git grep'
 #path dependent
 alias todo='vim ~/docs/notes/todo.otl'
 alias datomic-free=$HOME/.datomic-free/bin/datomic-free
-alias bb="BABASHKA_PRELOADS='(load-file (str (System/getenv \"HOME\") \"/code/repo/clj-clis/preloads.clj\"))' bb"
+alias bb="BABASHKA_PRELOADS='(load-file (str (System/getenv \"HOME\") \"/code/repo/bb-clis/preloads.clj\"))' bb"
