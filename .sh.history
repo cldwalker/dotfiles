@@ -35,3 +35,6 @@ for x in *; do mv $x _$x; done
 arp -a
 lein test $(git diff --name-only |grep _test.clj)
 git grep -oh '(helper/[a-zA-z\-]\+' test-sponsor | sort |uniq
+git log --oneline develop ^HEAD
+# https://stackoverflow.com/a/13687302
+git ls-tree -r -z --name-only HEAD -- scss | xargs -0 -n1 git blame --line-porcelain HEAD |grep "^author "|sort|uniq -c|sort -nr 

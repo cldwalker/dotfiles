@@ -57,6 +57,7 @@ alias u='urls'
 alias rb='rbenv'
 alias bbk='rlwrap deps.clj -Scommand "bb -cp {{classpath}} {{main-opts}}"'
 alias bbjq='bb "(json/parse-stream *in* true)" | bb'
+alias sm='say "MOO"'
 
 #git
 alias g='git'
@@ -79,8 +80,6 @@ alias gph='git push heroku master'
 alias gmv='git mv'
 alias grc='git rebase --continue'
 alias gbd='git branch -D'
-alias gfeat='git flow feature'
-alias grel='git flow release'
 alias gg='git grep'
 
 #path dependent
