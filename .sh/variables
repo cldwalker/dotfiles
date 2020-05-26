@@ -14,8 +14,7 @@ export NVM_DIR=~/.nvm
 export LT_HOME=~/code/repo/LightTable/builds/lighttable-0.8.1-mac
 export ANDROID_HOME=/usr/local/opt/android-sdk
 DEPS_EDN_PATHS=$(clojure -Spath -Sdeps "$(cat $HOME/code/repo/bb-clis/deps.edn)")
-export BABASHKA_CLASSPATH=$HOME/code/repo/bb-clis/src:$HOME/code/repo/my-pinboard/src:$DEPS_EDN_PATHS
-
+export BABASHKA_CLASSPATH=$HOME/code/repo/bb-clis/src:$DEPS_EDN_PATHS:$HOME/code/repo/my-pinboard/src:$HOME/code/repo/my-pinboard/resources
 # ruby
 export RI="--no-home --no-gems --no-site --format ansi -T"
 export NO_RUBYGEMS=true
