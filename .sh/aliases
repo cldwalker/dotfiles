@@ -14,11 +14,13 @@ alias s="sudo"
 
 ### Personal (You'll need to adjust paths and install applications as needed) ###
 
-#apps
+# apps
+## editors
 alias e='vim'
 alias emacs='emacs -nw'
 alias se='NO_VIM_PLUGINS=1 vim'
 alias ee='vim -u NONE'
+## ruby
 alias r='ruby'
 alias ru='RUBYOPT=-rubygems'
 alias raker='rake -rubygems'
@@ -39,15 +41,10 @@ alias gi='gem install'
 alias gu='gem uninstall'
 alias lg='lightning'
 alias lgr='lightning-reload'
-alias le='lein'
-alias lr='lein repl'
-alias lt='lein test'
 alias b='boson'
 alias r19='rbenv shell 1.9.3-p194'
 alias rvg='rvm gemset'
 alias rvu='rvm gemset use'
-alias h='heroku'
-alias hr='heroku run'
 alias bu='bundle'
 alias bi='bundle install'
 alias be='bundle exec'
@@ -55,11 +52,19 @@ alias brew='RUBYOPT="" brew'
 alias v='vimdb'
 alias u='urls'
 alias rb='rbenv'
+## misc
+alias h='heroku'
+alias hr='heroku run'
+alias sm='say "MOO"'
+## clojure
+alias le='lein'
+alias lr='lein repl'
+alias lt='lein test'
 alias bbk='rlwrap deps.clj -Scommand "bb -cp {{classpath}} {{main-opts}}"'
 alias bbjq='bb "(json/parse-stream *in* true)" | bb'
-alias sm='say "MOO"'
-
-#git
+alias cljs="clj -m cljs.main"
+alias sc='npx shadow-cljs'
+## git
 alias g='git'
 alias ga='git add'
 alias gb='git branch'
@@ -82,7 +87,7 @@ alias grc='git rebase --continue'
 alias gbd='git branch -D'
 alias gg='git grep'
 
-#path dependent
+# path dependent
 alias todo='vim ~/docs/notes/todo.otl'
 alias datomic-free=$HOME/.datomic-free/bin/datomic-free
 alias bb="BABASHKA_PRELOADS='(load-file (str (System/getenv \"HOME\") \"/code/repo/bb-clis/preloads.clj\"))' bb"
