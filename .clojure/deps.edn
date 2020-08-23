@@ -16,7 +16,8 @@
                                           :sha "1ed3b11025b7f3a582e6db099ba10a888fe0fc2c"
                                           :deps/root "analysis"}}
             :main-opts ["-m" "clj-kondo.tools.unused-vars"]}
- }
+           ;; Start a socket repl on port 5555
+           :socket {:jvm-opts ["-Dclojure.server.repl={:port,5555,:accept,clojure.core.server/repl}"]}}
 
   ;; Paths
   ;;   Directories in the current project to include in the classpath
