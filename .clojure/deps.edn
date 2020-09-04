@@ -17,7 +17,9 @@
                                           :deps/root "analysis"}}
             :main-opts ["-m" "clj-kondo.tools.unused-vars"]}
            ;; Start a socket repl on port 5555
-           :socket {:jvm-opts ["-Dclojure.server.repl={:port,5555,:accept,clojure.core.server/repl}"]}}
+           :socket {:jvm-opts ["-Dclojure.server.repl={:port,5555,:accept,clojure.core.server/repl}"]}
+           ;; Add reveal to a project, add it as a tap and then tap> to it
+           :reveal {:extra-deps {vlaaad/reveal {:mvn/version "0.1.0-ea26"}}}}
 
   ;; Paths
   ;;   Directories in the current project to include in the classpath
@@ -25,7 +27,7 @@
   ;; :paths ["src"]
 
   ;; External dependencies
- 
+
   ;; :deps {
   ;;   org.clojure/clojure {:mvn/version "1.10.0"}
   ;; }
