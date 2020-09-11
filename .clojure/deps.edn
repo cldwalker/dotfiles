@@ -19,7 +19,19 @@
            ;; Start a socket repl on port 5555
            :socket {:jvm-opts ["-Dclojure.server.repl={:port,5555,:accept,clojure.core.server/repl}"]}
            ;; Add reveal to a project, add it as a tap and then tap> to it
-           :reveal {:extra-deps {vlaaad/reveal {:mvn/version "0.1.0-ea26"}}}}
+           :reveal {:extra-deps {vlaaad/reveal {:mvn/version "0.1.0-ea26"}}}
+
+           :outdated {:extra-deps {antq/antq {:mvn/version "RELEASE"}}
+             :main-opts ["-m" "antq.core"]}
+
+           :rebl        ;; for JDK 11+
+           {:extra-deps {com.cognitect/rebl          {:mvn/version "0.9.241"}
+                         org.openjfx/javafx-fxml     {:mvn/version "15-ea+6"}
+                         org.openjfx/javafx-controls {:mvn/version "15-ea+6"}
+                         org.openjfx/javafx-swing    {:mvn/version "15-ea+6"}
+                         org.openjfx/javafx-base     {:mvn/version "15-ea+6"}
+                         org.openjfx/javafx-web      {:mvn/version "15-ea+6"}}
+            :main-opts ["-m" "cognitect.rebl"]}}
 
   ;; Paths
   ;;   Directories in the current project to include in the classpath
