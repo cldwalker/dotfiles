@@ -14,7 +14,7 @@ Among these are:
 # Install
 
 Run `ruby install.rb` in this directory to symlink these files to
-your home directory.
+your home directory and set up zsh.
 
 # Additional Links
 

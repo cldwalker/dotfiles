@@ -4,6 +4,8 @@ plugins=(git emoji docker lein)
 export ZSH_THEME="clean"
 source $ZSH/oh-my-zsh.sh
 COMPLETION_WAITING_DOTS="true"
+# See https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template for
+# vars I can set
 
 source ~/.sh/all
 
