@@ -1,9 +1,9 @@
+# needs to come before others for cmds to get picked e.g. for aliases
+source ~/.sh/variables
 source ~/.sh/aliases
 source ~/.sh/functions
 
 if [ -f ~/.sh/private ]; then
   source ~/.sh/private
 fi
-
-source ~/.sh/variables
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

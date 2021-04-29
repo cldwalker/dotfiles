@@ -93,3 +93,7 @@ alias todo='vim ~/docs/notes/todo.otl'
 alias datomic-free=$HOME/.datomic-free/bin/datomic-free
 alias bbp="BABASHKA_PRELOADS='(load-file (str (System/getenv \"HOME\") \"/code/repo/bb-clis/preloads.clj\"))' bb"
 alias bbr="BABASHKA_PRELOADS='(load-file (str (System/getenv \"HOME\") \"/code/repo/bb-clis/preloads.clj\"))' rlwrap bb"
+# brew doesn't install this correctly for atom-beta
+if [ -f '/Applications/Atom Beta.app/Contents/Resources/app/apm/bin/apm' ] ; then
+  alias apm='/Applications/Atom\ Beta.app/Contents/Resources/app/apm/bin/apm'
+fi

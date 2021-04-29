@@ -11,10 +11,14 @@ Among these are:
 * lightning: My ruby gem for configurable cli completion under .lightning\*
 * other: Other dotfiles are mostly for gems or clojars I've written that I may not use as actively
 
+These dotfiles work on a macbook pro with an intel or M1 chip.
+
 # Install
 
-Run `ruby install.rb` in this directory to symlink these files to
-your home directory and set up zsh.
+* Run `ruby install.rb` in this directory to symlink these files to
+  your home directory and set up zsh.
+* Optional: To use lightning or any of the other gem configs, install
+  https://github.com/cldwalker/irbfiles#install.
 
 # Additional Links
 
