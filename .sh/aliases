@@ -53,9 +53,9 @@ alias v='vimdb'
 alias u='urls'
 alias rb='rbenv'
 ## misc
-alias h='heroku'
-alias hr='heroku run'
 alias sm='say "MOO"'
+alias ws='wormhole send'
+alias wr='wormhole receive --accept-file'
 ## clojure
 alias le='lein'
 alias lr='lein repl'
@@ -89,7 +89,6 @@ alias gbd='git branch -D'
 alias gg='git grep'
 
 # path dependent
-alias todo='vim ~/docs/notes/todo.otl'
 alias datomic-free=$HOME/.datomic-free/bin/datomic-free
 alias bbp="BABASHKA_PRELOADS='(load-file (str (System/getenv \"HOME\") \"/code/repo/bb-clis/preloads.clj\"))' bb"
 alias bbr="BABASHKA_PRELOADS='(load-file (str (System/getenv \"HOME\") \"/code/repo/bb-clis/preloads.clj\"))' rlwrap bb"
