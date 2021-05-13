@@ -1,6 +1,6 @@
 # trying out oh-my-zsh
 export ZSH=$HOME/.oh-my-zsh
-plugins=(git emoji docker lein)
+plugins=(git emoji docker lein aws)
 export ZSH_THEME="clean"
 source $ZSH/oh-my-zsh.sh
 COMPLETION_WAITING_DOTS="true"

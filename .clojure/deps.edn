@@ -25,7 +25,7 @@
                       :main-opts ["-m" "antq.core"]}
 
            :carve {:extra-deps {borkdude/carve {:git/url "https://github.com/borkdude/carve"
-                                                :sha "af7004dab7000ad7e9c942499f269cf7d21c0728"}}
+                                                :sha "f499f65e36e02484609f01ce891f3c0207b24444"}}
                    :main-opts ["-m" "carve.main"]}
 
            :rebl        ;; for JDK 11+
