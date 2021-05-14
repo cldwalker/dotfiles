@@ -16,3 +16,11 @@ bindkey '^X^X' tmux-pane-words-anywhere
 zstyle ':completion:tmux-pane-words-(prefix|anywhere):*' completer _tmux_pane_words
 zstyle ':completion:tmux-pane-words-(prefix|anywhere):*' ignore-line current
 zstyle ':completion:tmux-pane-words-anywhere:*' matcher-list 'b:=* m:{A-Za-z}={a-zA-Z}'
+
+# Only for bb tasks
+_bb_tasks () {
+  local IFS=$'\n'
+  reply=(`bb tasks |tail -n +3 |cut -f1 -d ' '`)
+}
+compctl -QK _bb_tasks bb
+
