@@ -18,9 +18,9 @@ zstyle ':completion:tmux-pane-words-(prefix|anywhere):*' ignore-line current
 zstyle ':completion:tmux-pane-words-anywhere:*' matcher-list 'b:=* m:{A-Za-z}={a-zA-Z}'
 
 # Only for bb tasks
-_bb_tasks () {
-  local IFS=$'\n'
-  reply=(`bb tasks |tail -n +3 |cut -f1 -d ' '`)
+_bb_tasks() {
+    local matches=(`bb tasks |tail -n +3 |cut -f1 -d ' '`)
+    compadd -a matches
+    _files # autocomplete filenames as well
 }
-compctl -QK _bb_tasks bb
-
+compdef _bb_tasks bb
