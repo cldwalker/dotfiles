@@ -40,4 +40,4 @@ function pullify() {
 
   git config --add remote.origin.fetch '+refs/pull/*/head:refs/remotes/origin/pr/*'
 }
-function cljdoc() { echo "(doc $1)" | bb }
+function bbg() { cd $HOME/code/repo/bb-clis && bb $@; cd - > /dev/null}

@@ -24,3 +24,10 @@ _bb_tasks() {
     _files # autocomplete filenames as well
 }
 compdef _bb_tasks bb
+
+_bbg_tasks() {
+    local matches=(`cd ~/code/repo/bb-clis && bb tasks |tail -n +3 |cut -f1 -d ' '`)
+    compadd -a matches
+    _files # autocomplete filenames as well
+}
+compdef _bbg_tasks bbg
