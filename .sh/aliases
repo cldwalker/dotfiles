@@ -10,7 +10,6 @@ alias psgrep='ps aux|grep'
 alias rm='rm -i'
 alias rmf='rm -f'
 alias k9='kill -9'
-alias s="sudo"
 
 ### Personal (You'll need to adjust paths and install applications as needed) ###
 
@@ -25,37 +24,32 @@ alias r='ruby'
 alias ru='RUBYOPT=-rubygems'
 alias raker='rake -rubygems'
 alias rdm='rake db:migrate'
-alias sn='screen'
-alias x2='xmms2'
 alias ss='script/server'
 alias js='jekyll --server'
-alias rr='ripl rails'
 alias rt="RAILS_ENV='test'"
 alias rd="RAILS_ENV='development'"
 alias lrr='RACK_ENV=local ripl rack'
-alias ir='ripl'
-alias gs='gem search -r'
-alias sgi='sudo gem install'
-alias sgu='sudo gem uninstall'
 alias gi='gem install'
 alias gu='gem uninstall'
-alias lg='lightning'
-alias lgr='lightning-reload'
-alias b='boson'
-alias r19='rbenv shell 1.9.3-p194'
-alias rvg='rvm gemset'
-alias rvu='rvm gemset use'
 alias bu='bundle'
 alias bi='bundle install'
 alias be='bundle exec'
-alias brew='RUBYOPT="" brew'
+### ruby CLIs
+alias ir='ripl'
+alias rr='ripl rails'
+alias lg='lightning'
+alias lgr='lightning-reload'
+alias b='boson'
 alias v='vimdb'
 alias u='urls'
 alias rb='rbenv'
+
 ## misc
 alias sm='say "MOO"'
 alias ws='wormhole send'
 alias wr='wormhole receive --accept-file'
+alias av='aws-vault'
+
 ## clojure
 alias le='lein'
 alias lr='lein repl'
@@ -65,6 +59,7 @@ alias bbjq='bb "(json/parse-stream *in* true)" | bb'
 alias cljs="clj -m cljs.main"
 alias sc='npx shadow-cljs'
 alias portal="bb -cp `clj -Spath -Sdeps '{:deps {djblue/portal {:mvn/version \"RELEASE\"}}}'` -m portal.main"
+
 ## git
 alias g='git'
 alias ga='git add'

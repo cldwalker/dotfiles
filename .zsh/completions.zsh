@@ -31,3 +31,5 @@ _bbg_tasks() {
     _files # autocomplete filenames as well
 }
 compdef _bbg_tasks bbg
+
+complete -C aws_completer aws-vault
