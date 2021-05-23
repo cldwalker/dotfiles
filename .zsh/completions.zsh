@@ -33,3 +33,5 @@ _bbg_tasks() {
 compdef _bbg_tasks bbg
 
 complete -C aws_completer aws-vault
+
+complete -C aws_completer bb-aws
