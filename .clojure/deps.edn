@@ -13,18 +13,11 @@
 {:aliases
  {;; Start a socket repl on port 5555
   :socket {:jvm-opts ["-Dclojure.server.repl={:port,5555,:accept,clojure.core.server/repl}"]}
+  ;; === datafy/tap> tools ===
   ;; Add portal to a project to tap> to it
   :portal {:extra-deps {djblue/portal {:mvn/version "RELEASE"}}}
   ;; Add reveal to a project, add it as a tap and then tap> to it
   :reveal {:extra-deps {vlaaad/reveal {:mvn/version "0.1.0-ea26"}}}
-
-  :outdated {:extra-deps {antq/antq {:mvn/version "RELEASE"}}
-             :main-opts ["-m" "antq.core"]}
-
-  ;; Detect unused vars
-  :carve {:extra-deps {borkdude/carve {:git/url "https://github.com/borkdude/carve"
-                                       :sha "f499f65e36e02484609f01ce891f3c0207b24444"}}
-          :main-opts ["-m" "carve.main"]}
 
   :rebl        ;; for JDK 11+
   {:extra-deps {com.cognitect/rebl          {:mvn/version "0.9.241"}
@@ -35,9 +28,24 @@
                 org.openjfx/javafx-web      {:mvn/version "15-ea+6"}}
    :main-opts ["-m" "cognitect.rebl"]}
 
+  ;; === Cmdline tools ===
+  :outdated {:extra-deps {antq/antq {:mvn/version "RELEASE"}}
+             :main-opts ["-m" "antq.core"]}
+
+  ;; Detect unused vars
+  :carve {:extra-deps {borkdude/carve {:git/url "https://github.com/borkdude/carve"
+                                       :sha "f499f65e36e02484609f01ce891f3c0207b24444"}}
+          :main-opts ["-m" "carve.main"]}
+
   :new {:extra-deps {seancorfield/clj-new {:mvn/version "1.1.228"}}
         :ns-default clj-new
-        :exec-args {:template "app"}}}
+        :exec-args {:template "app"}}
+
+  ;; === Libraries ===
+  :aws {:extra-deps {com.cognitect.aws/api       {:mvn/version "0.8.505"}
+                     com.cognitect.aws/endpoints {:mvn/version "1.1.11.1001"}
+                     com.cognitect.aws/s3        {:mvn/version "811.2.889.0"}}}
+  }
 
   ;; :mvn/repos {
   ;;   "central" {:url "https://repo1.maven.org/maven2/"}
