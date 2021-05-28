@@ -20,3 +20,7 @@ end
 
 puts "git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh"
 `git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh`
+
+if system("which fzf")
+  system("$(brew --prefix)/opt/fzf/install")
+end

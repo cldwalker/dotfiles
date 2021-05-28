@@ -32,3 +32,6 @@ source ~/.zsh/completions.zsh
 zstyle ':completion:*' verbose yes
 
 export PATH="$HOME/.yarn/bin:$PATH"
+
+# Ctrl-R and Ctrl-T goodness. Ctrl-R didn't work with zsh plugin
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
