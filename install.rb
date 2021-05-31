@@ -24,3 +24,5 @@ puts "git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh"
 if system("which fzf")
   system("$(brew --prefix)/opt/fzf/install")
 end
+
+system("git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab")

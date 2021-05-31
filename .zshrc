@@ -1,6 +1,6 @@
 # trying out oh-my-zsh
 export ZSH=$HOME/.oh-my-zsh
-plugins=(git emoji docker lein aws)
+plugins=(git emoji docker lein aws fzf-tab)
 export ZSH_THEME="clean"
 source $ZSH/oh-my-zsh.sh
 COMPLETION_WAITING_DOTS="true"
@@ -27,11 +27,16 @@ source ~/.zsh/keys.zsh
 source ~/.zsh/functions.zsh
 source ~/.zsh/completions.zsh
 
-# COMPLETION
+## COMPLETION
 # get option description in completion
 zstyle ':completion:*' verbose yes
-
-export PATH="$HOME/.yarn/bin:$PATH"
+# Next 3 from https://github.com/Aloxaf/fzf-tab#configure
+# set descriptions format to enable group support
+zstyle ':completion:*:descriptions' format '[%d]'
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# switch group using `,` and `.`
+zstyle ':fzf-tab:*' switch-group ',' '.'
 
 # Ctrl-R and Ctrl-T goodness. Ctrl-R didn't work with zsh plugin
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
