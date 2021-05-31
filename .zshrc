@@ -3,7 +3,6 @@ export ZSH=$HOME/.oh-my-zsh
 plugins=(git emoji docker lein aws fzf-tab)
 export ZSH_THEME="clean"
 source $ZSH/oh-my-zsh.sh
-COMPLETION_WAITING_DOTS="true"
 # See https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template for
 # vars I can set
 
@@ -37,6 +36,8 @@ zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
+# Disable default prefix for tab groups, explained in https://github.com/Aloxaf/fzf-tab/pull/183#issuecomment-787080931
+zstyle ':fzf-tab:*' prefix ''
 
 # Ctrl-R and Ctrl-T goodness. Ctrl-R didn't work with zsh plugin
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
