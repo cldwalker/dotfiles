@@ -1,5 +1,6 @@
-export HISTSIZE=3000
-export HISTFILESIZE=3000
+export HISTSIZE=100000
+export HISTFILESIZE=100000
+export SAVEHIST=100000
 export EDITOR=vim
 export VISUAL=vim
 
