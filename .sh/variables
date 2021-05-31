@@ -1,3 +1,4 @@
+# Shell configuration
 export HISTSIZE=100000
 export HISTFILESIZE=100000
 export SAVEHIST=100000
@@ -15,11 +16,14 @@ if [ -f /opt/homebrew/bin/brew ] ; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+# App configuration
 export LC_CTYPE=en_US.UTF-8
 # only page if more than a screenful
 export LESS=FRX
 export NVM_DIR=~/.nvm
-export LT_HOME=~/code/repo/LightTable/builds/lighttable-0.8.1-mac
+# Thanks to https://github.com/junegunn/fzf/wiki/Examples#clipboard
+# Does copy trailing newline though
+export FZF_DEFAULT_OPTS='--bind "ctrl-y:execute-silent(printf {} | cut -f 3- -d \" \" | sed -e \"s/^[[:space:]]*//\" | pbcopy)"'
 export ANDROID_HOME=/usr/local/opt/android-sdk
 DEPS_EDN_PATHS=$(clojure -Spath -Sdeps "$(cat $HOME/code/repo/bb-clis/deps.edn)")
 export BABASHKA_CLASSPATH=$HOME/code/repo/bb-clis/src:$DEPS_EDN_PATHS:$HOME/code/repo/my-pinboard/src:$HOME/code/repo/my-pinboard/resources
