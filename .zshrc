@@ -26,20 +26,5 @@ source ~/.zsh/keys.zsh
 source ~/.zsh/functions.zsh
 source ~/.zsh/completions.zsh
 
-# zstyles
-# get option description in completion
-zstyle ':completion:*' verbose yes
-# Next 5 for https://github.com/Aloxaf/fzf-tab#configure
-# set descriptions format to enable group support
-zstyle ':completion:*:descriptions' format '[%d]'
-# set list-colors to enable filename colorizing
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-# switch group using `,` and `.`
-zstyle ':fzf-tab:*' switch-group ',' '.'
-# Disable default prefix for tab groups, explained in https://github.com/Aloxaf/fzf-tab/pull/183#issuecomment-787080931
-zstyle ':fzf-tab:*' prefix ''
-# Sweet tab menu preview of directories a la midnight commander
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls $realpath'
-
 # Ctrl-R and Ctrl-T goodness. Ctrl-R didn't work with zsh plugin
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
