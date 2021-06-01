@@ -39,16 +39,17 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls $realpath'
 zstyle ':fzf-tab:complete:bbg:*' fzf-preview 'cd ~/code/repo/bb-clis && bb help $word'
 
 ### bb completions ###
-# Gives option completion to bb
-#compdef _gnu_generic bb
 
 # Only for bb tasks
-_bb_tasks() {
+_bb() {
     local matches=(`bb tasks |tail -n +3 |cut -f1 -d ' '`)
     compadd -a matches
     _files # autocomplete filenames as well
+    _gnu_generic #complete options
+    # TODO: Move tasks to _arguments
+    # _arguments '1:tasks:_bb_tasks'
 }
-compdef _bb_tasks bb
+compdef _bb bb
 
 _bbg_tasks() {
     local matches=(`cd ~/code/repo/bb-clis && bb tasks |tail -n +3 |cut -f1 -d ' '`)
