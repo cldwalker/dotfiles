@@ -15,6 +15,10 @@ export MANPATH=$MANPATH:/usr/local/man
 if [ -f /opt/homebrew/bin/brew ] ; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+# brew doesn't install this correctly for atom-beta
+if [ -f '/Applications/Atom Beta.app/Contents/Resources/app/apm/bin/apm' ] ; then
+  export PATH=$PATH:'/Applications/Atom Beta.app/Contents/Resources/app/apm/bin'
+fi
 
 # App configuration
 export LC_CTYPE=en_US.UTF-8
