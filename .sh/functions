@@ -13,7 +13,7 @@ cl ()
 
 #move files to Trash bin, for files I'm not 100% sure to delete
 rmt () {
-  mv -i $@ $HOME/temp/trash/
+  mv -i $@ $HOME/.trash/
 }
 
 # git grep blame (ggb)
