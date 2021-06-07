@@ -37,8 +37,8 @@
                                        :sha "f499f65e36e02484609f01ce891f3c0207b24444"}}
           :main-opts ["-m" "carve.main"]}
 
-  :new {:extra-deps {seancorfield/clj-new {:mvn/version "1.1.228"}}
-        :ns-default clj-new
+  :new {:extra-deps {seancorfield/clj-new {:mvn/version "1.1.309"}}
+        :exec-fn clj-new/create
         :exec-args {:template "app"}}
 
   ;; === Libraries ===
