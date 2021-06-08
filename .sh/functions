@@ -4,8 +4,8 @@ tobin()
   chmod +x $1;
 }
 
-cl () 
-{ 
+cl ()
+{
     cd $1;
     shift;
     ls $a
@@ -25,12 +25,12 @@ function vgr() {
   vim -c ":Ack $@"
 }
 
-function hf() { 
-  history | grep $1 
+function hf() {
+  history | grep $1
 }
 
 function fgr() {
-  find ${@:2} |grep $1 
+  find ${@:2} |grep $1
 }
 
 function rspec() { if [ -e Gemfile ]; then bundle exec rspec $@; else command rspec $@; fi }
@@ -40,4 +40,6 @@ function pullify() {
 
   git config --add remote.origin.fetch '+refs/pull/*/head:refs/remotes/origin/pr/*'
 }
-function bbg() { cd $HOME/code/repo/bb-clis && bb $@; cd - > /dev/null}
+
+# Could have been an alias but needs to be a fn for autocompletion
+function bbg() { BABASHKA_EDN=~/code/repo/bb-clis/bb.edn bb $@ }
