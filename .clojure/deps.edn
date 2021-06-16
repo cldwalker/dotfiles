@@ -29,7 +29,7 @@
    :main-opts ["-m" "cognitect.rebl"]}
 
   ;; === Cmdline tools ===
-  :outdated {:extra-deps {antq/antq {:mvn/version "RELEASE"}}
+  :outdated {:extra-deps {com.github.liquidz/antq {:mvn/version "RELEASE"}}
              :main-opts ["-m" "antq.core"]}
 
   ;; Detect unused vars
