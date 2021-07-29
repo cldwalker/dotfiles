@@ -50,6 +50,7 @@ alias sm='say "MOO"'
 alias ws='wormhole send'
 alias wr='wormhole receive --accept-file'
 alias av='aws-vault'
+alias ave='aws-vault exec'
 
 ## clojure
 alias le='lein'
