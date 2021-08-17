@@ -23,20 +23,27 @@
 [alias]
   co = checkout
   ls = ls-files
+  re = remote
+  # List files
   ignored = "!git ls-files --others --exclude-standard"
   pending = !git --no-pager log origin/master..master && echo
-  nb = checkout -b
+  # stats
   who = shortlog -s -n
+  # commit views
   network = log --graph --pretty=oneline --abbrev-commit
-  re = remote
   lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
   news = log -p HEAD@{1}..HEAD@{0}
-  # http://stackoverflow.com/questions/9651898/is-there-a-git-sed-or-equivalent
-  sed = ! git ls-files -z | xargs -0 sed -i -e
   fd = diff HEAD ^origin/master
   fl = log HEAD ^origin/master
-  sup = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+
+  # commit
   msha = rev-parse --short=20
+  human-commit = log --format="%H" -n 1 --until
+
+  # operations
+  # http://stackoverflow.com/questions/9651898/is-there-a-git-sed-or-equivalent
+  sed = ! git ls-files -z | xargs -0 sed -i -e
+  sup = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
 
 [url "git@github.com:"]
     insteadOf = "gh:"
