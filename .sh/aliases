@@ -58,6 +58,7 @@ alias lr='lein repl'
 alias lt='lein test'
 alias bbk='rlwrap deps.clj -Scommand "bb -cp {{classpath}} {{main-opts}}"'
 alias bbjq='bb "(json/parse-stream *in* true)" | bb'
+alias bbjqi='bb "(json/parse-stream *in* true)"'
 alias cljs="clj -m cljs.main"
 alias sc='npx shadow-cljs'
 alias portal="bb -cp `clj -Spath -Sdeps '{:deps {djblue/portal {:mvn/version \"RELEASE\"}}}'` -m portal.main"
