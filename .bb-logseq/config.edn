@@ -1,0 +1,33 @@
+;; Config for use across bb-logseq-* tools in https://github.com/cldwalker/bb-clis
+{;;for bb-logseq-convert
+ :text-properties
+ {"http://ogp.me/ns#description" "desc"
+  "http://opengraphprotocol.org/schema/description" "desc"
+  "http://schema.org/headline" "desc"
+  "http://schema.org/name" "name"
+  "http://opengraphprotocol.org/schema/title" "name"}
+
+ ;; for bb-logseq-convert
+ :host-properties
+ {"github.com"
+  #{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+    "http://ogp.me/ns#description"
+    "http://schema.org/name"}
+
+  "youtube.com"
+  ;; consider duration and related u.author.{name,url}
+  #{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+    "http://ogp.me/ns#description"
+    "http://schema.org/name"}
+
+  "imdb.com"
+  ;; consider genre, rating, date published and actors
+  ;; related anonymous _.name would be preferred
+  #{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+    "http://opengraphprotocol.org/schema/title"
+    "http://opengraphprotocol.org/schema/description"}
+
+  "en.wikipedia.org"
+  ;; type isn't consistently accurate here as there are usually multiple nodes with types
+  #{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+    "http://schema.org/headline"}}}
