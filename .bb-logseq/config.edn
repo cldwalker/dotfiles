@@ -14,6 +14,11 @@
     "http://ogp.me/ns#description"
     "http://schema.org/name"}
 
+  "gist.github.com"
+  #{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+    "http://ogp.me/ns#description"
+    "http://schema.org/name"}
+
   "youtube.com"
   ;; consider duration and related u.author.{name,url}
   #{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
@@ -28,6 +33,11 @@
     "http://opengraphprotocol.org/schema/description"}
 
   "en.wikipedia.org"
-  ;; type isn't consistently accurate here as there are usually multiple nodes with types
+  ;; too many types to be consistently correct
+  #{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+    "http://schema.org/headline"}
+
+  "nytimes.com"
+  ;; too many types to be consistently correct
   #{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
     "http://schema.org/headline"}}}
