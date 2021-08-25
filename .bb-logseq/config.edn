@@ -3,8 +3,10 @@
  :text-properties
  {"http://ogp.me/ns#description" "desc"
   "http://opengraphprotocol.org/schema/description" "desc"
+  "http://schema.org/description" "desc"
   "http://schema.org/headline" "desc"
   "http://schema.org/name" "name"
+  "http://ogp.me/ns#title" "name"
   "http://opengraphprotocol.org/schema/title" "name"}
 
  ;; for bb-logseq-convert
@@ -30,7 +32,9 @@
   ;; related anonymous _.name would be preferred
   #{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
     "http://opengraphprotocol.org/schema/title"
-    "http://opengraphprotocol.org/schema/description"}
+    ;; Can't use http://schema.org/name b/c inconsistent
+    ;; Can't use http://ogp.me/ns#title b/c it works for actor but not movie urls
+    "http://schema.org/description"}
 
   "en.wikipedia.org"
   ;; too many types to be consistently correct
@@ -40,4 +44,21 @@
   "nytimes.com"
   ;; too many types to be consistently correct
   #{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-    "http://schema.org/headline"}}}
+    "http://schema.org/headline"}
+
+  "vimeo.com"
+  ;; inconsistent type
+  #{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+    "http://schema.org/description"
+    "http://ogp.me/ns#title"}
+
+  "reddit.com"
+  #{"http://ogp.me/ns#title"}
+
+  "goodreads.com"
+  #{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+    "http://ogp.me/ns#description"
+    ;; b/c http://schema.org/name is inconsistent
+    "http://ogp.me/ns#title"}
+
+  }}
