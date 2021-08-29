@@ -68,12 +68,37 @@
  ;; for bb-logseq-convert
  :url-properties
  [["gist.github.com/([^/]+)/[^/]+"
+   ;; schema.org/Code not mapped to snippet
    {:properties {:type "snippet"}
     :capture-names [:creator]}]
+  ;; almost no rdf-data
   ["twitter.com/[^/]+/status/.*"
    {:properties {:type "comment"}}]
+  ;; they claim news article but not what I read
   ["medium.com/[^/]+/.+"
    {:properties {:type "blog-posting"}}]
+  ;; inconsistent types
+  ["youtube.com/watch"
+   {:properties {:type "video"}}]
+  ;; inconsistent types
   ["stackoverflow.com/questions/.+"
-   {:properties {:type "question"}}]]
+   {:properties {:type "question"}}]
+  ;; no rdf data
+  ["schema.org/.+"
+   {:properties {:type "type"}}]
+  ;; no rdf data
+  ["news.ycombinator.com/item"
+   {:properties {:type "comment"}}]
+  ;; inconsistent types
+  ["vimeo.com/.+"
+   {:properties {:type "video"}}]
+  ;; inconsistent types and/or takes too long
+  ["nytimes.com/.+"
+   {:properties {:type "article"}}]
+  ;; rdf data takes too long
+  ["washingtonpost.com/.+"
+   {:properties {:type "article"}}]
+  ;; has no rdf type
+  ["reddit.com/r/\\S+/comments/"
+   {:properties {:type "comment"}}]]
  }
