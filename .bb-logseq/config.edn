@@ -61,4 +61,19 @@
     ;; b/c http://schema.org/name is inconsistent
     "http://ogp.me/ns#title"}
 
-  }}
+  "stackoverflow.com"
+  #{"http://ogp.me/ns#title"
+    "https://schema.org/description"}}
+
+ ;; for bb-logseq-convert
+ :url-properties
+ [["gist.github.com/([^/]+)/[^/]+"
+   {:properties {:type "snippet"}
+    :capture-names [:creator]}]
+  ["twitter.com/[^/]+/status/.*"
+   {:properties {:type "comment"}}]
+  ["medium.com/[^/]+/.+"
+   {:properties {:type "blog-posting"}}]
+  ["stackoverflow.com/questions/.+"
+   {:properties {:type "question"}}]]
+ }
