@@ -66,3 +66,6 @@
 	diffFilter = diff-so-fancy --patch
 [init]
 	defaultBranch = main
+
+[includeIf "gitdir:~/code/work/"]
+    path = ~/.work.gitconfig
