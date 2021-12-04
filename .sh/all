@@ -7,3 +7,4 @@ if [ -f ~/.sh/private ]; then
   source ~/.sh/private
 fi
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh" 
