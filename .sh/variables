@@ -29,7 +29,6 @@ export NVM_DIR=~/.nvm
 # Does copy trailing newline though
 export FZF_DEFAULT_OPTS='--bind "ctrl-y:execute-silent(printf {} | cut -f 3- -d \" \" | sed -e \"s/^[[:space:]]*//\" | pbcopy)"'
 export ANDROID_HOME=/usr/local/opt/android-sdk
-export BABASHKA_CLASSPATH=$HOME/code/repo/bb-clis/src:$HOME/code/repo/my-pinboard/src:$HOME/code/repo/my-pinboard/resources
 # ruby
 export RI="--no-home --no-gems --no-site --format ansi -T"
 export NO_RUBYGEMS=true

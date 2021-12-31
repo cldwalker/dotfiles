@@ -42,4 +42,5 @@ function pullify() {
 }
 
 # Could have been an alias but needs to be a fn for autocompletion
-function bbg() { BABASHKA_EDN=~/code/repo/bb-clis/bb.edn bb $@ }
+# Pass an explicit BB_EDN so that help command knows where bb.edn is
+function bbg() { BB_EDN=~/code/repo/bb-clis/bb.edn bb --config ~/code/repo/bb-clis/bb.edn $@ }
