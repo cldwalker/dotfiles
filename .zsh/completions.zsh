@@ -59,9 +59,3 @@ _bbg_tasks() {
     # _files
 }
 compdef _bbg_tasks bbg
-
-### Misc completions ###
-# These are for aws cli v2
-compdef bb-aws=aws
-# Only autocompletes as subcommand and not in desired: aws-vault exec foo -- aws [TAB]
-compdef aws-vault=aws
