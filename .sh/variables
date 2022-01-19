@@ -9,7 +9,7 @@ export VISUAL=vim
 export GOPATH=$HOME/.go
 export PATH=$PATH:$HOME/bin:$GOPATH/bin
 # Personal projects
-export PATH=$PATH:$HOME/code/repo/bb-clis/bin:$HOME/code/repo/my-pinboard/bin
+export PATH=$PATH:$HOME/code/repo/bb-clis/bin:$HOME/code/repo/my-pinboard/bin:$HOME/code/repo/nbb-clis/bin
 export MANPATH=$MANPATH:/usr/local/man
 # Generates *PATH settings and some homebrew vars
 if [ -f /opt/homebrew/bin/brew ] ; then
