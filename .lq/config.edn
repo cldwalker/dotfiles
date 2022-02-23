@@ -1,0 +1,4 @@
+{:default-options
+ {:graph "logseq-notes"
+  :table-command "bb-table"
+  :puget true}}
