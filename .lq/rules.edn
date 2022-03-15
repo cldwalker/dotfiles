@@ -1,8 +1,8 @@
-[{:desc "Join to page by name, property or property value"
+{:cldwalker/page-name-property
+ {:desc "Join to page by name, property or property value"
   :rule
   [(page-name-property ?b ?block-name ?property-name ?property-value)
    [?b :block/original-name ?block-name]
    [?b :block/properties ?p]
    [(get ?p ?property-name) ?property-values]
-   [(contains? ?property-values ?property-value)]]}
- ]
+   [(contains? ?property-values ?property-value)]]}}

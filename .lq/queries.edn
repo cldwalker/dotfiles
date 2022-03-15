@@ -1,7 +1,7 @@
 {
  ;; Properties
  ;; ==========
- :page-property
+ :cldwalker/page-property
  {:query [:find (pull ?things [*])
           :in $ ?region %
           :where
@@ -11,8 +11,8 @@
   :desc "Practice page property query"
   :default-args ["Middle East"]}
 
- :property-counts
- {:query :all-block-property
+ :cldwalker/has-property-counts
+ {:parent :lq/has-property
   :result-transform (fn [result]
                       (->> result
                            (reduce (fn [acc e]
@@ -21,9 +21,14 @@
   :default-args ["type"]
   :desc "Counts for given property by type"}
 
+ :cldwalker/property
+ {:parent :lq/property
+  :default-args ["type" "person"]
+  :desc "Like :parent but with default args"}
+
  ;; Misc
  ;; ====
- :page-names
+ :cldwalker/page-names
  {:query [:find ?n
           :in $ %
           :where
@@ -32,34 +37,50 @@
 
  ;; Todos
  ;; =====
- :todos-by-marker
- {:query :todos
+ :cldwalker/task-all
+ {:query [:find (pull ?b
+                      [* :block/parent {:block/page [:db/id :block/name]}])
+          :in $ %
+          :where
+          [?b :block/marker ?_marker]]
+  :desc "List all tasks"}
+
+ :cldwalker/tasks-by-page
+ {:parent :cldwalker/task-all
+  :result-transform (fn [result]
+                      (->> (update-vals
+                            (group-by (fn [x] (get-in x [:block/page :block/name])) result) count)
+                           (sort-by val >)))
+  :desc "Tasks count by page"}
+
+ :cldwalker/tasks-by-marker
+ {:parent :cldwalker/task-all
   :result-transform (fn [result]
                       (update-vals (group-by :block/marker result) count))
-  :desc "todos count by marker"}
+  :desc "Tasks count by marker"}
 
- :todos-with-urls
+ :cldwalker/tasks-with-urls
  {:query [:find (pull ?b [*])
           :in $ %
           :where
-          (todo ?b #{"TODO" "DOING"})
-          (content-search ?b "https")]
-  :desc "Todos with urls"}
+          (task ?b #{"TODO" "DOING"})
+          (block-content ?b "https")]
+  :desc "Tasks with urls"}
 
- :tag-todos
+ :cldwalker/tag-tasks
  {:query [:find (pull ?b [* {:block/refs [:db/id :block/name]}])
           :in $ ?tag %
           :where
-          (todo ?b #{"TODO" "DOING"})
-          (tag ?b ?tag)]
+          (task ?b #{"TODO" "DOING"})
+          (page-ref ?b ?tag)]
   :default-args ["eng"]
-  :desc "List all todos for tag"}
+  :desc "List all tasks for tag"}
 
- :tag-todos-tag-counts
- {:query :tag-todos
+ :cldwalker/tag-tasks-tag-counts
+ {:parent :cldwalker/tag-tasks
   :result-transform (fn [result]
                       (->> result
                            (mapcat (fn [m] (map :block/name (:block/refs m))))
                            frequencies
                            (sort-by val >)))
-  :desc "Counts for tag todos for tag"}}
+  :desc "Counts for tag tasks for tag"}}
