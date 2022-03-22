@@ -35,7 +35,7 @@
           [?_b :block/name ?n]]
   :desc "List all page names"}
 
- ;; Todos
+ ;; Tasks
  ;; =====
  :cldwalker/task-all
  {:query [:find (pull ?b
@@ -74,13 +74,4 @@
           (task ?b #{"TODO" "DOING"})
           (page-ref ?b ?tag)]
   :default-args ["eng"]
-  :desc "List all tasks for tag"}
-
- :cldwalker/tag-tasks-tag-counts
- {:parent :cldwalker/tag-tasks
-  :result-transform (fn [result]
-                      (->> result
-                           (mapcat (fn [m] (map :block/name (:block/refs m))))
-                           frequencies
-                           (sort-by val >)))
-  :desc "Counts for tag tasks for tag"}}
+  :desc "List all tasks for tag"}}
