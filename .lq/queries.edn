@@ -11,12 +11,15 @@
   :desc "Practice page property query"
   :default-args ["Middle East"]}
 
+ ;; This count assumes only one type per block
  :cldwalker/has-property-counts
  {:parent :lq/has-property
   :result-transform (fn [result]
                       (->> result
                            (reduce (fn [acc e]
-                                     (update-in acc [(get-in e [:block/properties :type])] (fnil inc 0))) {})
+                                     (let [types (get-in e [:block/properties :type])
+                                           type (if (coll? types) (first types) types)]
+                                       (update-in acc [type] (fnil inc 0)))) {})
                            (sort-by val >)))
   :default-args ["type"]
   :desc "Counts for given property by type"}
@@ -25,6 +28,14 @@
  {:parent :lq/property
   :default-args ["type" "person"]
   :desc "Like :parent but with default args"}
+
+ :cldwalker/has-page-property
+ {:query [:find (pull ?b [*])
+          :in $ ?ks %
+          :where
+          [(keyword ?ks) ?k]
+          (has-page-property ?b ?k)]
+  :desc "List pages that have given property"}
 
  ;; Misc
  ;; ====

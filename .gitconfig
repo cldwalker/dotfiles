@@ -48,10 +48,10 @@
 [url "git@github.com:"]
     insteadOf = "gh:"
 
-[url "git://github.com/"]
+[url "https://github.com/"]
     insteadOf = "github:"
 
-[url "git://gist.github.com/"]
+[url "https://gist.github.com/"]
     insteadOf = "gist:"
 
 [url "git@heroku.com:"]
