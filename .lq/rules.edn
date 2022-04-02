@@ -5,4 +5,27 @@
    [?b :block/original-name ?block-name]
    [?b :block/properties ?p]
    [(get ?p ?property-name) ?property-values]
-   [(contains? ?property-values ?property-value)]]}}
+   [(contains? ?property-values ?property-value)]]}
+
+ ;; WIP for :lq/property
+ :cldwalker/property
+ {:desc "Blocks that have property equal to value or that contain the value"
+  :rule
+  [(property ?b ?key ?val)
+   [?b :block/properties ?prop]
+   [(missing? $ ?b :block/name)]
+   [(get ?prop ?key) ?v]
+   ;; Neither OR works for properties that can be string or set
+   ;; Simpler or works with q+sq but doesn't work for integer pages
+   (or
+      [(= ?v ?val)]
+      [(contains? ?v ?val)])
+   ;; [?v] works for sq but not q
+   ;; [?v ?val] works for q but not sq
+   #_(or-join [?v]
+            [(= ?v ?val)]
+            [(contains? ?v ?val)]
+            ;; For integer pages that aren't strings
+            (and
+             [(str ?val) ?str-val]
+             [(contains? ?v ?str-val)]))]}}

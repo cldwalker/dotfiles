@@ -24,6 +24,16 @@
   :default-args ["type"]
   :desc "Counts for given property by type"}
 
+ :cldwalker/has-property-hosts
+ {:parent :lq/has-property
+  :result-transform (fn [result]
+                      (->> result
+                           (map (fn [m] (get-in m [:block/properties :url])))
+                           (map (fn [url] (.getHost (java.net.URL. url))))
+                           frequencies
+                           (sort-by val >)))
+  :default-args ["type"]}
+
  :cldwalker/property
  {:parent :lq/property
   :default-args ["type" "person"]
