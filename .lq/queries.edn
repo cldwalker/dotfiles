@@ -47,6 +47,31 @@
           (has-page-property ?b ?k)]
   :desc "List pages that have given property"}
 
+ ;; Tag Counts
+ ;; ==========
+ :cldwalker/tags
+ {:query [:find ?b ?tag
+          :where [?b :block/refs ?bp] [?bp :block/name ?tag]]
+  :result-transform (fn [result]
+                      (->> result (map second)))
+  :desc "List tags"}
+
+ :cldwalker/tag-counts
+ {:parent :cldwalker/tags
+  :result-transform (fn [result]
+                      (->> result (map second) frequencies (sort-by val >)))
+  :desc "Tag counts"}
+
+ :cldwalker/tag-inherited-counts
+ {:query [:find ?b ?tag
+          :where
+          [?b :block/path-refs ?bp]
+          [?bp :block/name ?tag]
+          [?bp :block/journal? false]]
+  :result-transform (fn [result]
+                      (->> result (map second) frequencies (sort-by val >)))
+  :desc "Tag counts for inherited tags except journals"}
+
  ;; Misc
  ;; ====
  :cldwalker/page-names
