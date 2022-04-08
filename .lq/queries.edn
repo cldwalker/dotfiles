@@ -47,8 +47,14 @@
           (has-page-property ?b ?k)]
   :desc "List pages that have given property"}
 
- ;; Tag Counts
- ;; ==========
+ ;; Tags
+ ;; ====
+ :cldwalker/tagged
+ {:query [:find (pull ?b [*])
+          :in $ ?tag
+          :where (page-ref ?b ?tag)]
+  :desc "List blocks tagged with tag"}
+
  :cldwalker/tags
  {:query [:find ?b ?tag
           :where [?b :block/refs ?bp] [?bp :block/name ?tag]]
