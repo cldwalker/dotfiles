@@ -61,7 +61,7 @@ _bbg_tasks() {
 compdef _bbg_tasks bbg
 
 _lq_tasks() {
-    local matches=(`lq bb tasks |tail -n +3 |cut -f1 -d ' '`)
+    local matches=(`lq --completion |cut -f1 -d ' '`)
     compadd -a matches
     # Disable file completion to not pollute fzf-preview
     # _files

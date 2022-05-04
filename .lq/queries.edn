@@ -49,10 +49,16 @@
 
  ;; Tags
  ;; ====
- :cldwalker/tagged
+ :cldwalker/page-ref
  {:query [:find (pull ?b [*])
           :in $ ?tag
           :where (page-ref ?b ?tag)]
+  :desc "List blocks tagged with tag"}
+
+ :cldwalker/tag-ref
+ {:query [:find (pull ?b [*])
+          :in $ ?tag
+          :where [?b :block/refs ?bp] [?bp :block/name ?tag]]
   :desc "List blocks tagged with tag"}
 
  :cldwalker/tags
