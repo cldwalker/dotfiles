@@ -7,7 +7,7 @@ export VISUAL=vim
 
 # Paths
 export GOPATH=$HOME/.go
-export PATH=$PATH:$HOME/bin:$GOPATH/bin:$HOME/.yarn/bin
+export PATH=$PATH:$HOME/bin:$GOPATH/bin:$HOME/.yarn/bin:$HOME/.babashka/bbin/bin
 # Personal projects
 export PATH=$PATH:$HOME/code/repo/bb-clis/bin:$HOME/code/repo/my-pinboard/bin
 export MANPATH=$MANPATH:/usr/local/man
