@@ -69,3 +69,7 @@
 
 [includeIf "gitdir:~/code/work/"]
     path = ~/.work.gitconfig
+
+[diff "sqlite3"]
+    binary = true
+    textconv = "echo .dump | sqlite3"

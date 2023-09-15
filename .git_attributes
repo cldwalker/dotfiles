@@ -1,2 +1,3 @@
 *_compiled.js -diff
 *_compiled.js.map -diff
+*.sqlite diff=sqlite3
