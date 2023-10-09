@@ -1,6 +1,6 @@
 # trying out oh-my-zsh
 export ZSH=$HOME/.oh-my-zsh
-plugins=(git emoji docker lein aws fzf-tab gh jenv tmux terraform nvm)
+plugins=(emoji docker lein aws fzf-tab gh jenv tmux terraform nvm)
 export ZSH_THEME="clean"
 source $ZSH/oh-my-zsh.sh
 # See https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template for
