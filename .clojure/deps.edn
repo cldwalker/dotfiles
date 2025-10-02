@@ -45,10 +45,16 @@
   :aws {:extra-deps {com.cognitect.aws/api       {:mvn/version "0.8.505"}
                      com.cognitect.aws/endpoints {:mvn/version "1.1.11.1001"}
                      com.cognitect.aws/s3        {:mvn/version "811.2.889.0"}}}
-  }
+  :mcp
+  {:deps {org.slf4j/slf4j-nop {:mvn/version "2.0.16"} ;; Required for stdio server
+          com.bhauman/clojure-mcp {:git/url "https://github.com/bhauman/clojure-mcp.git"
+                                   :git/tag "v0.1.10-alpha"
+                                   :git/sha "8bd96c3"}}
+   :exec-fn clojure-mcp.main/start-mcp-server
+   :exec-args {:port 8701}}}
 
-  ;; :mvn/repos {
+;; :mvn/repos {
   ;;   "central" {:url "https://repo1.maven.org/maven2/"}
   ;;   "clojars" {:url "https://repo.clojars.org/"}
   ;; }
-}
+ }
