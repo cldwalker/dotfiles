@@ -6,5 +6,10 @@ source ~/.sh/functions
 if [ -f ~/.sh/private ]; then
   source ~/.sh/private
 fi
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh" # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# force NVM's node bin to front
+if command -v nvm >/dev/null 2>&1; then
+  nvm_path="$(nvm which default 2>/dev/null | xargs dirname)"
+  export PATH="$nvm_path:$PATH"
+fi
