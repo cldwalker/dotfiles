@@ -92,4 +92,3 @@ alias gg='git grep'
 # path dependent
 alias datomic-free=$HOME/.datomic-free/bin/datomic-free
 alias bbp="BABASHKA_PRELOADS='(load-file (str (System/getenv \"HOME\") \"/code/repo/bb-clis/preloads.clj\"))' bb"
-alias bbr="BABASHKA_PRELOADS='(load-file (str (System/getenv \"HOME\") \"/code/repo/bb-clis/preloads.clj\"))' rlwrap bb"

@@ -45,7 +45,6 @@ _bb() {
     local matches=(`bb tasks |tail -n +3 |cut -f1 -d ' '`)
     compadd -a matches
     _files # autocomplete filenames as well
-    _gnu_generic #complete options
     # TODO: Move tasks to _arguments
     # _arguments '1:tasks:_bb_tasks'
 }
