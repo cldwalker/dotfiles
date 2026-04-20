@@ -10,7 +10,8 @@ source ~/.sh/all
 
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 if which jenv > /dev/null; then eval "$(jenv init - zsh)"; fi
-if which mise > /dev/null; then eval "$(mise activate)"; fi
+# TODO: Fix mise messing up $PATH and node 24+ installs
+# if which mise > /dev/null; then eval "$(mise activate)"; fi
 if which logseq > /dev/null; then eval "$(logseq completion zsh)"; fi
 
 #for lightning - http://github.com/cldwalker/lightning
