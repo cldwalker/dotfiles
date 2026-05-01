@@ -43,5 +43,3 @@ export ANDROID_HOME=/usr/local/opt/android-sdk
 # ruby
 export RI="--no-home --no-gems --no-site --format ansi -T"
 export NO_RUBYGEMS=true
-# mac only
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
