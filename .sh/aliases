@@ -50,6 +50,7 @@ alias ws='wormhole send'
 alias wr='wormhole receive --accept-file'
 alias av='aws-vault'
 alias ave='aws-vault exec'
+alias lq='logseq'
 
 ## clojure
 alias le='lein'
@@ -60,7 +61,8 @@ alias bbjq='bb "(json/parse-stream *in* true)" | bb'
 alias bbjqi='bb "(json/parse-stream *in* true)"'
 alias cljs="clj -m cljs.main"
 alias sc='npx shadow-cljs'
-alias portal="bb -cp `clj -Spath -Sdeps '{:deps {djblue/portal {:mvn/version \"RELEASE\"}}}'` -m portal.main"
+# This causes maven fetches when sourcing file. Improve and enable if I actually use this
+# alias portal="bb -cp `clj -Spath -Sdeps '{:deps {djblue/portal {:mvn/version \"RELEASE\"}}}'` -m portal.main"
 
 ## git
 alias g='git'
