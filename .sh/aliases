@@ -51,6 +51,8 @@ alias wr='wormhole receive --accept-file'
 alias av='aws-vault'
 alias ave='aws-vault exec'
 alias lq='logseq'
+# This overrides dc calc which is ok for me
+alias dc='docker compose'
 
 ## clojure
 alias le='lein'
