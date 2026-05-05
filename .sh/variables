@@ -7,7 +7,7 @@ export VISUAL=vim
 
 # Paths
 export GOPATH=$HOME/.go
-export PATH=$PATH:$HOME/bin:$GOPATH/bin:$HOME/.yarn/bin:$HOME/.babashka/bbin/bin
+export PATH=$PATH:$HOME/bin:$GOPATH/bin:$HOME/.yarn/bin:$HOME/.local/bin
 # Personal projects
 export PATH=$PATH:$HOME/code/repo/bb-clis/bin:$HOME/code/repo/my-pinboard/bin
 export MANPATH=$MANPATH:/usr/local/man
@@ -15,13 +15,9 @@ export MANPATH=$MANPATH:/usr/local/man
 if [ -f /opt/homebrew/bin/brew ] ; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
   # For brew based ruby
-  export PATH=/opt/homebrew/lib/ruby/gems/3.4.0/bin:/opt/homebrew/opt/ruby/bin:$PATH
+  #export PATH=/opt/homebrew/lib/ruby/gems/3.4.0/bin:/opt/homebrew/opt/ruby/bin:$PATH
   export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
   export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
-fi
-# brew doesn't install this correctly for atom-beta
-if [ -f '/Applications/Atom Beta.app/Contents/Resources/app/apm/bin/apm' ] ; then
-  export PATH=$PATH:'/Applications/Atom Beta.app/Contents/Resources/app/apm/bin'
 fi
 
 # Added by LM Studio CLI (lms)

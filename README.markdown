@@ -23,6 +23,6 @@ These dotfiles work on a macbook pro with an intel or M1 chip.
 # Additional Links
 
 * For editor configs: see https://github.com/cldwalker/vimfiles,
-  https://github.com/cldwalker/atomfiles and https://github.com/cldwalker/ltfiles.
+  https://github.com/cldwalker/vscode-files
 * For configs to other applications just look for repositories ending in 'files' like
   https://github.com/cldwalker/irbfiles or https://github.com/cldwalker/hammerspoon-files.
