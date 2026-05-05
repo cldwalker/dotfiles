@@ -33,8 +33,7 @@ export NVM_DIR=~/.nvm
 # https://github.com/nodejs/corepack?tab=readme-ov-file#environment-variables
 export COREPACK_ENABLE_AUTO_PIN=0
 # Thanks to https://github.com/junegunn/fzf/wiki/Examples#clipboard
-# Does copy trailing newline though
-export FZF_DEFAULT_OPTS='--bind "ctrl-y:execute-silent(printf {} | cut -f 3- -d \" \" | sed -e \"s/^[[:space:]]*//\" | pbcopy)"'
+export FZF_DEFAULT_OPTS='--bind "ctrl-y:execute-silent(printf %s {} | awk \"{ sub(/^[0-9]+\t/, \\\"\\\"); printf \\\"%s\\\", \\\$0 }\" | pbcopy)"'
 export ANDROID_HOME=/usr/local/opt/android-sdk
 # ruby
 export RI="--no-home --no-gems --no-site --format ansi -T"
