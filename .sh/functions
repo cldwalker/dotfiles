@@ -33,12 +33,6 @@ function fgr() {
   find ${@:2} |grep $1
 }
 
-# gll <WORD> - invoke git log with search enabled in pager
-# Only use for seeing full commits as turning off -u leads to issues with LESS
-gll() {
-  git -c core.pager="less +/$1" log -G "$1" -u "${@:2}"
-}
-
 function pullify() {
 
   git config --add remote.origin.fetch '+refs/pull/*/head:refs/remotes/origin/pr/*'
