@@ -57,6 +57,7 @@
     - echo
     globs:
     - $HOME/code/{gems,work,repo,priv,fork,cjars}/*
+    - $HOME/logseq/graphs/*
     alias: c
   ruby_load_path:
     functions:
