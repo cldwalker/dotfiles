@@ -58,17 +58,17 @@ _g-ft () {
 }
 compctl -QK _g-ft g-ft
 
-l-w () {
+less-w () {
   local IFS=$'\n'
   local arr
-  arr=( $(${LBIN_PATH}lightning-translate l-w $@) )
+  arr=( $(${LBIN_PATH}lightning-translate less-w $@) )
   less "${arr[@]}"
 }
-_l-w () {
+_less-w () {
   local IFS=$'\n'
-  reply=( $(${LBIN_PATH}lightning-complete l-w "${@}") )
+  reply=( $(${LBIN_PATH}lightning-complete less-w "${@}") )
 }
-compctl -QK _l-w l-w
+compctl -QK _less-w less-w
 
 m-rb () {
   local IFS=$'\n'
@@ -238,17 +238,17 @@ _g-rvc () {
 }
 compctl -QK _g-rvc g-rvc
 
-l-n () {
+less-n () {
   local IFS=$'\n'
   local arr
-  arr=( $(${LBIN_PATH}lightning-translate l-n $@) )
+  arr=( $(${LBIN_PATH}lightning-translate less-n $@) )
   less "${arr[@]}"
 }
-_l-n () {
+_less-n () {
   local IFS=$'\n'
-  reply=( $(${LBIN_PATH}lightning-complete l-n "${@}") )
+  reply=( $(${LBIN_PATH}lightning-complete less-n "${@}") )
 }
-compctl -QK _l-n l-n
+compctl -QK _less-n less-n
 
 m-c () {
   local IFS=$'\n'
@@ -418,41 +418,41 @@ _v-ft () {
 }
 compctl -QK _v-ft v-ft
 
-l-rc () {
+less-rc () {
   local IFS=$'\n'
   local arr
-  arr=( $(${LBIN_PATH}lightning-translate l-rc $@) )
+  arr=( $(${LBIN_PATH}lightning-translate less-rc $@) )
   less "${arr[@]}"
 }
-_l-rc () {
+_less-rc () {
   local IFS=$'\n'
-  reply=( $(${LBIN_PATH}lightning-complete l-rc "${@}") )
+  reply=( $(${LBIN_PATH}lightning-complete less-rc "${@}") )
 }
-compctl -QK _l-rc l-rc
+compctl -QK _less-rc less-rc
 
-l-js () {
+less-js () {
   local IFS=$'\n'
   local arr
-  arr=( $(${LBIN_PATH}lightning-translate l-js $@) )
+  arr=( $(${LBIN_PATH}lightning-translate less-js $@) )
   less "${arr[@]}"
 }
-_l-js () {
+_less-js () {
   local IFS=$'\n'
-  reply=( $(${LBIN_PATH}lightning-complete l-js "${@}") )
+  reply=( $(${LBIN_PATH}lightning-complete less-js "${@}") )
 }
-compctl -QK _l-js l-js
+compctl -QK _less-js less-js
 
-l-b () {
+less-b () {
   local IFS=$'\n'
   local arr
-  arr=( $(${LBIN_PATH}lightning-translate l-b $@) )
+  arr=( $(${LBIN_PATH}lightning-translate less-b $@) )
   less "${arr[@]}"
 }
-_l-b () {
+_less-b () {
   local IFS=$'\n'
-  reply=( $(${LBIN_PATH}lightning-complete l-b "${@}") )
+  reply=( $(${LBIN_PATH}lightning-complete less-b "${@}") )
 }
-compctl -QK _l-b l-b
+compctl -QK _less-b less-b
 
 cp-rvc () {
   local IFS=$'\n'
@@ -526,17 +526,17 @@ _e-ft () {
 }
 compctl -QK _e-ft e-ft
 
-l-system_ruby () {
+less-system_ruby () {
   local IFS=$'\n'
   local arr
-  arr=( $(${LBIN_PATH}lightning-translate l-system_ruby $@) )
+  arr=( $(${LBIN_PATH}lightning-translate less-system_ruby $@) )
   less "${arr[@]}"
 }
-_l-system_ruby () {
+_less-system_ruby () {
   local IFS=$'\n'
-  reply=( $(${LBIN_PATH}lightning-complete l-system_ruby "${@}") )
+  reply=( $(${LBIN_PATH}lightning-complete less-system_ruby "${@}") )
 }
-compctl -QK _l-system_ruby l-system_ruby
+compctl -QK _less-system_ruby less-system_ruby
 
 cp-gg () {
   local IFS=$'\n'
@@ -646,17 +646,17 @@ _cd-js () {
 }
 compctl -QK _cd-js cd-js
 
-l-ft () {
+less-ft () {
   local IFS=$'\n'
   local arr
-  arr=( $(${LBIN_PATH}lightning-translate l-ft $@) )
+  arr=( $(${LBIN_PATH}lightning-translate less-ft $@) )
   less "${arr[@]}"
 }
-_l-ft () {
+_less-ft () {
   local IFS=$'\n'
-  reply=( $(${LBIN_PATH}lightning-complete l-ft "${@}") )
+  reply=( $(${LBIN_PATH}lightning-complete less-ft "${@}") )
 }
-compctl -QK _l-ft l-ft
+compctl -QK _less-ft less-ft
 
 e-gg () {
   local IFS=$'\n'
@@ -718,29 +718,29 @@ _e-r () {
 }
 compctl -QK _e-r e-r
 
-l-rv () {
+less-rv () {
   local IFS=$'\n'
   local arr
-  arr=( $(${LBIN_PATH}lightning-translate l-rv $@) )
+  arr=( $(${LBIN_PATH}lightning-translate less-rv $@) )
   less "${arr[@]}"
 }
-_l-rv () {
+_less-rv () {
   local IFS=$'\n'
-  reply=( $(${LBIN_PATH}lightning-complete l-rv "${@}") )
+  reply=( $(${LBIN_PATH}lightning-complete less-rv "${@}") )
 }
-compctl -QK _l-rv l-rv
+compctl -QK _less-rv less-rv
 
-l-rvc () {
+less-rvc () {
   local IFS=$'\n'
   local arr
-  arr=( $(${LBIN_PATH}lightning-translate l-rvc $@) )
+  arr=( $(${LBIN_PATH}lightning-translate less-rvc $@) )
   less "${arr[@]}"
 }
-_l-rvc () {
+_less-rvc () {
   local IFS=$'\n'
-  reply=( $(${LBIN_PATH}lightning-complete l-rvc "${@}") )
+  reply=( $(${LBIN_PATH}lightning-complete less-rvc "${@}") )
 }
-compctl -QK _l-rvc l-rvc
+compctl -QK _less-rvc less-rvc
 
 cp-rv () {
   local IFS=$'\n'
@@ -766,17 +766,17 @@ _m-g () {
 }
 compctl -QK _m-g m-g
 
-l-r () {
+less-r () {
   local IFS=$'\n'
   local arr
-  arr=( $(${LBIN_PATH}lightning-translate l-r $@) )
+  arr=( $(${LBIN_PATH}lightning-translate less-r $@) )
   less "${arr[@]}"
 }
-_l-r () {
+_less-r () {
   local IFS=$'\n'
-  reply=( $(${LBIN_PATH}lightning-complete l-r "${@}") )
+  reply=( $(${LBIN_PATH}lightning-complete less-r "${@}") )
 }
-compctl -QK _l-r l-r
+compctl -QK _less-r less-r
 
 ba () {
   local IFS=$'\n'
@@ -802,29 +802,29 @@ _ls-wd () {
 }
 compctl -QK _ls-wd ls-wd
 
-l-gg () {
+less-gg () {
   local IFS=$'\n'
   local arr
-  arr=( $(${LBIN_PATH}lightning-translate l-gg $@) )
+  arr=( $(${LBIN_PATH}lightning-translate less-gg $@) )
   less "${arr[@]}"
 }
-_l-gg () {
+_less-gg () {
   local IFS=$'\n'
-  reply=( $(${LBIN_PATH}lightning-complete l-gg "${@}") )
+  reply=( $(${LBIN_PATH}lightning-complete less-gg "${@}") )
 }
-compctl -QK _l-gg l-gg
+compctl -QK _less-gg less-gg
 
-l-cw () {
+less-cw () {
   local IFS=$'\n'
   local arr
-  arr=( $(${LBIN_PATH}lightning-translate l-cw $@) )
+  arr=( $(${LBIN_PATH}lightning-translate less-cw $@) )
   less "${arr[@]}"
 }
-_l-cw () {
+_less-cw () {
   local IFS=$'\n'
-  reply=( $(${LBIN_PATH}lightning-complete l-cw "${@}") )
+  reply=( $(${LBIN_PATH}lightning-complete less-cw "${@}") )
 }
-compctl -QK _l-cw l-cw
+compctl -QK _less-cw less-cw
 
 ls-pp () {
   local IFS=$'\n'
@@ -1342,29 +1342,29 @@ _g-pd () {
 }
 compctl -QK _g-pd g-pd
 
-l-rlp () {
+less-rlp () {
   local IFS=$'\n'
   local arr
-  arr=( $(${LBIN_PATH}lightning-translate l-rlp $@) )
+  arr=( $(${LBIN_PATH}lightning-translate less-rlp $@) )
   less "${arr[@]}"
 }
-_l-rlp () {
+_less-rlp () {
   local IFS=$'\n'
-  reply=( $(${LBIN_PATH}lightning-complete l-rlp "${@}") )
+  reply=( $(${LBIN_PATH}lightning-complete less-rlp "${@}") )
 }
-compctl -QK _l-rlp l-rlp
+compctl -QK _less-rlp less-rlp
 
-l-pp () {
+less-pp () {
   local IFS=$'\n'
   local arr
-  arr=( $(${LBIN_PATH}lightning-translate l-pp $@) )
+  arr=( $(${LBIN_PATH}lightning-translate less-pp $@) )
   less "${arr[@]}"
 }
-_l-pp () {
+_less-pp () {
   local IFS=$'\n'
-  reply=( $(${LBIN_PATH}lightning-complete l-pp "${@}") )
+  reply=( $(${LBIN_PATH}lightning-complete less-pp "${@}") )
 }
-compctl -QK _l-pp l-pp
+compctl -QK _less-pp less-pp
 
 ls-r () {
   local IFS=$'\n'
@@ -1378,17 +1378,17 @@ _ls-r () {
 }
 compctl -QK _ls-r ls-r
 
-l-g () {
+less-g () {
   local IFS=$'\n'
   local arr
-  arr=( $(${LBIN_PATH}lightning-translate l-g $@) )
+  arr=( $(${LBIN_PATH}lightning-translate less-g $@) )
   less "${arr[@]}"
 }
-_l-g () {
+_less-g () {
   local IFS=$'\n'
-  reply=( $(${LBIN_PATH}lightning-complete l-g "${@}") )
+  reply=( $(${LBIN_PATH}lightning-complete less-g "${@}") )
 }
-compctl -QK _l-g l-g
+compctl -QK _less-g less-g
 
 ls-gg () {
   local IFS=$'\n'
@@ -1498,17 +1498,17 @@ _e-system_ruby () {
 }
 compctl -QK _e-system_ruby e-system_ruby
 
-l-rb () {
+less-rb () {
   local IFS=$'\n'
   local arr
-  arr=( $(${LBIN_PATH}lightning-translate l-rb $@) )
+  arr=( $(${LBIN_PATH}lightning-translate less-rb $@) )
   less "${arr[@]}"
 }
-_l-rb () {
+_less-rb () {
   local IFS=$'\n'
-  reply=( $(${LBIN_PATH}lightning-complete l-rb "${@}") )
+  reply=( $(${LBIN_PATH}lightning-complete less-rb "${@}") )
 }
-compctl -QK _l-rb l-rb
+compctl -QK _less-rb less-rb
 
 g-js () {
   local IFS=$'\n'
@@ -1618,17 +1618,17 @@ _e-js () {
 }
 compctl -QK _e-js e-js
 
-l-pd () {
+less-pd () {
   local IFS=$'\n'
   local arr
-  arr=( $(${LBIN_PATH}lightning-translate l-pd $@) )
+  arr=( $(${LBIN_PATH}lightning-translate less-pd $@) )
   less "${arr[@]}"
 }
-_l-pd () {
+_less-pd () {
   local IFS=$'\n'
-  reply=( $(${LBIN_PATH}lightning-complete l-pd "${@}") )
+  reply=( $(${LBIN_PATH}lightning-complete less-pd "${@}") )
 }
-compctl -QK _l-pd l-pd
+compctl -QK _less-pd less-pd
 
 m-rvc () {
   local IFS=$'\n'

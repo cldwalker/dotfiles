@@ -5,7 +5,7 @@
   grep: g
   vim: v
   ls: ls
-  less: l
+  less: less
   echo: e
 :bolts:
   rails:
