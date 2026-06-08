@@ -17,3 +17,12 @@ clj-ns-aliases() {
   | sed -E 's/.*:as +([a-zA-Z._?!*+<>-]+).*/\1/' \
   | sort | uniq -c | sort -rn
 }
+
+# Create l-<name> aliases for every logseq-<name> executable found in $PATH
+logseq-aliases() {
+  local name
+  for name in ${^path}/logseq-*(N:t); do
+    alias "l-${name#logseq-}=$name"
+  done
+}
+logseq-aliases
