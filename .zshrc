@@ -2,6 +2,8 @@
 export ZSH=$HOME/.oh-my-zsh
 plugins=(emoji docker lein aws fzf-tab gh jenv tmux terraform nvm)
 export ZSH_THEME="clean"
+# Custom per-command completions which must come before oh-my-zsh.sh (which runs compinit).
+fpath=(~/.zsh/completions $fpath)
 source $ZSH/oh-my-zsh.sh
 # See https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template for
 # vars I can set
