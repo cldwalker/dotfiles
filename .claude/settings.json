@@ -1,4 +1,5 @@
 {
+  "model": "claude-fable-5[1m]",
   "hooks": {
     "Notification": [
       {
@@ -13,5 +14,5 @@
     ]
   },
   "skipAutoPermissionPrompt": true,
-  "model": "claude-fable-5[1m]"
+  "agentPushNotifEnabled": false
 }
