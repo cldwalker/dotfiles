@@ -18,6 +18,14 @@ clj-ns-aliases() {
   | sort | uniq -c | sort -rn
 }
 
+exchange-grep() {
+  git grep -l "$@" src/cljs |
+    awk -F/ '{print $1"/"$2"/"$3}' |
+    sort |
+    uniq -c |
+    awk '{printf "* %s - %d\n", $2, $1}'
+}
+
 # Create l-<name> aliases for every logseq-<name> executable found in $PATH
 logseq-aliases() {
   local name
