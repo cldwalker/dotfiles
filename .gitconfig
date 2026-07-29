@@ -32,6 +32,7 @@
   # commit views
   network = log --graph --pretty=oneline --abbrev-commit
   lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+  lf = "log --follow"
   news = log -p HEAD@{1}..HEAD@{0}
   fd = diff HEAD ^origin/master
   fl = log HEAD ^origin/master
