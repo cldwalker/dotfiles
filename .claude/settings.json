@@ -13,6 +13,6 @@
       }
     ]
   },
-  "skipAutoPermissionPrompt": true,
-  "agentPushNotifEnabled": false
+  "agentPushNotifEnabled": false,
+  "skipAutoPermissionPrompt": true
 }
