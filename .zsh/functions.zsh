@@ -3,6 +3,12 @@ zman() {
   PAGER="less -g -s '+/^       "$1"'" man zshall
 }
 
+# Count regex matches across the repo, most frequent first.
+# Usage: grep-counts PATTERN [PATH...]
+grep-counts() {
+  git grep -ohE "$1" -- "${@:2}" | sort | uniq -c | sort -rn
+}
+
 # gll <WORD> [extract git log args] - invoke git log with search enabled in pager
 # Only use for seeing full commits as turning off -u leads to issues with LESS
 git-log-less() {
