@@ -40,16 +40,6 @@ zstyle ':fzf-tab:complete:bbg:*' fzf-preview 'BB_EDN=~/code/repo/bb-clis/bb.edn 
 
 ### bb completions ###
 
-# Only for bb tasks
-_bb() {
-    local matches=(`bb tasks |tail -n +3 |cut -f1 -d ' '`)
-    compadd -a matches
-    _files # autocomplete filenames as well
-    # TODO: Move tasks to _arguments
-    # _arguments '1:tasks:_bb_tasks'
-}
-compdef _bb bb
-
 _bbg_tasks() {
     local matches=(`bb --config ~/code/repo/bb-clis/bb.edn tasks |tail -n +3 |cut -f1 -d ' '`)
     compadd -a matches
