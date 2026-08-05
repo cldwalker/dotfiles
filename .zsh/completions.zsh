@@ -36,23 +36,4 @@ zstyle ':fzf-tab:*' prefix ''
 # Sweet tab menu preview of directories a la midnight commander
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls $realpath'
 # Display usage of bb task in preview
-zstyle ':fzf-tab:complete:bbg:*' fzf-preview 'BB_EDN=~/code/repo/bb-clis/bb.edn bb --config ~/code/repo/bb-clis/bb.edn help $word'
-
-### bb completions ###
-
-_bbg_tasks() {
-    local matches=(`bb --config ~/code/repo/bb-clis/bb.edn tasks |tail -n +3 |cut -f1 -d ' '`)
-    compadd -a matches
-    # Disable file completion to not pollute fzf-preview and until I can put in
-    # it's own tab group
-    # _files
-}
-compdef _bbg_tasks bbg
-
-_lq_tasks() {
-    local matches=(`lq --completion |cut -f1 -d ' '`)
-    compadd -a matches
-    # Disable file completion to not pollute fzf-preview
-    # _files
-}
-compdef _lq_tasks lq
+zstyle ':fzf-tab:complete:bbg:*' fzf-preview 'BB_EDN=~/code/repo/bb-clis/bb.edn bb --config ~/code/repo/bb-clis/bb.edn $word --help'
