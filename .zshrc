@@ -8,6 +8,9 @@ source $ZSH/oh-my-zsh.sh
 # See https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template for
 # vars I can set
 
+# Adds to $PATH
+[[ -f ~/.opam/opam-init/init.zsh ]] && source ~/.opam/opam-init/init.zsh
+
 source ~/.sh/all
 
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
