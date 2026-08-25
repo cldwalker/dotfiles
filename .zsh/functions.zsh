@@ -19,6 +19,13 @@ clj-ns-aliases() {
   | sort | uniq -c | sort -rn
 }
 
+# cljs-ns-aliases <NS> - Prints count of different aliases for a cljs ns
+cljs-ns-aliases() {
+  grep -rhE "\[$1 +:as +[a-zA-Z._?!*+<>-]+" --include='*.cljs' --include='*.cljc' . \
+  | sed -E 's/.*:as +([a-zA-Z._?!*+<>-]+).*/\1/' \
+  | sort | uniq -c | sort -rn
+}
+
 # Grep cljs code and shares count by top-level src/cljs/* dir
 exchange-grep() {
   git grep -l "$@" src/cljs |
