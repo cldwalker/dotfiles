@@ -2,4 +2,4 @@
 .sh/private
 .herrie/autosave.pls
 .clojure/.cpcache
-.claude/*
+.claude/settings.local.json

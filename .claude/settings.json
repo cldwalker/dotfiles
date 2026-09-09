@@ -13,5 +13,9 @@
     ]
   },
   "agentPushNotifEnabled": false,
-  "skipAutoPermissionPrompt": true
+  "skipAutoPermissionPrompt": true,
+  "statusLine": {
+    "type": "command",
+    "command": "bash /Users/me/.claude/statusline-command.sh"
+  }
 }
