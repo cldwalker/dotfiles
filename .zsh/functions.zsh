@@ -37,7 +37,7 @@ exchange-grep() {
 
 logseq-bookmark-search() {
   logseq search block -c "$@" -g personal
-  cd ~/code/priv/public-notes && git grep "$@"
+  cd ~/code/priv/public-notes && git grep "$@"; cd -
 }
 alias l-bookmark-search=logseq-bookmark-search
 
