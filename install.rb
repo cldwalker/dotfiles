@@ -10,6 +10,7 @@ update = ARGV.include?('--update')
 ln_option = force ? "f" : "i"
 
 exists = lambda { |path| File.symlink?(path) || File.exist?(path) }
+ignored = lambda { |file| system("git check-ignore -q #{file}") }
 
 run = lambda do |command, dest = nil|
   if update && dest && exists.call(dest)
@@ -21,7 +22,7 @@ run = lambda do |command, dest = nil|
 end
 
 Dir['.*'].each do |file|
-  next if ['.git','.gitignore', 'install.rb','.','..','.claude'].include?(file) || file =~ /~$|\.sw[a-z]$/
+  next if ['.git','.gitignore', 'install.rb','.','..','.claude'].include?(file) || file =~ /~$|\.sw[a-z]$/ || ignored.call(file)
   target = File.join(home, "#{file}")
   run.call("ln -#{ln_option}s #{File.expand_path file} #{target}", target)
 end
@@ -37,6 +38,7 @@ else
   FileUtils.mkdir_p(claude_dir)
 end
 Dir['.claude/*'].each do |file|
+  next if ignored.call(file)
   target = File.join(home, file)
   run.call("ln -#{ln_option}s #{File.expand_path file} #{target}", target)
 end
