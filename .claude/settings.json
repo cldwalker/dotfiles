@@ -16,10 +16,11 @@
       }
     ]
   },
-  "agentPushNotifEnabled": false,
-  "skipAutoPermissionPrompt": true,
   "statusLine": {
     "type": "command",
     "command": "bash /Users/me/.claude/statusline-command.sh"
-  }
+  },
+  "agentPushNotifEnabled": false,
+  "skipAutoPermissionPrompt": true,
+  "model": "opus"
 }
