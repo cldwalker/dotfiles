@@ -1,4 +1,5 @@
 {
+  "model": "opus",
   "hooks": {
     "Notification": [
       {
@@ -22,5 +23,9 @@
   },
   "agentPushNotifEnabled": false,
   "skipAutoPermissionPrompt": true,
-  "model": "opus"
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "high"
+    }
+  }
 }
