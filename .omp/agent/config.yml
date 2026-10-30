@@ -1,0 +1,14 @@
+modelRoles: {}
+symbolPreset: unicode
+composer:
+  shape: band
+theme:
+  dark: titanium
+setupVersion: 2
+statusLine:
+  preset: custom
+  rightSegments:
+    - session_name
+    - usage
+    - token_total
+    - context_pct

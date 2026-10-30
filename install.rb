@@ -22,25 +22,27 @@ run = lambda do |command, dest = nil|
 end
 
 Dir['.*'].each do |file|
-  next if ['.git','.gitignore', 'install.rb','.','..','.claude'].include?(file) || file =~ /~$|\.sw[a-z]$/ || ignored.call(file)
+  next if ['.git','.gitignore', 'install.rb','.','..','.claude','.omp'].include?(file) || file =~ /~$|\.sw[a-z]$/ || ignored.call(file)
   target = File.join(home, "#{file}")
   run.call("ln -#{ln_option}s #{File.expand_path file} #{target}", target)
 end
 
-# ~/.claude holds live state (sessions, history, projects) — symlink individual files instead of the dir
+# ~/.claude and ~/.omp/agent hold live state (sessions, history, dbs) — symlink individual files instead of the dir
 require 'fileutils'
-claude_dir = File.join(home, '.claude')
-if update && File.directory?(claude_dir)
-  # puts "# skip (exists): #{claude_dir}"
-elsif pretend
-  puts "mkdir -p #{claude_dir}"
-else
-  FileUtils.mkdir_p(claude_dir)
-end
-Dir['.claude/*'].each do |file|
-  next if ignored.call(file)
-  target = File.join(home, file)
-  run.call("ln -#{ln_option}s #{File.expand_path file} #{target}", target)
+['.claude', '.omp/agent'].each do |dir|
+  dest_dir = File.join(home, dir)
+  if update && File.directory?(dest_dir)
+    # puts "# skip (exists): #{dest_dir}"
+  elsif pretend
+    puts "mkdir -p #{dest_dir}"
+  else
+    FileUtils.mkdir_p(dest_dir)
+  end
+  Dir["#{dir}/*"].each do |file|
+    next if ignored.call(file)
+    target = File.join(home, file)
+    run.call("ln -#{ln_option}s #{File.expand_path file} #{target}", target)
+  end
 end
 
 # git push on commit
