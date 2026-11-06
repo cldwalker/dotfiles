@@ -12,3 +12,4 @@ statusLine:
     - usage
     - token_total
     - context_pct
+emojiAutocomplete: false
