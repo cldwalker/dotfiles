@@ -58,7 +58,7 @@
 [url "git@heroku.com:"]
     insteadOf = "heroku:"
 
-[url "git@bitbucket.org:"]
+[url "git@ssh.bitbucket.org:"]
     insteadOf = "bit:"
 
 [credential]
