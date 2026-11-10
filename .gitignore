@@ -3,3 +3,4 @@
 .herrie/autosave.pls
 .clojure/.cpcache
 .claude/settings.local.json
+.omp/agent/config.yml.lock
