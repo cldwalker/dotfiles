@@ -4,7 +4,7 @@ composer:
   shape: band
 theme:
   dark: titanium
-setupVersion: 2
+setupVersion: 3
 statusLine:
   preset: custom
   rightSegments:
@@ -13,3 +13,5 @@ statusLine:
     - token_total
     - context_pct
 emojiAutocomplete: false
+update:
+  auto: false
